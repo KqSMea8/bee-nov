@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "D:\\code\\go\\src\\beego-demo"
+		},
+		{
+			"path": "D:\\code\\go\\src\\github.com\\ulricqin\\beego-blog"
+		},
+		{
+			"path": "D:\\code\\go\\src\\github.com\\goinggo\\beego-mgo"
+		},
+		{
+			"path": "D:\\code\\go\\src\\github.com\\snaigle\\novels-book-go"
+		}
+	]
+}
