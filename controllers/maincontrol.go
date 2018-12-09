@@ -1,6 +1,9 @@
 package controllers
 
 import (
+	"bee-nov/models"
+	"fmt"
+
 	"github.com/astaxie/beego"
 )
 
@@ -45,7 +48,16 @@ type MainController struct {
 func (c *MainController) Get() {
 	c.Data["Website"] = "beego.me"
 	c.Data["Email"] = "astaxie@gmail.com"
-	c.TplName = "index.tpl"
+	c.Data["Category"] = models.Category
+	if bklist, err := models.FindByCount(3); err == nil {
+		c.Data["BkList"] = bklist
+		for x, y := range *bklist {
+			fmt.Println(x, y.Image)
+		}
+	} else {
+		fmt.Println("select book error")
+	}
+	c.TplName = "index.html"
 }
 
 // RetError return error information in JSON.
@@ -58,6 +70,5 @@ func (base *BaseController) RetError(e *ControllerError) {
 	base.Ctx.ResponseWriter.WriteHeader(e.Status)
 	base.Data["json"] = e
 	base.ServeJSON()
-
 	base.StopRun()
 }

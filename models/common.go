@@ -14,6 +14,9 @@ const (
 	ErrNotFound = -4
 )
 
+// Category ...
+var Category = map[string]string{"玄幻": "/xuanhuan", "武侠": "/wuxia", "全本": "/quanben", "校园": "/xiaoyuan"}
+
 // CodeInfo definiton.
 type CodeInfo struct {
 	Code int
@@ -48,7 +51,8 @@ func init() {
 	sess, err := mgo.Dial("127.0.0.1,27017")
 	if err != nil {
 		fmt.Println("mdb connect err")
-		panic(err)
+		//panic(err)
+		return
 	}
 	fmt.Println("db con")
 
