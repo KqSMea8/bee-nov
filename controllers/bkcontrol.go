@@ -15,7 +15,7 @@ type BookController struct {
 func (c *BookController) Get() {
 	c.Data["Website"] = "beego.me"
 	c.Data["Email"] = "astaxie@gmail.com"
-	c.TplName = "bkone.tpl"
+	c.TplName = "bkone.html"
 
 	bk := models.MBook{}
 	if code, err := bk.FindByName("首辅养成手册"); err != nil {
