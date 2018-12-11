@@ -9,4 +9,5 @@ import (
 func init() {
 	beego.Router("/", &controllers.MainController{})
 	beego.Router("/book/:id", &controllers.BookController{})
+	beego.Router("/bkloader/*", &controllers.BookController{}, "get:LoadMore")
 }

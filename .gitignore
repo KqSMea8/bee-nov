@@ -20,7 +20,7 @@ vendor/bundle
 *.vi
 *.zip
 *~
-
+*.exe
 # OS or Editor folders
 ._*
 .cache
