@@ -21,6 +21,9 @@ vendor/bundle
 *.zip
 *~
 *.exe
+*.jpg
+*.jpeg
+*.png
 # OS or Editor folders
 ._*
 .cache

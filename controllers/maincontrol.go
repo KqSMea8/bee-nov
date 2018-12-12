@@ -49,7 +49,7 @@ func (c *MainController) Get() {
 	c.Data["Website"] = "beego.me"
 	c.Data["Email"] = "astaxie@gmail.com"
 	c.Data["Category"] = models.Category
-	if bklist, err := models.FindByCount(3); err == nil {
+	if bklist, err := models.FirstByCount(3); err == nil {
 		c.Data["BkList"] = bklist
 		for x, y := range *bklist {
 			fmt.Println(x, y.Image)
