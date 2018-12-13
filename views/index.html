@@ -17,14 +17,32 @@
 
   <!-- Custom styles for this template -->
   <link href="/static/css/carousel.css" rel="stylesheet">
-</head>
-
-<body>
-
-  {{template "header.html" .}}
-
-  <main role="main" style="margin:0  10%" id="mainbody">
-    <style>
+  <style>
+    .card{
+          padding:0;
+          border-radius: 0;
+          border: 1px solid #aeda11 !important;
+        } 
+         .mescroll{
+        top: 44px;
+        bottom: 51px;
+        height: auto;
+      }
+      .smallright{
+        font-size: 50%;
+        align-self:flex-end;
+        text-align: right !important;
+      }
+      .middleright{
+        font-size: 70%;
+        align-self:flex-end;
+        text-align: right !important;
+      }
+      .smallleft{
+        font-size: 90%;
+        align-self:flex-end;
+        text-align: left !important;
+      }
       .carousel-item{
                   background: #ffffff;
                   min-width: 500px;
@@ -33,6 +51,13 @@
                   border: 1px solid #aeda11;
       }
       </style>
+</head>
+
+<body>
+
+  {{template "header.html" .}}
+
+  <main role="main" style="margin:0  10%" id="mainbody">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         {{ range $ik, $bk := .BkList }}
@@ -71,8 +96,8 @@
                   </td>
                 </div>
               </div>
-                <img style="height: 400px;width: 100%; object-fit: scale-down;" class="col-lg-3 col-md-4 col-xs-10" src="/static/image/{{$bk.Image}}"
-                  onload="function a(){alert('loggg')}"></img>
+              <img style="height: 400px;width: 100%; object-fit: scale-down;" class="col-lg-3 col-md-4 col-xs-10" src="/static/image/{{$bk.Image}}"
+                onload="function a(){alert('loggg')}"></img>
             </div>
           </div>
           {{end}}
@@ -84,42 +109,22 @@
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      <div class="album py-5 bg-light">
-        <div id="mescroll" class="container">
-          <div class="row" id="mediv">
-            <style>
-              .card1{
-                min-width: 300px;
-                max-height: 400px
-              } 
-               .mescroll{
-              top: 44px;
-              bottom: 51px;
-              height: auto;
-            }
-            </style>
-            {{ range $ik, $bk := .BkList }}
-            <!-- it -->
-            <div class="col-md-6 col-xs-12 col-lg-3 col-sm-12">
-              <div class="card mb-4">
-                <img class="card-img-top" data-src="holder.min.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
-                  alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
+      <div class="album row bg-light" id="mediv">
+        {{ range $ik, $bk := .BkList }}
+        <!-- it -->
+        <div class="col-md-6 col-xs-12 col-lg-4 col-xl-3 col-sm-12">
+          <div class="card m-2">
+            <img data-src="holder.min.js/100px250?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" style="object-fit:fill;width:100%;height:250px;"
+              src="/static/image/bk.Image" alt="加载封面">
+            <div class="p-1">
+              <font class="text-body smallleft">{{$bk.Name}}</font>
+              <font class="text-body  middleright">({{$bk.Author}})</font>
+              <small class="text-success smallright">{{$bk.Numbers}}字</small>
+              <button type="button" class="btn btn-sm btn-success smallright">步入</button>
             </div>
-            {{end}}
           </div>
         </div>
+        {{end}}
       </div>
       <div>
 
@@ -127,7 +132,8 @@
           $(function () {
             var mescroll = new MeScroll("body", { //第一个参数"mescroll"对应上面布局结构div的id (1.3.5版本支持传入dom对象)
               up: {
-                auto: true, isBoth: true,
+                auto: true,
+                isBoth: true,
                 callback: upCallback, //上拉加载回调,简写callback:function(page){upCallback(page);}
                 //以下是一些常用的配置,当然不写也可以的.
                 page: {
@@ -148,23 +154,18 @@
             function upCallback(page) {
               console.log(page);
               if (page.num > 3) {
-                mescroll.endErr(); return;
+                mescroll.endErr();
+                return;
               }
               $.ajax({
                 url: 'bkloader?num=' + page.num + "&size=" + page.size,
                 success: function (curPageData) {
                   console.log(curPageData);
                   console.log(curPageData.length);
-
-                  //方法一(推荐): 后台接口有返回列表的总页数 totalPage
-                  //必传参数(当前页的数据个数, 总页数)
                   mescroll.endByPage(curPageData.length, curPageData.totalPage);
-
-                  //设置列表数据
-                  setListData(curPageData, true);//自行实现 TODO
+                  setListData(curPageData, true);
                 },
                 error: function () {
-                  //联网失败的回调,隐藏下拉刷新和上拉加载的状态
                   mescroll.endErr();
                 }
               });
@@ -174,7 +175,7 @@
             function setListData(curPageData, isAppend) {
               var listDom = document.getElementById("mediv");
               for (var i = 0; i < curPageData.length; i++) {
-                var newObj = curPageData[i];
+                var newObj = curPageData.BkList[i];
 
                 //var str='<p>'+newObj.title+'</p>';
                 //str+='<p class="new-content">'+newObj.content+'</p>';
@@ -183,28 +184,31 @@
 
                 if (isAppend) {
                   console.log('isappend')
-                  $("#mediv").append('<div class="col-md-6 col-xs-12 col-lg-3 col-sm-12">\
-                    <div class="card  mb-4 box-shadow">\
-                      <img class="card-img-top" data-src="holder.min.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"\
-                        alt="Card image cap">\
-                      <div class="card-body">\
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to\
-                          additional content. This content is a little bit longer.</p>\
-                        <div class="d-flex justify-content-between align-items-center">\
-                          <div class="btn-group">\
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>\
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>\
-                          </div>\
-                          <small class="text-muted">9 mins</small>\
-                        </div>\
-                      </div>\
-                    </div>\
-                  </div>');
+                  $("#mediv").append(
+                    '<div class="col-md-6 col-xs-12 col-lg-4 col-xl-3 col-sm-12">\
+          <div class="card m-2">\
+            <img data-src="holder.min.js/100px250?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" style="object-fit:fill;width:100%;height:250px;"\
+              src="/static/image/' +
+                    "a.png" +
+                    '" alt="加载封面">\
+            <div class="p-1">\
+              <font class="text-body smallleft">' +
+                    newObj.Name +
+                    '</font>\
+              <font class="text-body  middleright">(' + newObj.Author +
+                    ')</font>\
+              <small class="text-success smallright">' + newObj.Numbers +
+                    '字</small>\
+              <button type="button" class="btn btn-sm btn-success smallright">步入</button>\
+            </div>\
+          </div>\
+        </div>'
+                  );
 
                   //listDom.appendChild(liDom);//加在列表的后面,上拉加载
                 } else {
                   console.log('not append')
-                  listDom.insertBefore(liDom, listDom.firstChild);//加在列表的前面,下拉刷新
+                  listDom.insertBefore(liDom, listDom.firstChild); //加在列表的前面,下拉刷新
                 }
               }
             }
