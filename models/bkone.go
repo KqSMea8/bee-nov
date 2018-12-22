@@ -97,3 +97,25 @@ func FindByCount(cnt int) (*[]MBook, error) {
 	}
 	return &bookList, err
 }
+
+// FirstByCount query a document according to input id.
+func FirstByCount(cnt int) (*[]MBook, error) {
+	mConn := Conn()
+	defer mConn.Close()
+
+	bc := mConn.DB("web").C("book")
+	var bookList = make([]MBook, 0)
+	err := bc.Find(bson.M{"image": bson.M{"$ne": ""}}).Skip(0).Limit(cnt).All(&bookList)
+	if err != nil {
+		if err == mgo.ErrNotFound {
+			fmt.Println("bkone not found")
+			//code = ErrNotFound
+		} else {
+			fmt.Println("bkone db error")
+			//code = ErrDatabase
+		}
+	} else {
+		//code = 0
+	}
+	return &bookList, err
+}

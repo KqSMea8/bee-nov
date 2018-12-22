@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"bee-nov/models"
+	"fmt"
 
 	"github.com/astaxie/beego"
 )
@@ -31,4 +32,22 @@ func (c *BookController) Get() {
 	c.Data["name"] = bk.Author
 	beego.Debug("RoleInfo:", &bk)
 
+}
+
+/*LoadMore ... ***/
+func (c *BookController) LoadMore() {
+	fmt.Println("loadmore")
+	result := map[string]interface{}{
+		"success": false,
+	}
+
+	if bklist, err := models.FindByCount(6); err == nil {
+		result["length"] = 6
+		result["totalPage"] = 122
+		result["BkList"] = bklist
+		c.Data["json"] = &result
+		c.ServeJSON()
+	} else {
+		fmt.Println("LoadMore book error")
+	}
 }

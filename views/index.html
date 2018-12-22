@@ -6,66 +6,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="icon" href="../../../../favicon.ico">
 
   <title></title>
-
+  <link href="/static/css/mescroll.css" />
   <!-- Bootstrap core CSS -->
-  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/css/bootstrap.css" rel="stylesheet">
+  <script src="/static/js/jquery-3.3.1.js"></script>
 
   <!-- Custom styles for this template -->
   <link href="/static/css/carousel.css" rel="stylesheet">
+  <style>
+    .card{
+          padding:0;
+          border-radius: 0;
+          border: 1px solid #aeda11 !important;
+        } 
+         .mescroll{
+        top: 44px;
+        bottom: 51px;
+        height: auto;
+      }
+      .smallright{
+        font-size: 50%;
+        align-self:flex-end;
+        text-align: right !important;
+      }
+      .middleright{
+        font-size: 70%;
+        align-self:flex-end;
+        text-align: right !important;
+      }
+      .smallleft{
+        font-size: 90%;
+        align-self:flex-end;
+        text-align: left !important;
+      }
+      .carousel-item{
+                  background: #ffffff;
+                  min-width: 500px;
+              }
+      .carousel-inner{
+                  border: 1px solid #aeda11;
+      }
+      </style>
 </head>
 
 <body>
 
   {{template "header.html" .}}
 
-  <main role="main">
+  <main role="main" style="margin:0  10%" id="mainbody">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
-
         {{ range $ik, $bk := .BkList }}
+        {{ if eq $ik 0}}
+        <li data-target="#myCarousel" data-slide-to="{{$ik}}" class="active"></li>
+        {{ else}}
         <li data-target="#myCarousel" data-slide-to="{{$ik}}"></li>
+        {{end}}
         {{end}}
         </li>
       </ol>
       <div class="carousel-inner">
         {{ range $ik, $bk := .BkList }}
         {{ if eq $ik 0}}
-        <div class="carousel-item active">
+        <div class="carousel-item active inline-block">
           {{ else}}
-          <div class="carousel-item">
+          <div class="carousel-item inline-block">
             {{end}}
-            <table>
-              <tr>
-                <td>
-                  <font>作者： {{$bk.Author}}</font>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <font>书名： {{$bk.Name}}</font>
-                </td>
-              </tr>
-              <tr>
-                <td style="width:80%">
-                  <font>简介： {{$bk.Profile}}</font>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
-            <img src="/static/img/{{$bk.Image}}" height="50px" width="60px"></img>
+            <div class="row d-flex p-3">
+              <div class="col-md-7">
+                <div>
+                  <td>
+                    <font>书名： {{$bk.Name}}</font>
+                  </td>
+                </div>
+                <div>
+                  <td>
+                    <font>作者： {{$bk.Author}}</font>
+                  </td>
+                </div>
+                <div>
+                  <td style="width:80%">
+                    <font>简介： {{$bk.Profile}}</font>
+                  </td>
+                  <td>
+                  </td>
+                </div>
+              </div>
+              <img style="height: 400px;width: 100%; object-fit: scale-down;" class="col-lg-3 col-md-4 col-xs-10" src="/static/image/{{$bk.Image}}"
+                onload="function a(){alert('loggg')}"></img>
+            </div>
           </div>
           {{end}}
         </div>
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </a>
       </div>
 
 
@@ -73,46 +109,129 @@
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      <div class="album py-5 bg-light">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
-                  alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
+      <div class="album row bg-light" id="mediv">
+        {{ range $ik, $bk := .BkList }}
+        <!-- it -->
+        <div class="col-md-6 col-xs-12 col-lg-4 col-xl-3 col-sm-12">
+          <div class="card m-2">
+            <img data-src="holder.min.js/100px250?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" style="object-fit:fill;width:100%;height:250px;"
+              src="/static/image/bk.Image" alt="加载封面">
+            <div class="p-1">
+              <font class="text-body smallleft">{{$bk.Name}}</font>
+              <font class="text-body  middleright">({{$bk.Author}})</font>
+              <small class="text-success smallright">{{$bk.Numbers}}字</small>
+              <button type="button" class="btn btn-sm btn-success smallright">步入</button>
             </div>
           </div>
         </div>
+        {{end}}
+      </div>
+      <div>
+
+        <script>
+          $(function () {
+            var mescroll = new MeScroll("body", { //第一个参数"mescroll"对应上面布局结构div的id (1.3.5版本支持传入dom对象)
+              up: {
+                auto: true,
+                isBoth: true,
+                callback: upCallback, //上拉加载回调,简写callback:function(page){upCallback(page);}
+                //以下是一些常用的配置,当然不写也可以的.
+                page: {
+                  num: 0, //当前页 默认0,回调之前会加1; 即callback(page)会从1开始
+                  size: 6, //每页数据条数,默认10
+                },
+                htmlNodata: '<p class="upwarp-nodata">亲,没有更多数据了~</p>',
+                noMoreSize: 2, //如果列表已无数据,可设置列表的总数量要大于5才显示无更多数据;避免列表数据过少(比如只有一条数据),显示无更多数据会不好看.这就是为什么无更多数据 有时候不显示的原因了.
+
+                lazyLoad: {
+                  use: true, // 是否开启懒加载,默认false
+                  attr: '/static/img/mlab.png', // 网络图片地址的属性名 (图片加载成功会自动移除改属性): <img imgurl='网络图  src='占位图''/>
+                  offset: 1500 // 超出可视区域多少px的图片仍可触发懒加载 默认200. 目的是提前加载可视区域外的部分图片
+                }
+              }
+            });
+            //上拉加载的回调 page = {num:1, size:10}; num:当前页 从1开始, size:每页数据条数
+            function upCallback(page) {
+              console.log(page);
+              if (page.num > 3) {
+                mescroll.endErr();
+                return;
+              }
+              $.ajax({
+                url: 'bkloader?num=' + page.num + "&size=" + page.size,
+                success: function (curPageData) {
+                  console.log(curPageData);
+                  console.log(curPageData.length);
+                  mescroll.endByPage(curPageData.length, curPageData.totalPage);
+                  setListData(curPageData, true);
+                },
+                error: function () {
+                  mescroll.endErr();
+                }
+              });
+            }
+
+            /*设置列表数据*/
+            function setListData(curPageData, isAppend) {
+              var listDom = document.getElementById("mediv");
+              for (var i = 0; i < curPageData.length; i++) {
+                var newObj = curPageData.BkList[i];
+
+                //var str='<p>'+newObj.title+'</p>';
+                //str+='<p class="new-content">'+newObj.content+'</p>';
+                //var liDom=document.createElement("li");
+                //liDom.innerHTML=str;
+
+                if (isAppend) {
+                  console.log('isappend')
+                  $("#mediv").append(
+                    '<div class="col-md-6 col-xs-12 col-lg-4 col-xl-3 col-sm-12">\
+          <div class="card m-2">\
+            <img data-src="holder.min.js/100px250?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" style="object-fit:fill;width:100%;height:250px;"\
+              src="/static/image/' +
+                    "a.png" +
+                    '" alt="加载封面">\
+            <div class="p-1">\
+              <font class="text-body smallleft">' +
+                    newObj.Name +
+                    '</font>\
+              <font class="text-body  middleright">(' + newObj.Author +
+                    ')</font>\
+              <small class="text-success smallright">' + newObj.Numbers +
+                    '字</small>\
+              <button type="button" class="btn btn-sm btn-success smallright">步入</button>\
+            </div>\
+          </div>\
+        </div>'
+                  );
+
+                  //listDom.appendChild(liDom);//加在列表的后面,上拉加载
+                } else {
+                  console.log('not append')
+                  listDom.insertBefore(liDom, listDom.firstChild); //加在列表的前面,下拉刷新
+                }
+              }
+            }
+          });
+        </script>
       </div>
 
-      <!-- FOOTER -->
-      <footer class="container">
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
   </main>
-
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="/static/js/vendor/jquery-slim.min.js" crossorigin="anonymous"></script>
-  <script>
-    window.jQuery || document.write('<script src="/static/js/vendor/jquery-slim.min.js"><\/script>')
-  </script>
+
+
+
+  <script src="/static/js/jquery-3.3.1.js"></script>
+  <script src="/static/js/mescroll.js"></script>
   <script src="/static/js/vendor/popper.min.js"></script>
-  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/bootstrap.js"></script>
   <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
   <script src="/static/js/vendor/holder.min.js"></script>
 </body>
