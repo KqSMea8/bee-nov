@@ -1,0 +1,66 @@
+<!-- start 书友评价 -->
+    <div id="commentList">
+        <!-- start 热门评论数据 -->
+        <div class="comment-list">
+        <%
+        //无数据状态
+        if(code != 0 || data.commentInfo.length == 0) {
+        %>
+        <!-- start 无数据状态 -->
+        <div class="no-data">
+            <span></span>
+            <p>还没有评价<i>&#183;</i>快来抢沙发</p>
+        </div>
+        <!-- end 无数     据状态 -->
+        <% } else { %>
+        <!-- start 有数据状态 -->
+        <dl>
+            <%
+            //获取热门列表数据
+            var commentData = data.commentInfo;
+            for(var i=0; i < commentData.length; i++) { %>
+            <dd>
+                <div class="user-photo">
+                    <a href="<%=mePreFix%>/friendIndex.aspx?id=<%=commentData[i].userId%>" target="_blank">
+                        <img src="<%=commentData[i].userIcon%>">
+                        <span class="user-level lv<%=commentData[i].fanLevel%>"></span>
+                    </a>
+                </div>
+                <div class="comment-info">
+                    <%
+                    var act = '';
+                    if(commentData[i].isLike == 1){
+                    act = 'act'
+                    } %>
+                    <h6><a class="zan <%=act%>" href="javascript:" data-rateid="<%=commentData[i].rateId%>" data-islike="<%=commentData[i].isLike%>" data-eid="qd_G112"><b><%=commentData[i].like%></b><em class="iconfont">&#xe640;</em></a><a class="blue" href="<%=mePreFix%>/friendIndex.aspx?id=<%=commentData[i].userId%>" target="_blank"><%=commentData[i].nickName%></a><i>评</i><span class="score-min star<%=commentData[i].star%>"></span></h6>
+                    <%
+                    //评论字数超过111字会显示展开按钮
+                    var comment = commentData[i].comment;
+                    var extend = 'normal'
+
+                    //过滤XSS
+                    comment = comment.replace(/</g, '&lt;');
+                    comment = comment.replace(/>/g, '&gt;');
+
+                    if(comment.length > 111) {
+                        extend='extend';
+                    } %>
+                    <p class="<%=extend%>"><%=comment%><cite class="iconfont blue j_unfold" title="展开评论">&#xe623;</cite></p>
+                    <p><%=commentData[i].time%></p>
+                </div>
+            </dd>
+            <% } %>
+        </dl>
+        <!-- end 有数据状态 -->
+
+        <!-- start 热门分页 -->
+        <div class="page-box cf">
+            <div class="pagination fr" data-eid="qd_G34" id="page-container" data-pageMax="<%=Math.ceil(data.totalCnt/15)%>" data-page="<%=data.pageIndex%>"></div>
+            </div>
+        <!-- end 热门分页 -->
+        <% } %>
+    </div>
+        <!-- end 热门评论数据 -->
+
+    </div>
+<!-- end 书友评价 -->

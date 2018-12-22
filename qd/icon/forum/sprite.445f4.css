@@ -1,0 +1,193 @@
+.icon-alert {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: 0 0;
+  width: 48px;
+  height: 48px
+}
+.icon-error {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: 0 -52px;
+  width: 48px;
+  height: 48px
+}
+.icon-jinghua {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -104px -80px;
+  width: 30px;
+  height: 16px
+}
+.icon-lock {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -52px -52px;
+  width: 30px;
+  height: 16px
+}
+.icon-ok {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -52px 0;
+  width: 48px;
+  height: 48px
+}
+.icon-reach {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -138px -80px;
+  width: 16px;
+  height: 16px
+}
+.icon-topfix {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -104px -20px;
+  width: 30px;
+  height: 16px
+}
+.icon-unreach {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -138px -60px;
+  width: 16px;
+  height: 16px
+}
+.icon-user-lv0 {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -104px -60px;
+  width: 30px;
+  height: 16px
+}
+.icon-user-lv1 {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -138px -40px;
+  width: 30px;
+  height: 16px
+}
+.icon-user-lv10 {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: 0 -104px;
+  width: 30px;
+  height: 16px
+}
+.icon-user-lv2 {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -34px -104px;
+  width: 30px;
+  height: 16px
+}
+.icon-user-lv3 {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -68px -104px;
+  width: 30px;
+  height: 16px
+}
+.icon-user-lv4 {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -102px -104px;
+  width: 30px;
+  height: 16px
+}
+.icon-user-lv5 {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -138px 0;
+  width: 30px;
+  height: 16px
+}
+.icon-user-lv6 {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -138px -20px;
+  width: 30px;
+  height: 16px
+}
+.icon-user-lv7 {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -104px -40px;
+  width: 30px;
+  height: 16px
+}
+.icon-user-lv8 {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -104px 0;
+  width: 30px;
+  height: 16px
+}
+.icon-user-lv9 {
+  background-image: url(/qd/icon/forum/sprite.3eaee.png);
+  background-position: -52px -72px;
+  width: 30px;
+  height: 16px
+}
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi) {
+  .icon-alert {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-error {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-jinghua {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-lock {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-ok {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-reach {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-topfix {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-unreach {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-user-lv0 {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-user-lv1 {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-user-lv10 {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-user-lv2 {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-user-lv3 {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-user-lv4 {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-user-lv5 {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-user-lv6 {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-user-lv7 {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-user-lv8 {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+  .icon-user-lv9 {
+    background-image: url(/qd/icon/forum/sprite@2x.b44b6.png);
+    background-size: 168px 120px
+  }
+}

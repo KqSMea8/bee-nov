@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>大超·的七'言{{.tChapter.Name}}_{{.tChapter.Title}}</title>
+  <meta name="description" content="{{.tChapter.Name}}最新章节阅读，{{.tChapter.Name}}是一部科幻小说,由背剑游江湖创作,七言提供首发更新。雁门关(2018.12.13)">
+  <meta name="keywords" content="{{.tChapter.Name}},最新,最新章节,科幻小说,阅读">
+  <meta name="robots" content="all">
+  <meta name="googlebot" content="all">
+  <meta name="baiduspider" content="all">
+  <meta http-equiv="mobile-agent" content="format=wml; url=http://m.qiyan.com/book/1013695262/437383799">
+  <meta http-equiv="mobile-agent" content="format=xhtml; url=http://m.qiyan.com/book/1013695262/437383799">
+  <meta http-equiv="mobile-agent" content="format=html5; url=http://m.qiyan.com/book/1013695262/437383799">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="renderer" content="webkit" />
+
+  <link href="/static/css/app-responsive.css" rel="stylesheet" />
+  <link href="/static/css/lohp-42b3.css" rel="stylesheet" />
+
+  <link rel="stylesheet" data-ignore="true" href="/c/=/qd/css/lbfUI/css/icon.a578d.css,/qd/css/lbfUI/css/Drag.41d31.css,/qd/css/reset.ddecf.css,/qd/css/global.d41d8.css,/qd/css/font.089a4.css,/qd/css/footer.3607a.css,/qd/css/qd_popup.7e65f.css,/qd/css/book_popup.18f47.css,/qd/css/vote_popup.3844d.css,/qd/icon/forum/sprite.445f4.css,/qd/css/forum/emoji.c4e81.css">
+
+  <link rel="stylesheet" href="/qd/css/module.e710a.css" />
+  <link rel="stylesheet" href="/qd/css/layout.5de0f.css" />
+  <link rel="stylesheet" href="/qd/css/book_details.0d238.css" />
+
+  <script src="/static/js/app-d19f.js"></script>
+
+  <script>
+    // 获取cookie
+        function getCookie(name) {
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            arr = document.cookie.match(reg);
+            if (arr){
+                return arr[2];
+            }else {
+                return null;
+            }
+        }
+        // tf = 1 用户选择，留在PC
+        if (getCookie('tf') != 1) {
+            if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+                window.location.href="//m.qiyan.com/book/1013695262/437383799";
+            }
+        }else{
+            // M站设置了一年，这里fixed
+            setCookie('tf', 1, 'qiyan.com', '/', 0);
+        }
+    </script>
+  <script>
+    document.domain = 'qiyan.com';
+    </script>
+  <script>
+    var speedTimer = [],
+            speedZero = new Date().getTime();
+    </script>
+
+  <script>
+    //遇到cookie tf=1的话留在本站，否则跳转移动站
+    if (getCookie('tf') != 1) {
+        //判断是以下设备后跳转到m站
+        if (navigator.userAgent.match(/(iPhone|iPod|Android)/i)) {
+            location.href = "//m.qiyan.com"
+        }
+    }else {
+        // M站设置了一年，这里fixed
+        setCookie('tf', 1, 'qiyan.com', '/', 0);
+    }
+    // start 防劫持
+    //设置cookie
+    function setCookie(name, value, domain, path, expires) {
+        if(expires){
+            expires = new Date(+new Date() + expires);
+        }
+        var tempcookie = name + '=' + escape(value) +
+                ((expires) ? '; expires=' + expires.toGMTString() : '') +
+                ((path) ? '; path=' + path : '') +
+                ((domain) ? '; domain=' + domain : '');
+        //Ensure the cookie's size is under the limitation
+        if(tempcookie.length < 4096) {
+            document.cookie = tempcookie;
+        }
+    }
+    //获取cookie
+    function getCookie(name) {
+        var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+        if (arr = document.cookie.match(reg))
+            return (arr[2]);
+        else
+            return null;
+    }
+    //创建并发送请求
+    function createSender(url){
+        var img = new Image();
+        img.onload = img.onerror = function(){
+            img = null;
+        };
+        img.src = url;
+    };
+</script>
+
+  <link rel="stylesheet" data-ignore="true" href="//qiyan.gtimg.com/c/=/qd/css/lbfUI/css/icon.a578d.css,/qd/css/lbfUI/css/Drag.41d31.css,/qd/css/lbfUI/css/Checkbox.ef549.css,/qd/css/reset.ddecf.css,/qd/css/global.d41d8.css,/qd/css/font.089a4.css,/qd/css/module.e710a.css,/qd/css/footer.3607a.css,/qd/css/read.da89b.css,/qd/css/layout.5de0f.css,/qd/css/qd_popup.7e65f.css,/qd/css/book_popup.18f47.css,/qd/css/vote_popup.3844d.css" />
+
+  <link data-ignore="true" rel="stylesheet" href="/static/css/vote_popup.css">
+  <link data-ignore="true" rel="stylesheet" href="/static/css/Popup.css">
+</head>
+
+<body class="theme-0 ">
+  <div class="share-img">
+    <img src="/static/image/{{$.tChapter.ID}}" width="300" height="300">
+  </div>
+  <div class="wrap">
+    {{template "header.html" .}}
+    <div class="read-header" id="readHeader" data-l1="40">
+      <div class="wrap-center cf">
+        <div class="left-nav fl">
+          <div class="logo">
+            <a class="logo-ico" href="javascript:"></a>
+          </div>
+          <ul>
+            <li class="site" data-l2="1">
+              <a class="pin-logo" href="//" target="_blank" data-eid="qd_R01"><span></span></a>
+              <div class="dropdown">
+                <a href="//www.qdmm.com" target="_blank" data-eid="qd_R02">七言女生网</a>
+                <a href="http://chuangshi.qq.com" target="_blank" data-eid="qd_R03">创世中文网</a>
+                <a href="http://yunqi.qq.com" target="_blank" data-eid="qd_R04">云起书院</a>
+              </div>
+            </li>
+            <li class="app" data-l2="2">
+              <cite>手机阅读</cite>
+              <div class="dropdown scan-app hidden">
+                <div class="box">
+                  <h3>扫描下载七言读书客户端</h3>
+                  <img src="//qiyan.gtimg.com/qd/images/qd_qrcode.f4f94.png">
+                  <a href="https://itunes.apple.com/cn/app/id534174796?mt=8" target="_blank" data-eid="qd_R05"><em
+                      class="iconfont">&#xe64c;</em>App store 下载</a>
+                  <a href="http://download.qiyan.com/apknew/source/QDReader.apk" target="_blank" data-eid="qd_R06"><em
+                      class="iconfont">&#xe64a;</em>Android 下载</a>
+                </div>
+              </div>
+            </li>
+            <li id="j_nearRead" data-l2="3">
+              <cite>最近阅读</cite>
+            </li>
+            <li class="quick-nav" data-l2="4">
+              <cite><i class="iconfont">&#xe661;</i>快速导航</cite>
+              <div class="dropdown type-list">
+                <div class="type-box">
+                  <h3>分类频道</h3>
+                  <a href="///xuanhuan" data-eid="qd_R13" target="_blank">玄幻</a>
+                  <a href="///qihuan" data-eid="qd_R14" target="_blank">奇幻</a>
+                  <a href="///wuxia" data-eid="qd_R15" target="_blank">武侠</a>
+                  <a href="///xianxia" data-eid="qd_R16" target="_blank">仙侠</a>
+                  <a href="///dushi" data-eid="qd_R17" target="_blank">都市</a>
+                  <a href="///xianshi" data-eid="qd_R18" target="_blank">现实</a>
+                  <a href="///lishi" data-eid="qd_R20" target="_blank">历史</a>
+                  <a href="///junshi" data-eid="qd_R19" target="_blank">军事</a>
+                  <a href="///youxi" data-eid="qd_R21" target="_blank">游戏</a>
+                  <a href="///tiyu" data-eid="qd_R22" target="_blank">体育</a>
+                  <a href="///kehuan" data-eid="qd_R23" target="_blank">科幻</a>
+                  <a href="///lingyi" data-eid="qd_R24" target="_blank">悬疑灵异</a>
+                  <a href="///2cy" class="ecy" data-eid="qd_R26" target="_blank">二次元</a>
+                  <a href="///finish" data-eid="qd_R27" target="_blank">完本</a>
+                  <a href="//www.qdmm.com" data-eid="qd_R25" target="_blank">女生</a>
+                  <a href="///book/sanjiang" data-eid="qd_R28" target="_blank">三江</a>
+                </div>
+                <div class="type-box">
+                  <h3>其它</h3>
+                  <a href="//write.qq.com/college" data-eid="qd_R29" target="_blank">投稿</a>
+                  <a href="//wwwploy.qiyan.com/HelpCenter/default.aspx?type=0&categoryid=58&parentid=53" data-eid="qd_R30"
+                    target="_blank">签约</a>
+                  <a href="//wwwploy.qiyan.com/ploy/20150520qdsp/theme1.htm" data-eid="qd_R31" target="_blank">福利</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="read-login fr">
+          <ul>
+            <li id="min-search" data-l2="5">
+              <form action="///search" method="get" target="_blank">
+                <input class="submit-input" type="submit" id="searchSubmit" data-eid="qd_R32">
+                <input id="pin-input" class="pin-input hide" name="kw" type="text" placeholder="一品修仙">
+                <label id="pin-search" for="searchSubmit" data-eid="qd_R32"><em class="iconfont"></em></label>
+              </form>
+            </li>
+            <li class="line"></li>
+            <li class="sign-out" data-l2="6">
+              <a id="pin-login" href="javascript:" data-eid="qd_R33">登录</a>
+              <a class="reg" href="//passport.qiyan.com/reg.html?appid=10&areaid=1&target=iframe&ticket=1&auto=1&autotime=30&returnUrl=http%3A%2F%2Fwww.qiyan.com"
+                target="_blank" data-eid="qd_R34">注册</a>
+            </li>
+            <li class="sign-in hidden" data-l2="6">
+              <a href="//me.qiyan.com/Index.aspx" target="_blank" data-eid="qd_R36"><i id="nav-user-name"></i><span></span></a>
+              <div class="dropdown">
+                <a href="//me.qiyan.com/profile/info.aspx" target="_blank" data-eid="qd_R37">账户设置</a>
+                <a href="//me.qiyan.com/account/info.aspx" target="_blank" data-eid="qd_R38">账务中心</a>
+                <a href="//me.qiyan.com/author/authorDoor.aspx" target="_blank" data-eid="qd_R39">作家专区</a>
+                <a id="exit" href="javascript:" data-eid="qd_R40">退出</a>
+              </div>
+            </li>
+            <li data-l2="6"><a href="///charge/meRedirect" target="_blank" data-eid="qd_R35">充值</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="j_bodyRecWrap" class="hidden"></div>
+    <div class="crumbs-nav" data-l1="1">
+
+      <a href="//" target="_blank" data-eid="qd_G01">首页</a><em class="iconfont">&#xe621;</em>
+      <a href="///kehuan" target="_blank" data-chanid="9" id="j_chanId" data-eid="qd_G02">科幻</a><em class="iconfont">&#xe621;</em>
+      <a href="///all?chanId=9&subCateId=251" target="_blank">时空穿梭</a><em class="iconfont">&#xe621;</em>
+
+      <a class="act" href="//book.qiyan.com/info/1013695262" target="_blank" id="bookImg" data-bid="1013695262">{{.tChapter.Name}}</a>
+    </div>
+
+    <div class="read-main-wrap font-family01" style="font-size:18px" id="j_readMainWrap">
+      <div id="j_chapterBox" data-l1="3">
+
+
+        <div class="text-wrap" id="chapter-437383799" data-cid="437383799" data-purl="//read.qiyan.com/chapter/o1gBvOwWEt8uwUjttRcGug2/_L7fcE_DoOq2uJcMpdsVgA2"
+          data-nurl="//read.qiyan.com/chapter/o1gBvOwWEt8uwUjttRcGug2/5MCAuqRVuKzwrjbX3WA1AA2" data-info="0|437358923|437438890|0|0">
+          <div class="main-text-wrap">
+            <div class="text-head">
+              <div class="guide-box">
+                <cite></cite>
+                <p>点击书签后，可收藏每个章节的书签，“阅读进度”可以在个人中心书架里查看</p>
+              </div>
+              <a class="book-mark" href="javascript:" title="书签" data-cid="437383799" data-bid="1013695262" data-auid="403553193"
+                data-eid="qd_R104"></a>
+              <h3 class="j_chapterName">{{.tChapter.Title}}</h3>
+              <div class="text-info cf">
+                <div class="info fl">
+                  <a href="//book.qiyan.com/info/1013695262" target="_blank" data-bid="1013695262" data-auid="403553193"
+                    data-eid="qd_R102"><em class="iconfont">&#xe60c;</em>{{.tChapter.Name}}</a>
+
+                  <a href="//me.qiyan.com/authorIndex.aspx?id=403553193" target="_blank" data-bid="1013695262"
+                    data-auid="403553193" data-eid="qd_R103"><em class="iconfont">&#xe650;</em>{{.tChapter.Title}}</a>
+
+                  <i><em class="iconfont">&#xe64f;</em><span class="j_chapterWordCut">{{.tChapter.Counts}}</span>字</i>
+                  <i><em class="iconfont">&#xe653;</em><span class="j_updateTime">{{.tChapter.Intime}}</span></i>
+                </div>
+              </div>
+            </div>
+            <div class="read-content j_readContent">
+              {{ range $ci,$cobj := .tChapter.Paragraphs }}
+              <p>{{$cobj}}</p>
+              {{end}}　　
+            </div>
+
+            <div class="admire-wrap">
+              <a class="report-btn j_reportBtn" href="javascript:" data-eid="qd_R106"><em class="iconfont">&#xe657;</em>举报</a>
+              <div class="read-btn-box">
+                <a class="admire lang j_admireBtn" href="javascript:" data-showtype="3" data-eid="qd_R105">赞赏<span
+                    class="j_admireNum"></span></a>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter-control dib-wrap" data-l1="3">
+
+        <a id="j_chapterPrev" data-eid="qd_R107" href="//read.qiyan.com/chapter/o1gBvOwWEt8uwUjttRcGug2/_L7fcE_DoOq2uJcMpdsVgA2">上一章</a><span>|</span>
+        <a href="//book.qiyan.com/info/1013695262#Catalog" target="_blank" data-eid="qd_R108">目录</a><span>|</span>
+        <a id="j_chapterNext" href="//read.qiyan.com/chapter/o1gBvOwWEt8uwUjttRcGug2/5MCAuqRVuKzwrjbX3WA1AA2" data-eid="qd_R109">下一章</a>
+      </div>
+
+      <div class="la-ball-pulse j_chapterLoad hidden">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <div class="float-wrap" id="j_floatWrap" data-l1="2">
+    <div class="left-bar-list" id="j_leftBarList">
+      <dl>
+        <dd id="j_navCatalogBtn" data-eid="qd_R42">
+          <a href="javascript:"><i><em class="iconfont">&#xe619;</em><span>目录</span></i></a>
+          <div class="guide-box">
+            <cite></cite>
+            目录
+          </div>
+        </dd>
+        <dd id="j_navSettingBtn">
+          <a href="javascript:"><i><em class="iconfont">&#xe65b;</em><span>设置</span></i></a>
+          <div class="guide-box">
+            <cite></cite>
+            设置
+          </div>
+        </dd>
+        <dd id="j_phoneRead" data-eid="qd_R83">
+          <a href="javascript:"><i><em class="iconfont">&#xe65c;</em><span>手机</span></i></a>
+          <div class="guide-box">
+            <cite></cite>
+            手机阅读
+          </div>
+        </dd>
+        <dd data-eid="qd_R84">
+          <a class="add-book" href="javascript:" data-bookid="1013695262"><i><em class="iconfont">&#xe654;</em><span>书架</span></i></a>
+          <div class="guide-box">
+            <cite></cite>
+            加入书架
+          </div>
+        </dd>
+        <dd data-eid="qd_R85">
+          <a href="//book.qiyan.com/info/1013695262" target="_blank"><i><em class="iconfont">&#xe652;</em><span>书页</span></i></a>
+          <div class="guide-box">
+            <cite></cite>
+            返回书页
+          </div>
+        </dd>
+        <dd id="j_navGameBtn" data-eid="qd_R86">
+
+          <a href="javascript:"><i><em class="iconfont">&#xe65e;</em><span>游戏</span></i></a>
+          <div class="guide-box">
+            <cite></cite>
+            七言游戏
+          </div>
+        </dd>
+
+      </dl>
+    </div>
+    <div class="right-bar-list" id="j_rightBarList">
+      <dl>
+        <dd id="navReward" data-showtype="3" data-aid="qd_R87">
+          <a href="javascript:"><i><em class="iconfont">&#xe635;</em><span>打赏</span></i></a>
+          <div class="guide-box">
+            <cite></cite>
+            打赏
+          </div>
+        </dd>
+        <dd id="navTicket" data-showtype="2" data-aid="qd_R88">
+          <a href="javascript:"><i><em class="iconfont">&#xe65d;</em><span>投票</span></i></a>
+          <div class="guide-box">
+            <cite></cite>
+            投票
+          </div>
+        </dd>
+        <dd id="j_discussHref" data-eid="qd_R89">
+
+          <a href="//forum.qiyan.com/NewForum/List.aspx?forumId=1013695262" target="_blank"><i><em class="iconfont">&#xe658;</em><span>评论</span></i></a>
+          <div class="guide-box">
+            <cite></cite>
+            评论
+          </div>
+        </dd>
+        <dd class="go-top" id="j_goTop" title="返回顶部" data-eid="qd_R90">
+          <a href="javascript:"><i><em class="iconfont">&#xe651;</em></i></a>
+        </dd>
+
+      </dl>
+    </div>
+    <div class="guide-btn-wrap">
+      <a class="guide-btn" id="j_guideBtn" href="javascript:" data-eid="qd_R41">指南</a>
+    </div>
+  </div>
+  <div id="userLevel" class="hidden"></div>
+  <div id="authorId" data-authorid="403553193" class="hidden"></div>
+  <script>
+    //全局的通用数据都放g_data变量里
+    var g_data = {};
+    //环境变量，会按照环境选择性打log
+    g_data.envType = 'pro';
+    //用作统计PV
+    g_data.pageId = 'qd_P_read';
+    //环境域名
+    g_data.domainSearch = '/search';
+    //阅读页配置参数
+    g_data.readSetting = {
+      "t": 0,
+      "ft": 0,
+      "fs": 3,
+      "w": 1,
+      "rt": 0,
+      "autoBuy": 0
+    };
+    g_data.isPublication = false;
+    g_data.salesMode = 1;
+    //书信息
+    g_data.bookInfo = {
+      "bookId": 1013695262,
+      "bookName": '{{.tChapter.Name}}',
+      "authorId": 403553193,
+      "authorName": '{{.tChapter.Name}}'
+    };
+    //非vip章节,背景广告
+
+    g_data.bgOpsInfo = {
+      "id": 1060,
+      "title": "",
+      "adCategoryName": "广告",
+      "colorType": 0,
+      "startTime": 1544752800,
+      "endTime": 1544839200,
+      "type": 1,
+      "isAdv": 1,
+      "adType": 1,
+      "adImgUrl": "//qiyan.qpic.cn/qiyan_common/349573/933c60561e1cc26785191c8aaaace93f/0",
+      "adJumpUrl": "http://cpgame.qd.game.qiyan.com/Home/Index/directLogin/name/xy/way/1?qd_game_key=xy1920x1057&qd_dd_p1=1060",
+      "hasAd": 1
+    };
+
+    //页面初始化章节信息
+    g_data.chapter = {
+      //页面进入加载的章节id
+      id: 437383799,
+      //章节vip标识
+      vipStatus: 0,
+      //上一章id
+      prevId: 437358923,
+      //下一章id
+      nextId: 437438890,
+      //本章节是否已经订阅
+      isBuy: 0
+    };
+    g_data.pageOps = {
+      "id": 5320,
+      "title": "",
+      "adCategoryName": "广告",
+      "colorType": 0,
+      "startTime": 1536458400,
+      "endTime": 1571364000,
+      "type": 1,
+      "isAdv": 1,
+      "adType": 1,
+      "adImgUrl": "//qiyan.qpic.cn/qiyan_common/349573/25f208378c84430d59f18781fb7aa257/0",
+      "adJumpUrl": "http://cpgame.qd.game.qiyan.com/Home/Index/directLogin/name/dmbj/way/1?qd_game_key=dmbj900x60&qd_dd_p1=5320",
+      "hasAd": 1
+    };
+    //页面进入时,下一章是否是vip章节
+    g_data.nextChapterVip = 0;
+    //章节底部广告
+    g_data.bottomOps = {
+      "hasAd": 0
+    };
+    //打赏参数
+    g_data.pageJson = {
+      // 是否是VIP书籍，传入js，在弹窗时需要判断，如果不是VIP看不到月票Tab
+      isVip: 0,
+      // 是否是出版物
+      isPublication: false,
+      //是否已登录，传入js，EJS后加载模板判断是否显示
+      isLogin: 0,
+      //是否签约作品，传入js，EJS后加载模板判断是否显示
+      isSign: 0,
+      //是否要送月票 传入js， EJS后加载模板判断使用
+      noRewardMonthTic: 1,
+      //获得bookId的json格式，传入js，EJS后加载模板中可以直接使用
+      bookId: 1013695262,
+      //获得签约状态，传入js，EJS后加载弹窗下载使用
+      signStatus: '独家首发',
+      //作家专区链接环境变量传入EJS模板
+      mePreFix: '//me.qiyan.com',
+      //讨论区连接环境变量传入EJS模板
+      forumPreFix: '//forum.qiyan.com'
+    };
+    // 区分女生网 && 七言中文网
+    g_data.isWebSiteType = 1;
+  </script>
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+  <script data-ignore="true" src="//qiyan.gtimg.com/lbf/1.1.0/LBF.js?max_age=31536000"></script>
+  <script>
+    // LBF 配置
+    LBF.config({
+      "paths": {
+        "site": "//qiyan.gtimg.com/qd/js",
+        "qd": "//qiyan.gtimg.com/qd",
+        "common": "//qiyan.gtimg.com/common/1.0.0"
+      },
+      "vars": {
+        "theme": "//qiyan.gtimg.com/qd/css"
+      },
+      "combo": true,
+      "debug": false
+    });
+    LBF.use(['lib.jQuery'], function ($) {
+      window.$ = $;
+    });
+  </script>
+  <script>
+    LBF.use(['monitor.SpeedReport', 'qd/js/component/login.a4de6.js', 'qd/js/read.qiyan.com/index.91e04.js'], function (
+      SpeedReport, Login, Index) {
+      // 页面逻辑入口
+      if (Login) {
+        Login.init().always(function () {
+          Index && typeof Index === 'function' && new Index();
+        })
+      }
+      if (219 && 219 != '') {
+        $(window).on('load.speedReport', function () {
+          // speedTimer[onload]
+          speedTimer.push(new Date().getTime());
+          var f1 = 7718, // china reading limited's ID
+            f2 = 219, // site ID
+            f3 = 39; // page ID
+          // chrome & IE9 Performance API
+          SpeedReport.reportPerformance({
+            flag1: f1,
+            flag2: f2,
+            flag3IE: f3,
+            flag3Chrome: f3,
+            rate: 0.1,
+            url: '//isdspeed.qiyan.com/cgi-bin/r.cgi'
+          });
+          // common speedTimer:['dom ready', 'onload']
+          var speedReport = SpeedReport.create({
+            flag1: f1,
+            flag2: f2,
+            flag3: f3,
+            start: speedZero,
+            rate: 0.1,
+            url: '//isdspeed.qiyan.com/cgi-bin/r.cgi'
+          });
+          // chrome & IE9 Performance API range 1~19, common speedTimer use 20+
+          for (var i = 0; i < speedTimer.length; i++) {
+            speedReport.add(speedTimer[i], i + 20)
+          }
+          // http://isdspeed.qq.com/cgi-bin/r.cgi?flag1=7718&flag2=224&flag3=1&1=38&2=38&…
+          speedReport.send();
+        })
+      }
+    });
+    speedTimer.push(new Date().getTime());
+  </script>
+  <script>
+    LBF.use(['lib.jQuery'], function ($) {
+      // 一天内不重复重现
+      if (new Date().getDate() == getCookie('PAGE_DAILY_MODAL')) {
+        return
+      }
+      try {
+        var v = localStorage.getItem('qiyan_PCM_APP_0')
+        if (new Date().getDate() == v) {
+          return
+        }
+      } catch (e) {}
+      setTimeout(function () {
+        $.ajax({
+          url: '/ajax/UserInfo/GetUserInfo?_csrfToken=' + getCookie('_csrfToken'),
+          dataType: 'json',
+        }).done(function (resp) {
+          if (resp.code == 1000) {
+            showModal()
+          }
+          if (resp.code == 0 && resp.data && !resp.data.isLogin) {
+            showModal()
+          }
+        })
+      }, 1000)
+
+      function showModal() {
+        var img = new Image()
+        var qrcodeUrl = '';
+        if (location.href.indexOf('.qiyan.com/chapter') > -1) {
+          // 102
+          qrcodeUrl = 'https://qiyan.qpic.cn/qiyan_common/349573/d43d50ee0d8e366e78e51be4ffadd5f7/0'
+          img.src = 'https://qdp.qiyan.com/qreport?' + $.param({
+            path: 'pclog',
+            ltype: 'P',
+            url: location.href,
+            title: document.title,
+            pid: 'qd_P_read',
+            l1: 19,
+            eid: 'qd_R127',
+            isQD: true,
+            cname: 'QDpclog'
+          })
+        } else if (location.href.indexOf('book.qiyan.com/info/') > -1) {
+          // 101
+          qrcodeUrl = 'https://qiyan.qpic.cn/qiyan_common/349573/cbb1324d36675c91cee6c68160289179/0'
+          img.src = 'https://qdp.qiyan.com/qreport?' + $.param({
+            path: 'pclog',
+            ltype: 'P',
+            url: location.href,
+            title: document.title,
+            pid: 'qd_P_xiangqing',
+            l1: 19,
+            eid: 'qd_G116',
+            isQD: true,
+            cname: 'QDpclog'
+          })
+        } else {
+          // 100
+          // qrcodeUrl = 'https://qiyan.qpic.cn/qiyan_common/349573/5dd35a6aab6dcebc411e15d8934f029b/0'
+          // img.src = 'https://qdp.qiyan.com/qreport?' + $.param({
+          //     path: 'pclog',
+          //     ltype: 'P',
+          //     url: location.href,
+          //     title: document.title,
+          //     pid: 'qd_p_qiyan',
+          //     l1: 41,
+          //     eid: 'qd_A197',
+          //     isQD: true,
+          //     cname: 'QDpclog'
+          // })
+          return;
+        }
+        var $modalBg = $(
+          "<div style='background: rgba(0,0,0,0.4);position: fixed;left:0;right:0;top:0;bottom:0;z-index:9999;'>"
+        );
+        var $modalDialog = $(
+          "<div style='width: 426px; height: 644px; background: url(https://qiyan.qpic.cn/qiyan_common/349573/0d31d4fc9b79d5361e8800ad62e11f4e/0); background-repeat: no-repeat; background-position: 50% 0; background-size: contain; position: absolute;left:0;right:0;top:70px;margin: auto;z-index: 9999;'>"
+        );
+        var $QRCode = $("<img src='" + qrcodeUrl +
+          "' style='position: absolute; width:120px; height: 120px; top: 343px; left: 50%; margin-left: -60px; z-index:9999;'>"
+        );
+        var $closeBtn = $(
+          "<div style='width: 60px; height: 60px; background: url(https://qiyan.qpic.cn/qiyan_common/349573/75d219eb067fae4345538fb91edf0ad4/0); background-repeat: no-repeat; background-position: 50% 50%; background-size: contain;position:absolute; top:0; right: 0;margin: auto;cursor: pointer;'>"
+        )
+        $modalDialog.append($QRCode)
+        $modalDialog.append($closeBtn)
+        $closeBtn.click(function () {
+          $modalBg.remove()
+          $modalDialog.remove()
+          setCookie('PAGE_DAILY_MODAL', new Date().getDate(), 5);
+        })
+        $(document.body).append($modalBg)
+        $(document.body).append($modalDialog)
+      }
+
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; domain=.qiyan.com; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        localStorage.setItem('qiyan_PCM_APP_0', value)
+      }
+
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+    });
+  </script>
+  <script>
+    var _mtac = {};
+    (function () {
+      var mta = document.createElement("script");
+      mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.2";
+      mta.setAttribute("name", "MTAH5");
+      mta.setAttribute("sid", "500451537");
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(mta, s);
+    })();
+  </script>
+
+  <script>
+    LBF.use(['lib.jQuery'], function ($) {
+      if (new Date().getDate() == getCookie('READ_DAILY_MODAL')) {
+        return
+      }
+      try {
+        var v = localStorage.getItem('qiyan_PCM_APP_1')
+        if (new Date().getDate() == v) {
+          return;
+        }
+      } catch (e) {}
+      setTimeout(function () {
+        $.ajax({
+          url: '/ajax/UserInfo/GetUserInfo?_csrfToken=' + getCookie('_csrfToken'),
+          dataType: 'json',
+        }).done(function (resp) {
+          if (resp.code == 1000) {
+            showModal()
+          }
+          if (resp.code == 0 && resp.data && !resp.data.isLogin) {
+            showModal()
+          }
+        })
+      }, 1000)
+
+      function showModal() {
+        var $ad = $(
+          '<span  style="display: inline-block;width: 150px; height: 291px; background: url(https://qiyan.qpic.cn/qiyan_common/349573/7ecf3bfddb49949c9c63e440082e9e39/0); background-repeat: no-repeat; background-position: 50% 0; background-size: contain; position: absolute; left: 50%; margin-left: 400px; top: -6px; ">'
+        )
+        var $closeAd = $(
+          '<span style="display: inline-block; top: -15px; right: -15px; width: 30px; position: absolute; height: 30px;">'
+        )
+        var $QRCode = $(
+          "<img src='https://qiyan.qpic.cn/qiyan_common/349573/9e92bc17635719cf1b173ab864658be1/0' style='position: absolute; width:120px; height: 120px; top: 100px; left: 50%; margin-left: -60px; z-index:9999;'>"
+        );
+        $ad.append($QRCode)
+        $ad.append($closeAd)
+        $('#j_readMainWrap')
+          .append($ad)
+        $closeAd.click(function () {
+          $ad.remove()
+          setCookie('READ_DAILY_MODAL', new Date().getDate(), 5);
+        })
+        var img = new Image()
+        img.src = 'https://qdp.qiyan.com/qreport?' + $.param({
+          path: 'pclog',
+          ltype: 'P',
+          url: location.href,
+          title: document.title,
+          pid: 'qd_P_read',
+          l1: 9,
+          eid: 'qd_R128',
+          isQD: true,
+          cname: 'QDpclog'
+        })
+      }
+
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; domain=.qiyan.com; expires=" + date.toGMTString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        localStorage.setItem('qiyan_PCM_APP_1', value)
+      }
+
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+    })
+  </script>
+  <script src="/static/js/analytics-4bf8.js"></script>
+  <script src="/static/js/nr-spa-1071.min.js"></script>
+  <script src="/static/js/common-head-f2f5.js"></script>
+  <script src="/static/js/boomerang.js"></script>
+  <script src="/static/js/vendors-06f3.js"></script>
+
+  <script>
+    //全局的通用数据都放g_data变量里
+    var g_data = {};
+    //环境变量，会按照环境选择性打log
+    g_data.envType = 'pro';
+    //用作统计PV
+    g_data.pageId = 'qd_P_read';
+    //环境域名
+    g_data.domainSearch = 'www.qiyan.com/search';
+    //阅读页配置参数
+    g_data.readSetting = {
+      "t": 0,
+      "ft": 0,
+      "fs": 3,
+      "w": 1,
+      "rt": 0,
+      "autoBuy": 0
+    };
+    g_data.isPublication = false;
+    g_data.salesMode = 1;
+    //书信息
+    g_data.bookInfo = {
+      "bookId": 1013695262,
+      "bookName": '书名随缘',
+      "authorId": 403553193,
+      "authorName": '背剑游江湖'
+    };
+    //非vip章节,背景广告
+
+    g_data.bgOpsInfo = {
+      "id": 600,
+      "title": "",
+      "adCategoryName": "广告",
+      "colorType": 0,
+      "startTime": 1544666400,
+      "endTime": 1544752800,
+      "type": 1,
+      "isAdv": 1,
+      "adType": 1,
+      "adImgUrl": "//qiyan.qpic.cn/qidian_common/349573/aebdb12749c5d9f0dde7b709c7066637/0",
+      "adJumpUrl": "http://cpgame.qd.game.qiyan.com/Home/Index/directLogin/name/gs/way/1?qd_game_key=gs1920x1057&qd_dd_p1=600",
+      "hasAd": 1
+    };
+
+    //页面初始化章节信息
+    g_data.chapter = {
+      //页面进入加载的章节id
+      id: 437446063,
+      //章节vip标识
+      vipStatus: 0,
+      //上一章id
+      prevId: 437438890,
+      //下一章id
+      nextId: -1,
+      //本章节是否已经订阅
+      isBuy: 0
+    };
+    g_data.pageOps = {
+      "id": 5320,
+      "title": "",
+      "adCategoryName": "广告",
+      "colorType": 0,
+      "startTime": 1536458400,
+      "endTime": 1571364000,
+      "type": 1,
+      "isAdv": 1,
+      "adType": 1,
+      "adImgUrl": "//qiyan.qpic.cn/qidian_common/349573/25f208378c84430d59f18781fb7aa257/0",
+      "adJumpUrl": "http://cpgame.qd.game.qiyan.com/Home/Index/directLogin/name/dmbj/way/1?qd_game_key=dmbj900x60&qd_dd_p1=5320",
+      "hasAd": 1
+    };
+    //页面进入时,下一章是否是vip章节
+    g_data.nextChapterVip = 0;
+    //章节底部广告
+    g_data.bottomOps = {
+      "hasAd": 0
+    };
+    //打赏参数
+    g_data.pageJson = {
+      // 是否是VIP书籍，传入js，在弹窗时需要判断，如果不是VIP看不到月票Tab
+      isVip: 0,
+      // 是否是出版物
+      isPublication: false,
+      //是否已登录，传入js，EJS后加载模板判断是否显示
+      isLogin: 0,
+      //是否签约作品，传入js，EJS后加载模板判断是否显示
+      isSign: 0,
+      //是否要送月票 传入js， EJS后加载模板判断使用
+      noRewardMonthTic: 1,
+      //获得bookId的json格式，传入js，EJS后加载模板中可以直接使用
+      bookId: 1013695262,
+      //获得签约状态，传入js，EJS后加载弹窗下载使用
+      signStatus: '独家首发',
+      //作家专区链接环境变量传入EJS模板
+      mePreFix: '//me.qiyan.com',
+      //讨论区连接环境变量传入EJS模板
+      forumPreFix: '//forum.qiyan.com'
+    };
+    // 区分女生网 && 起点中文网
+    g_data.isWebSiteType = 1;
+  </script>
+  <script src="/static/js/LBF.js"></script>
+  <script>
+    // LBF 配置
+    LBF.config({
+      "paths": {
+        "site": "/qd/js",
+        "qd": "/qd",
+        "common": "/static"
+      },
+      "vars": {
+        "theme": "/qd/css"
+      },
+      "combo": true,
+      "debug": true
+    });
+    LBF.use(['lib.jQuery'], function ($) {
+      window.$ = $;
+    });
+  </script>
+  <script>
+    LBF.use(['monitor.SpeedReport', 'qd/js/component/login.a4de6.js', 'qd/js/book_details/index.55dc5.js'], function (
+      SpeedReport, Login, Index) {
+      // 页面逻辑入口
+      new Index();
+      return;
+      if (Login) {
+        Login.init().always(function () {
+          Index && typeof Index === 'function' && new Index();
+        })
+      }
+    });
+    speedTimer.push(new Date().getTime());
+  </script>
+
+</body>
+
+</html>

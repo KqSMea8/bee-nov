@@ -9,15 +9,25 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="icon" href="../../../../favicon.ico">
 
-  <title></title>
+  <title>大超·的七'言</title>
   <link href="/static/css/mescroll.css" />
   <!-- Bootstrap core CSS -->
-  <link href="/static/css/bootstrap.css" rel="stylesheet">
-  <script src="/static/js/jquery-3.3.1.js"></script>
-
+  <link href="/static/css/app-responsive.css" rel="stylesheet" />
+  <link href="/static/css/lohp-42b3.css" rel="stylesheet" />
   <!-- Custom styles for this template -->
-  <link href="/static/css/carousel.css" rel="stylesheet">
+  <script src="/static/js/jquery-3.3.1.js"></script>
+  <script src="/static/js/vendor/holder.min.js"></script>
+  <script src="/static/js/mescroll.js"></script>
   <style>
+    .img{
+      pointer-events: none;
+      user-drag: none; 
+user-select: none;
+-moz-user-select: none;
+-webkit-user-drag: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+    }
     .card{
           padding:0;
           border-radius: 0;
@@ -54,186 +64,261 @@
 </head>
 
 <body>
-
   {{template "header.html" .}}
+  <div class="main-container" style="margin-top: 5px">
+    <div class="body-content">
+      <!---->
+      <section class="hero w-12 t-hero" style="background-color: #194f3b;">
+        <div class="overlay h-100 w-12">
+          
+          <div class="w-12">
+            <div class="container">
+              <div class="h3 tagline">
+                <strong>故事由此开篇。</strong>
+                <h1 class="subhead h4">发现超过 十万 本免费小说, 影片和歌曲。</h1>
+              </div>
+              <div class="search-holder w-12 js_header hidden-xs">
+                <div class="search-bar">
+                  <div class="search-form-wrapper clearfix">
+                    <form method="GET" action="/search" class="search-form search-form-large form-emphasis pull-left js_main-search-form">
+                      <input type="hidden" name="search_source" value="base_landing_page">
+                      <input type="hidden" name="language" value="zh">
+                      <div class="input-group">
+                        <div class="search-field-wrapper">
+                          <input class="form-control search-field js-typeahead js_search-field js-initial-focus" type="search"
+                            name="searchterm" value="" data-media-type="all" data-track="click.searchBar.textField-large"
+                            maxlength="2000" placeholder="搜索库存图片、矢量图、视频和音乐" autocomplete="off">
+                          <div class="js_suggestible typeahead dropdown-menu" role="listbox" style="display: none;"></div>
+                        </div>
+                        <div class="input-group-addon ris-camera-group">
 
-  <main role="main" style="margin:0  10%" id="mainbody">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        {{ range $ik, $bk := .BkList }}
-        {{ if eq $ik 0}}
-        <li data-target="#myCarousel" data-slide-to="{{$ik}}" class="active"></li>
-        {{ else}}
-        <li data-target="#myCarousel" data-slide-to="{{$ik}}"></li>
-        {{end}}
-        {{end}}
-        </li>
-      </ol>
-      <div class="carousel-inner">
-        {{ range $ik, $bk := .BkList }}
-        {{ if eq $ik 0}}
-        <div class="carousel-item active inline-block">
-          {{ else}}
-          <div class="carousel-item inline-block">
+                          <span id="reverse-image-camera" data-track="click.reverseImageSearch.cameraIcon" class="hidden-xs hidden-mo sstk-icon icon-reverse-search js_ris-cta"
+                            title="" data-original-title="<strong>新推出！</strong><br /> 利用图片代替文本在 Shutterstock 进行搜索，以发现类似图片。">
+                          </span>
+
+                        </div>
+                        <div class="dropdown dropdown-content-type-search input-group-addon js_dropdown-content-type">
+                          <input class="search-media-type-input js_search_media_type" type="hidden" name="image_type"
+                            value="all">
+                          <span class="dropdown-toggle" role="button" data-toggle="dropdown" id="dropdown-label-content-type-search"
+                            data-track="click.searchBar.expand-large" aria-haspopup="true" aria-expanded="false">
+                            <span class="js_dropdown-label-content-type">
+                              所有图片
+                            </span>
+                            <span class="caret"></span>
+                          </span>
+                          <ul class="dropdown-menu" aria-labelledby="dropdown-label-content-type-search">
+                            <li data-content-type="all" data-action="/search" data-placeholder="搜索我们的图片库">
+                              <a class="dropdown-item-link" data-track="click.searchBar.allImages-large">所有图片</a>
+                            </li>
+                            <li data-content-type="photo" data-action="/search" data-placeholder="搜索我们的照片">
+                              <a class="dropdown-item-link dropdown-item-link-sub" data-track="click.searchBar.imagesPhotos-large">照片</a>
+                            </li>
+                            <li data-content-type="vector" data-action="/search" data-placeholder="搜索我们的矢量图">
+                              <a class="dropdown-item-link dropdown-item-link-sub" data-track="click.searchBar.imagesVectors-large">矢量图</a>
+                            </li>
+                            <li data-content-type="illustration" data-action="/search" data-placeholder="搜索我们的插图">
+                              <a class="dropdown-item-link dropdown-item-link-sub" data-track="click.searchBar.imagesIllustrations-large">插图</a>
+                            </li>
+                            <li data-content-type="editorial" data-action="/editorial/search" data-placeholder="搜索我们的编辑精选图片库">
+                              <a class="dropdown-item-link" data-track="click.searchBar.editorial-large">编辑</a>
+                            </li>
+                            <li data-content-type="video" data-action="https://www.shutterstock.com/video/search"
+                              data-placeholder="搜索我们的库存视频">
+                              <a class="dropdown-item-link" data-track="click.searchBar.video-large">影片</a>
+                            </li>
+                            <li data-content-type="music" data-action="https://www.shutterstock.com/music/search"
+                              data-placeholder="搜索我们的库存音乐库">
+                              <a class="dropdown-item-link" data-track="click.searchBar.music-large">音乐</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <span class="input-group-btn">
+                          <button class="btn btn-primary" data-track="click.searchBar.submitButton-large" type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                          </button>
+                        </span>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="callout w-12 bar text-center" style="background-color:transparent">
+          </div>
+        </div>
+        <div class="hero-img h-100 w-12 js-load-image loaded" data-image="/static/img/mainbg.jpg"
+          style="background-image: url(&quot;/static/img/mainbg.jpg&quot;);"></div>
+      </section>
+
+      <!--分类-->
+      <section class="module px-5 py-5" 　style="margin:0 10% !important;">
+        <div class="container">
+          <h3 class="h4 title">
+            为您下一个项目搜集丰富的材
+          </h3>
+          <div class="inner-module-wrap row-tight">
+            {{range $cti, $ctobj := .CategoryList}}
+            <div class="inner-module photos col-xs-4 col-sm-3 ">
+              <a class="a" data-track="click.contentType.photos" href="{{$ctobj.Urll}}">
+                <div class="img-wrap gradient">
+                  <img class="img w-12" src="{{$ctobj.Image}}">
+                  <img class="icon" src="/static/img/icon_photos_2x-426d69c500.png">
+                </div>
+                <h4 class="h5 subtitle bold">
+                  {{$ctobj.Name}}
+                </h4>
+                <p class="description hidden-xs small">
+                  {{$ctobj.Profile}}
+                </p>
+              </a>
+            </div>
             {{end}}
-            <div class="row d-flex p-3">
-              <div class="col-md-7">
-                <div>
-                  <td>
-                    <font>书名： {{$bk.Name}}</font>
-                  </td>
-                </div>
-                <div>
-                  <td>
-                    <font>作者： {{$bk.Author}}</font>
-                  </td>
-                </div>
-                <div>
-                  <td style="width:80%">
-                    <font>简介： {{$bk.Profile}}</font>
-                  </td>
-                  <td>
-                  </td>
+          </div>
+        </div>
+      </section>
+
+      <!-- choose -->
+      <section class="module  px-5 py-5 hidden-mo t-free-images">
+        <div class="container">
+          <h3 class="h4 title">
+            自由算则
+          </h3>
+          <div class="inner-module-wrap row-tight" id="mediv">
+
+            {{ range $ik, $bk := .BkList }}
+            <div class="inner-module col-md-3 col-xl-2 col-xs-6 col-sm-4 ">
+              <div class="w-12">
+                <img draggable="false" data-src="holder.min.js/100px250?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
+                  style="object-fit:fill;width:100%;height:250px;" src="/static/image/00cb10bb3a98f37f75e53a0758730e7f.jpg"
+                  alt="加载封面">
+                <div class="p-1">
+                  <font class="text-body smallleft">{{$bk.Name}}</font>
+                  <font class="text-body  middleright">({{$bk.Author}})</font>
+                  <small class="text-success smallright">{{$bk.Numbers}}字</small>
+                  <a class="btn btn-sm btn-success smallright" id="{{$bk.ID}}" href="/book/{{$bk.ID}}">步入</a>
                 </div>
               </div>
-              <img style="height: 400px;width: 100%; object-fit: scale-down;" class="col-lg-3 col-md-4 col-xs-10" src="/static/image/{{$bk.Image}}"
-                onload="function a(){alert('loggg')}"></img>
             </div>
-          </div>
-          {{end}}
-        </div>
-      </div>
+            {{end}}
 
-
-      <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-
-      <div class="album row bg-light" id="mediv">
-        {{ range $ik, $bk := .BkList }}
-        <!-- it -->
-        <div class="col-md-6 col-xs-12 col-lg-4 col-xl-3 col-sm-12">
-          <div class="card m-2">
-            <img data-src="holder.min.js/100px250?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" style="object-fit:fill;width:100%;height:250px;"
-              src="/static/image/bk.Image" alt="加载封面">
-            <div class="p-1">
-              <font class="text-body smallleft">{{$bk.Name}}</font>
-              <font class="text-body  middleright">({{$bk.Author}})</font>
-              <small class="text-success smallright">{{$bk.Numbers}}字</small>
-              <button type="button" class="btn btn-sm btn-success smallright">步入</button>
-            </div>
           </div>
         </div>
-        {{end}}
-      </div>
-      <div>
+      </section>
 
-        <script>
-          $(function () {
-            var mescroll = new MeScroll("body", { //第一个参数"mescroll"对应上面布局结构div的id (1.3.5版本支持传入dom对象)
-              up: {
-                auto: true,
-                isBoth: true,
-                callback: upCallback, //上拉加载回调,简写callback:function(page){upCallback(page);}
-                //以下是一些常用的配置,当然不写也可以的.
-                page: {
-                  num: 0, //当前页 默认0,回调之前会加1; 即callback(page)会从1开始
-                  size: 6, //每页数据条数,默认10
-                },
-                htmlNodata: '<p class="upwarp-nodata">亲,没有更多数据了~</p>',
-                noMoreSize: 2, //如果列表已无数据,可设置列表的总数量要大于5才显示无更多数据;避免列表数据过少(比如只有一条数据),显示无更多数据会不好看.这就是为什么无更多数据 有时候不显示的原因了.
+    </div>
 
-                lazyLoad: {
-                  use: true, // 是否开启懒加载,默认false
-                  attr: '/static/img/mlab.png', // 网络图片地址的属性名 (图片加载成功会自动移除改属性): <img imgurl='网络图  src='占位图''/>
-                  offset: 1500 // 超出可视区域多少px的图片仍可触发懒加载 默认200. 目的是提前加载可视区域外的部分图片
-                }
-              }
-            });
-            //上拉加载的回调 page = {num:1, size:10}; num:当前页 从1开始, size:每页数据条数
-            function upCallback(page) {
-              console.log(page);
-              if (page.num > 3) {
-                mescroll.endErr();
-                return;
-              }
-              $.ajax({
-                url: 'bkloader?num=' + page.num + "&size=" + page.size,
-                success: function (curPageData) {
-                  console.log(curPageData);
-                  console.log(curPageData.length);
-                  mescroll.endByPage(curPageData.length, curPageData.totalPage);
-                  setListData(curPageData, true);
-                },
-                error: function () {
-                  mescroll.endErr();
-                }
-              });
-            }
 
-            /*设置列表数据*/
-            function setListData(curPageData, isAppend) {
-              var listDom = document.getElementById("mediv");
-              for (var i = 0; i < curPageData.length; i++) {
-                var newObj = curPageData.BkList[i];
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
 
-                //var str='<p>'+newObj.title+'</p>';
-                //str+='<p class="new-content">'+newObj.content+'</p>';
-                //var liDom=document.createElement("li");
-                //liDom.innerHTML=str;
-
-                if (isAppend) {
-                  console.log('isappend')
-                  $("#mediv").append(
-                    '<div class="col-md-6 col-xs-12 col-lg-4 col-xl-3 col-sm-12">\
-          <div class="card m-2">\
-            <img data-src="holder.min.js/100px250?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" style="object-fit:fill;width:100%;height:250px;"\
-              src="/static/image/' +
-                    "a.png" +
-                    '" alt="加载封面">\
-            <div class="p-1">\
-              <font class="text-body smallleft">' +
-                    newObj.Name +
-                    '</font>\
-              <font class="text-body  middleright">(' + newObj.Author +
-                    ')</font>\
-              <small class="text-success smallright">' + newObj.Numbers +
-                    '字</small>\
-              <button type="button" class="btn btn-sm btn-success smallright">步入</button>\
-            </div>\
-          </div>\
-        </div>'
-                  );
-
-                  //listDom.appendChild(liDom);//加在列表的后面,上拉加载
-                } else {
-                  console.log('not append')
-                  listDom.insertBefore(liDom, listDom.firstChild); //加在列表的前面,下拉刷新
-                }
-              }
-            }
-          });
-        </script>
-      </div>
-
-  </main>
-  <!-- FOOTER -->
+  </div> <!-- FOOTER -->
   <footer class="container">
     <p class="float-right"><a href="#">Back to top</a></p>
     <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
   </footer>
-  <!-- Bootstrap core JavaScript
-    ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
+  <script>
+    function gobook(bk) {
+      console.log(bk.id)
 
+    }
+    $(function () {
+      var mescroll = new MeScroll("body", { //第一个参数"mescroll"对应上面布局结构div的id (1.3.5版本支持传入dom对象)
+        up: {
+          auto: true,
+          isBoth: true,
+          callback: upCallback, //上拉加载回调,简写callback:function(page){upCallback(page);}
+          //以下是一些常用的配置,当然不写也可以的.
+          page: {
+            num: 0, //当前页 默认0,回调之前会加1; 即callback(page)会从1开始
+            size: 6, //每页数据条数,默认10
+          },
+          htmlNodata: '<p class="upwarp-nodata">亲,没有更多数据了~</p>',
+          noMoreSize: 2, //如果列表已无数据,可设置列表的总数量要大于5才显示无更多数据;避免列表数据过少(比如只有一条数据),显示无更多数据会不好看.这就是为什么无更多数据 有时候不显示的原因了.
 
+          lazyLoad: {
+            use: true, // 是否开启懒加载,默认false
+            attr: '/static/img/mlab.png', // 网络图片地址的属性名 (图片加载成功会自动移除改属性): <img imgurl='网络图  src='占位图''/>
+            offset: 1500 // 超出可视区域多少px的图片仍可触发懒加载 默认200. 目的是提前加载可视区域外的部分图片
+          }
+        }
+        ,down: {
+          use: false, // 是否启用上拉加载; 默认true
+      auto: false, // 是否在初始化完毕之后自动执行上拉加载的回调; 默认true
+      isLock: true, // 是否锁定上拉加载,默认false;
+      isBoth: false, // 上拉加载时,如果滑动到列表顶部是否可以同时触发下拉刷新;默认false,两者不可同时触发;
+      isBounce: true, // 是否允许ios的bounce回弹;默认true,允许; 如果设置为false,则除了mescroll, mescroll-touch, mescroll-touch-x, mescroll-touch-y能够接收touchmove事件,其他部分均无法滑动,能够有效禁止bounce
+      callback: null
+			}});
+      //上拉加载的回调 page = {num:1, size:10}; num:当前页 从1开始, size:每页数据条数
+      function upCallback(page) {
+        console.log(page);
+        if (page.num > 3) {
+          mescroll.endErr();
+          return;
+        }
+        $.ajax({
+          url: 'bkloader?num=' + page.num + "&size=" + page.size,
+          success: function (curPageData) {
+            console.log(curPageData);
+            console.log(curPageData.length);
+            mescroll.endByPage(curPageData.length, curPageData.totalPage);
+            setListData(curPageData, true);
+          },
+          error: function () {
+            mescroll.endErr();
+          }
+        });
+      }
 
-  <script src="/static/js/jquery-3.3.1.js"></script>
-  <script src="/static/js/mescroll.js"></script>
-  <script src="/static/js/vendor/popper.min.js"></script>
-  <script src="/static/js/bootstrap.js"></script>
+      /*设置列表数据*/
+      function setListData(curPageData, isAppend) {
+        var listDom = document.getElementById("mediv");
+        for (var i = 0; i < curPageData.length; i++) {
+          var newObj = curPageData.BkList[i];
+
+          //var str='<p>'+newObj.title+'</p>';
+          //str+='<p class="new-content">'+newObj.content+'</p>';
+          //var liDom=document.createElement("li");
+          //liDom.innerHTML=str;
+
+          if (isAppend) {
+            console.log('isappend')
+            $("#mediv").append(
+              '<div class="inner-module col-md-3 col-xl-2 col-xs-6 col-sm-4  ">\
+              <div class="w-12">\
+                  <img data-src="holder.min.js/100px250?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" style="object-fit:fill;width:100%;height:250px;"\
+                  src="/static/image/00cb10bb3a98f37f75e53a0758730e7f.jpg" alt="加载封面">\
+                <div class="p-1">\
+                  <font class="text-body smallleft">' +
+              newObj.Name +
+              '</font>\
+                  <font class="text-body  middleright">(' + newObj.Author +
+              ')</font>\
+                  <small class="text-success smallright">' + newObj.Numbers +
+              '字</small>\
+                  <button type="button" class="btn btn-sm btn-success smallright">步入</button>\
+                </div>\
+            </div>\
+            </div>'
+            );
+
+            //listDom.appendChild(liDom);//加在列表的后面,上拉加载
+          } else {
+            console.log('not append')
+            listDom.insertBefore(liDom, listDom.firstChild); //加在列表的前面,下拉刷新
+          }
+        }
+      }
+    });
+  </script>
+  <script src="/static/js/boomerang.js"></script>
+  <script src="/static/js/vendors-06f3.js"></script>
+  <script src="/static/js/app-d19f.js"></script>
   <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-  <script src="/static/js/vendor/holder.min.js"></script>
 </body>
 
 </html>

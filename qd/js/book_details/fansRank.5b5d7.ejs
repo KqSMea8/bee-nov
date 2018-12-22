@@ -1,0 +1,60 @@
+<% if(code == 0 ) { %>
+<div class="fans-rank-list">
+    <div class="rank-list">
+        <h3 class="wrap-title lang"><a class="blue" href="<%= g_data.domain %>/fansrank/<%= bookId %>" target="_blank" data-eid="qd_G71">更多<em class="iconfont">&#xe621;</em></a>粉丝排行榜</h3>
+        <div class="book-list">
+            <ul>
+                <% //获取粉丝排行榜数据
+                var fansRank = data.fansRank;
+                var count = 0;
+                var avatar = '';
+                var href = '';
+                for(var i=0; i < fansRank.length-7; i++) {
+                    if(fansRank[i].avatar == ''){
+                        href = 'javascript:'
+                        target = '';
+                        avatar = g_data.staticPath +'/images/ico/user.f22d3.png';
+                    } else {
+                        avatar = fansRank[i].avatar;
+                        target = 'target=_blank';
+                        href = mePreFix +'/friendIndex.aspx?id='+fansRank[i].userId;
+                    }
+                %>
+                <li class="top" data-rid="<%=i+1%>">
+                    <div class="num-box"><span class="num<%=i+1%>"><%=i+1%></span></div>
+                    <div class="top-name-box">
+                        <h4><a href="<%=href%>" class="name" <%=target%> data-eid="qd_G50" title="<%=fansRank[i].userName%>"><%=fansRank[i].userName%></a></h4>
+                        <p><span><%=fansRank[i].fansValue%></span>粉丝值</p>
+                    </div>
+                    <div class="fans-img">
+                        <a href="<%=href%>" <%=target%> data-eid=""><img src="<%=avatar%>"></a>
+                        <span class="user-level lv<%=fansRank[i].fansLevel%>"></span>
+                    </div>
+                </li>
+                <% } %>
+
+                <%
+                for(var i=3; i < fansRank.length; i++) {
+                if(fansRank[i].avatar == ''){
+                    href = 'javascript:'
+                    target = '';
+                    avatar = g_data.staticPath +'/images/ico/user.f22d3.png';
+                } else {
+                    target = 'target=_blank';
+                    avatar = fansRank[i].avatar;
+                    href = mePreFix +'/friendIndex.aspx?id='+fansRank[i].userId;
+                }
+                %>
+                <li data-rid="<%=i+1 %>">
+                    <div class="num-box"><span class="num<%=i+1 %>"><%=i+1 %></span></div>
+                    <div class="name-box">
+                        <a class="name" href="<%=href%>" <%=target%> title="<%=fansRank[i].userName%>" data-eid="qd_G50"><%=fansRank[i].userName%></a>
+                        <i class="total"><%=fansRank[i].fansValue%></i>
+                    </div>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</div>
+<% } %>

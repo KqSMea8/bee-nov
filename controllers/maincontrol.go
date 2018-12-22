@@ -48,7 +48,7 @@ type MainController struct {
 func (c *MainController) Get() {
 	c.Data["Website"] = "beego.me"
 	c.Data["Email"] = "astaxie@gmail.com"
-	c.Data["Category"] = models.Category
+	c.Data["CategoryList"] = models.CategoryList
 	if bklist, err := models.FirstByCount(3); err == nil {
 		c.Data["BkList"] = bklist
 		for x, y := range *bklist {

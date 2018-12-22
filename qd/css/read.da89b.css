@@ -1,0 +1,5681 @@
+@charset 'UTF-8';
+
+html {
+  min-width: 0
+}
+
+.user-level.lv0 {
+  width: 30px;
+  height: 16px;
+  background-image: url(/qd/images/common/common_sprite.005cf.png);
+  background-repeat: no-repeat;
+  background-position: -194px -162px;
+  background-size: 358px
+}
+
+.user-level.lv1 {
+  width: 30px;
+  height: 16px;
+  background-image: url(/qd/images/common/common_sprite.005cf.png);
+  background-repeat: no-repeat;
+  background-position: -226px -162px;
+  background-size: 358px
+}
+
+.user-level.lv2 {
+  width: 30px;
+  height: 16px;
+  background-image: url(/qd/images/common/common_sprite.005cf.png);
+  background-repeat: no-repeat;
+  background-position: -162px -162px;
+  background-size: 358px
+}
+
+.user-level.lv3 {
+  width: 30px;
+  height: 16px;
+  background-image: url(/qd/images/common/common_sprite.005cf.png);
+  background-repeat: no-repeat;
+  background-position: -322px -162px;
+  background-size: 358px
+}
+
+.user-level.lv4 {
+  width: 30px;
+  height: 16px;
+  background-image: url(/qd/images/common/common_sprite.005cf.png);
+  background-repeat: no-repeat;
+  background-position: -162px -180px;
+  background-size: 358px
+}
+
+.user-level.lv5 {
+  width: 30px;
+  height: 16px;
+  background-image: url(/qd/images/common/common_sprite.005cf.png);
+  background-repeat: no-repeat;
+  background-position: -194px -180px;
+  background-size: 358px
+}
+
+.user-level.lv6 {
+  width: 30px;
+  height: 16px;
+  background-image: url(/qd/images/common/common_sprite.005cf.png);
+  background-repeat: no-repeat;
+  background-position: -226px -180px;
+  background-size: 358px
+}
+
+.user-level.lv7 {
+  width: 30px;
+  height: 16px;
+  background-image: url(/qd/images/common/common_sprite.005cf.png);
+  background-repeat: no-repeat;
+  background-position: -258px -180px;
+  background-size: 358px
+}
+
+.user-level.lv8 {
+  width: 30px;
+  height: 16px;
+  background-image: url(/qd/images/common/common_sprite.005cf.png);
+  background-repeat: no-repeat;
+  background-position: -290px -180px;
+  background-size: 358px
+}
+
+.user-level.lv9 {
+  width: 30px;
+  height: 16px;
+  background-image: url(/qd/images/common/common_sprite.005cf.png);
+  background-repeat: no-repeat;
+  background-position: -322px -180px;
+  background-size: 358px
+}
+
+.user-level.lv10 {
+  width: 30px;
+  height: 16px;
+  background-image: url(/qd/images/common/common_sprite.005cf.png);
+  background-repeat: no-repeat;
+  background-position: -258px -162px;
+  background-size: 358px
+}
+
+.author-tag {
+  width: 30px;
+  height: 16px;
+  background-image: url(/qd/images/common/common_sprite.005cf.png);
+  background-repeat: no-repeat;
+  background-position: -290px -162px;
+  background-size: 358px
+}
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -khtml-user-select: none
+}
+
+.read-header {
+  position: relative;
+  z-index: 104;
+  height: 60px;
+  margin-bottom: 16px;
+  background: #fafafa;
+  background: rgba(255, 255, 255, .4)
+}
+
+.read-header .wrap-center {
+  min-width: 800px;
+  max-width: 1200px;
+  height: 60px;
+  margin-right: auto;
+  margin-left: auto
+}
+
+.left-nav .logo {
+  float: left;
+  padding: 0
+}
+
+.left-nav .logo .logo-ico {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-top: 14px;
+  border-radius: 5px;
+  background-image: url(/qd/images/common/logo.d41d3.png);
+  background-repeat: no-repeat
+}
+
+.left-nav .logo .mm-logo-ico {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-top: 14px;
+  border-radius: 5px;
+  background-image: url(/qd/images/common/logo_mm.164a8.png);
+  background-repeat: no-repeat
+}
+
+.left-nav ul {
+  float: left
+}
+
+.left-nav li {
+  position: relative;
+  float: left;
+  height: 60px;
+  padding: 0 12px;
+  cursor: pointer
+}
+
+.left-nav li cite {
+  font: 14px/60px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  display: block
+}
+
+.left-nav li.act {
+  line-height: 58px;
+  height: 58px;
+  border-top: 2px solid #ed4259;
+  background: #fff
+}
+
+.left-nav li.act .dropdown {
+  display: block;
+  animation: .15s ease-out;
+  animation-name: fadeinT;
+  background: #fff
+}
+
+.left-nav li.act cite {
+  font: 14px/58px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  margin-top: -1px
+}
+
+.left-nav li a {
+  z-index: 1;
+  display: block
+}
+
+.left-nav li.site {
+  width: 128px;
+  margin-right: 24px;
+  padding: 0
+}
+
+.left-nav li.site.act a.pin-logo {
+  height: 58px;
+  background-position: 0 18px
+}
+
+.left-nav li.site.act a.pin-logo span {
+  top: 27px;
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  transform: rotateX(-180deg)
+}
+
+.left-nav li.site.act a.mm-pin-logo {
+  height: 58px;
+  background-position: 0 18px
+}
+
+.left-nav li.site.act a.mm-pin-logo span {
+  top: 27px;
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  transform: rotateX(-180deg)
+}
+
+.left-nav li.site a.pin-logo {
+  display: block;
+  width: 128px;
+  height: 60px;
+  margin-left: 12px;
+  background-image: url(/qd/images/pin_logo_black_1x.9c2fd.png);
+  background-repeat: no-repeat;
+  background-position: 0 20px
+}
+
+.left-nav li.site a.mm-pin-logo {
+  display: block;
+  width: 128px;
+  height: 60px;
+  margin-left: 12px;
+  background-image: url(/qd/images/mm_pin_logo_black_1x.c2e44.png);
+  background-repeat: no-repeat;
+  background-position: 0 20px
+}
+
+.left-nav li.site a span {
+  position: absolute;
+  top: 27px;
+  right: 12px;
+  width: 0;
+  height: 0;
+  transition: all .2s;
+  border-top: 4px solid #ccc;
+  border-right: 4px solid transparent;
+  border-bottom: 0 none;
+  border-left: 4px solid transparent
+}
+
+.left-nav li.site .dropdown {
+  position: relative;
+  top: 0;
+  width: 128px
+}
+
+.left-nav li.site .dropdown a {
+  font: 14px/36px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  height: auto;
+  padding: 0 15px;
+  color: #1a1a1a;
+  border-top: none
+}
+
+.left-nav li.site .dropdown a:hover {
+  background: #fafafa
+}
+
+.left-nav li.quick-nav cite .iconfont {
+  font-size: 14px;
+  display: inline-block;
+  min-width: 14px;
+  margin-right: 8px;
+  color: #999;
+  color: rgba(0, 0, 0, .4);
+  -webkit-text-stroke-width: 0
+}
+
+.read-login li {
+  position: relative;
+  float: left;
+  height: 60px;
+  padding: 0 12px;
+  cursor: pointer
+}
+
+.read-login li:first-child {
+  padding: 0
+}
+
+.read-login li:first-child .iconfont {
+  font-size: 17px;
+  display: inline-block;
+  min-width: 17px;
+  vertical-align: middle
+}
+
+.read-login li:first-child input {
+  font-family: PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+  position: absolute;
+  z-index: 1;
+  top: 18px;
+  right: 40px;
+  width: 150px;
+  height: 26px;
+  transition: border .5s;
+  border-bottom: 1px solid #ccc;
+  background: 0 0
+}
+
+.read-login li:first-child input:focus {
+  border-bottom: 2px solid #bf2c24
+}
+
+.read-login li:first-child label {
+  line-height: 60px;
+  display: block;
+  height: 60px;
+  padding: 0 12px
+}
+
+.read-login li a {
+  font: 14px/60px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 60px
+}
+
+.read-login li.line {
+  height: 24px;
+  margin: 20px 0 0;
+  padding: 0 2px;
+  border-right: 1px solid #ddd
+}
+
+.read-login li.sign-out a {
+  display: inline
+}
+
+.read-login li.sign-out a#pin-login {
+  margin-right: 16px
+}
+
+.read-login li.sign-in {
+  padding: 0
+}
+
+.read-login li.sign-in a {
+  padding-right: 18px
+}
+
+.read-login li.sign-in a i {
+  display: block;
+  min-width: 70px;
+  padding: 0 0 0 12px
+}
+
+.read-login li.sign-in a span {
+  position: absolute;
+  z-index: 2;
+  top: 27px;
+  right: 5px;
+  width: 0;
+  height: 0;
+  transition: all .2s;
+  border-top: 4px solid #ccc;
+  border-right: 4px solid transparent;
+  border-bottom: 0 none;
+  border-left: 4px solid transparent
+}
+
+.read-login li.sign-in.act {
+  border-top: 2px solid #ed4259;
+  background: #fff
+}
+
+.read-login li.sign-in.act a {
+  line-height: 56px
+}
+
+.read-login li.sign-in.act span {
+  top: 25px;
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  transform: rotateX(-180deg)
+}
+
+.read-login li.sign-in.act .dropdown {
+  position: relative;
+  top: 0;
+  display: block;
+  width: 100%;
+  animation: .15s ease-out;
+  animation-name: fadeinT;
+  background: #fff
+}
+
+.read-login li.sign-in.act .dropdown a {
+  font: 14px/36px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  height: auto;
+  padding: 0 15px;
+  color: #1a1a1a;
+  border-top: none
+}
+
+.read-login li.sign-in.act .dropdown a:hover {
+  background: #fafafa
+}
+
+.read-login li.sign-in.act .dropdown .user-level {
+  margin-left: 15px
+}
+
+.dropdown.scan-app {
+  position: absolute;
+  left: 0;
+  width: 220px
+}
+
+.dropdown.scan-app .box {
+  padding: 24px;
+  text-align: center
+}
+
+.dropdown.scan-app h3 {
+  font: 14px/20px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif
+}
+
+.dropdown.scan-app h3+img+a {
+  margin-bottom: 16px
+}
+
+.dropdown.scan-app img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 24px auto;
+  padding: 8px;
+  border: 1px solid #d8d8d8
+}
+
+.dropdown.scan-app a {
+  font: 12px/40px PingFangSC-Regular, '-apple-system', Simsun;
+  width: 172px;
+  height: 40px;
+  padding: 0;
+  text-align: left;
+  border: 1px solid #d8d8d8;
+  background: #f7f7f7
+}
+
+.dropdown.scan-app a:hover {
+  background: #f7f7f7
+}
+
+.dropdown.scan-app a em {
+  display: inline-block;
+  margin: -2px 8px 0 32px;
+  vertical-align: middle
+}
+
+.dropdown.last-read {
+  width: 400px
+}
+
+.dropdown.last-read .all {
+  font: 12px/34px PingFangSC-Regular, '-apple-system', Simsun;
+  display: block;
+  height: 34px;
+  text-align: center;
+  color: #666;
+  background: #f2f2f2
+}
+
+.dropdown.last-read .all:hover {
+  color: #ed4259
+}
+
+.dropdown.last-read .all .iconfont {
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: -1px
+}
+
+.dropdown.last-read dl {
+  margin-bottom: 16px
+}
+
+.dropdown.last-read dd {
+  transition: background-color .3s
+}
+
+.dropdown.last-read dd:first-child .book-wrap {
+  padding-top: 32px;
+  border-top: none
+}
+
+.dropdown.last-read dd .book-wrap {
+  margin-left: 24px;
+  padding: 24px 0 18px;
+  border-top: 1px solid #d8d8d8
+}
+
+.dropdown.last-read dd .book-info {
+  width: 290px;
+  margin-top: 10px;
+  margin-left: 18px
+}
+
+.dropdown.last-read dd .book-info h4 {
+  font: 16px/22px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  overflow: hidden;
+  height: 22px;
+  margin-bottom: 5px
+}
+
+.dropdown.last-read dd .book-info h4~p {
+  font: 12px/24px PingFangSC-Regular, '-apple-system', Simsun;
+  overflow: hidden;
+  height: 24px
+}
+
+.dropdown.last-read dd .book-info h4~p .red {
+  display: none;
+  float: right
+}
+
+.dropdown.last-read dd .book-info h4~p span {
+  color: #666
+}
+
+.dropdown.last-read dd .book-info h4~p a {
+  display: inline
+}
+
+.dropdown.last-read dd .book-info h4~p a.blue:hover {
+  color: #2972cc
+}
+
+.dropdown.last-read dd:hover {
+  background-color: #f2f2f2
+}
+
+.dropdown.last-read dd:hover .book-info p .red {
+  display: block
+}
+
+.dropdown.last-read .no-data {
+  font: 14px/21px PingFangSC-Regular, '-apple-system', Simsun;
+  padding: 40px 10px;
+  text-align: center;
+  color: #a6a6a6
+}
+
+.dropdown.type-list {
+  width: 440px;
+  padding: 22px 0 0
+}
+
+.dropdown.type-list .type-box {
+  font-size: 0;
+  clear: both;
+  width: 456px;
+  padding: 0 0 0 26px
+}
+
+.dropdown.type-list .type-box h3 {
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 20px
+}
+
+.dropdown.type-list .type-box a {
+  font: 14px/1 PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  float: left;
+  margin-right: 40px;
+  margin-bottom: 32px
+}
+
+.dropdown.type-list .type-box a.ecy {
+  margin-right: 27px
+}
+
+.body-rec-mask,
+.body-rec-wrap,
+.float-op-wrap {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%
+}
+
+.body-rec-mask {
+  opacity: .2;
+  background: #e5e4db
+}
+
+.left-rec-box,
+.right-rec-box {
+  position: fixed;
+  top: 110px;
+  width: 200px;
+  height: 530px
+}
+
+.left-rec-box a,
+.right-rec-box a {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%
+}
+
+.left-rec-box {
+  left: 50%;
+  margin-left: -704px
+}
+
+.right-rec-box {
+  right: 50%;
+  margin-right: -704px
+}
+
+.read-main-wrap {
+  font-family: PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  font-size: 18px;
+  position: relative;
+  z-index: 101;
+  width: 800px;
+  margin: 0 auto
+}
+
+.read-main-wrap .la-ball-pulse {
+  margin: 56px 0
+}
+
+.read-main-wrap.font-family03 {
+  font-family: Kaiti
+}
+
+.read-main-wrap.font-family01 {
+  font-family: 'Microsoft YaHei', PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', sans-serif
+}
+
+.read-main-wrap.font-family02 {
+  font-family: PingFangSC-Regular, '-apple-system', Simsun
+}
+
+.float-op-wrap {
+  background-position: center 0
+}
+
+.float-op-wrap .float-op {
+  position: fixed;
+  z-index: 10;
+  top: 260px;
+  height: 400px
+}
+
+.float-op-wrap .float-op a {
+  display: block;
+  width: 100%;
+  height: 100%
+}
+
+.float-op-wrap .float-op.left-op {
+  left: 50%;
+  margin-left: -750px
+}
+
+.float-op-wrap .float-op.right-op {
+  right: 50%;
+  margin-right: -750px
+}
+
+.float-op-wrap .float-op div {
+  height: 400px
+}
+
+.float-op-wrap .float-op .left-person,
+.float-op-wrap .float-op .right-person {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 280px
+}
+
+.float-op-wrap .float-op .right-person {
+  right: 0
+}
+
+.float-op-wrap .float-op .left-person {
+  left: 0
+}
+
+.float-op-wrap .float-op .left-word,
+.float-op-wrap .float-op .right-word {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 120px;
+  margin-top: -200px
+}
+
+.float-op-wrap .float-op .left-word {
+  left: 80px;
+  background: url(/qd/images/read.qidian.com/left_word.png) no-repeat 50% 50%
+}
+
+.float-op-wrap .float-op .right-word {
+  right: 80px;
+  background: url(/qd/images/read.qidian.com/right_word.png) no-repeat 50% 50%
+}
+
+.float-op-wrap .float-op.type1 .left-person,
+.float-op-wrap .float-op.type1 .right-person {
+  display: none
+}
+
+.float-op-wrap .float-op.type1 .left-word,
+.float-op-wrap .float-op.type1 .right-word {
+  display: block
+}
+
+.float-op-wrap .float-op.type2 .right-person {
+  transition: visibility 1s ease-in
+}
+
+.float-op-wrap .float-op.type2 .right-person.action {
+  visibility: hidden;
+  animation: fadeOutRight 1s ease-in
+}
+
+.float-op-wrap .float-op.type2 .left-person {
+  transition: visibility 1s ease-in
+}
+
+.float-op-wrap .float-op.type2 .left-person.action {
+  visibility: hidden;
+  animation: fadeOutLeft 1s ease-in
+}
+
+.float-op-wrap .float-op.type2 .left-word.action {
+  display: block;
+  animation: fadeInLeft 1s ease-in
+}
+
+.float-op-wrap .float-op.type2 .right-word.action {
+  display: block;
+  animation: fadeInRight 1s ease-in
+}
+
+.text-wrap {
+  min-height: 600px;
+  margin-bottom: 24px;
+  border: 1px solid #d8d8d8;
+  background: url(/qd/images/read.qidian.com/basic_bg.edf95.png) repeat
+}
+
+.text-wrap.last-page {
+  margin-bottom: 55px
+}
+
+.book-cover-wrap {
+  height: 662px;
+  margin: 8px;
+  text-align: center;
+  border: 1px solid #d8d8d8
+}
+
+.book-cover-wrap .book-photo {
+  width: 128px;
+  height: 168px;
+  margin: 64px auto 24px;
+  border: 1px solid #efece5;
+  background: #fffbf2
+}
+
+.book-cover-wrap .book-photo img {
+  display: block;
+  width: 120px;
+  height: 160px;
+  margin: 4px auto;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray
+}
+
+.book-cover-wrap h1 {
+  font: 32px/45px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  overflow: hidden;
+  height: 45px;
+  margin-bottom: 7px
+}
+
+.book-cover-wrap h2 {
+  font: 14px/26px PingFangSC-Regular, '-apple-system', Simsun;
+  overflow: hidden;
+  height: 26px;
+  margin-bottom: 48px;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.book-cover-wrap h2 a {
+  margin-right: 5px;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.book-cover-wrap h2 a:hover {
+  color: #ed4259
+}
+
+.book-cover-wrap .info-list {
+  width: 360px;
+  margin: 0 auto 48px
+}
+
+.book-cover-wrap .info-list ul {
+  width: 1000px
+}
+
+.book-cover-wrap .info-list li {
+  font-size: 14px;
+  float: left
+}
+
+.book-cover-wrap .info-list li:first-child {
+  margin-right: 94px
+}
+
+.book-cover-wrap .info-list li:first-child+li {
+  margin-right: 80px
+}
+
+.book-cover-wrap .info-list li:first-child+li+li p {
+  margin-bottom: 0
+}
+
+.book-cover-wrap .info-list li p {
+  font: 18px/26px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  margin-bottom: 5px;
+  white-space: nowrap
+}
+
+.book-cover-wrap .info-list li span {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  display: block;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.book-cover-wrap .info-list li em {
+  font: 18px/30px Arial;
+  display: inline-block;
+  margin-bottom: 2px
+}
+
+.book-cover-wrap h3 {
+  font: 16px/26px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  overflow: hidden;
+  height: 26px;
+  margin-bottom: 8px
+}
+
+.book-cover-wrap h4 {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  margin-bottom: 48px;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.book-cover-wrap h4 a {
+  margin-right: 10px;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.book-cover-wrap h4 em {
+  font-family: PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  font-size: 12px
+}
+
+.book-cover-wrap h5,
+.book-cover-wrap h6 {
+  font: 14px/26px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  color: #666
+}
+
+.book-cover-wrap h6 {
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.crumbs-nav {
+  position: relative;
+  z-index: 1;
+  width: 800px;
+  height: 22px;
+  margin: 0 auto 21px
+}
+
+.crumbs-nav a,
+.crumbs-nav em {
+  display: inline-block;
+  vertical-align: middle
+}
+
+.crumbs-nav a {
+  font: 12px/22px PingFangSC-Regular, '-apple-system', Simsun;
+  color: #1a1a1a
+}
+
+.crumbs-nav a:hover {
+  text-decoration: underline
+}
+
+.crumbs-nav em {
+  font-size: 12px;
+  min-width: 12px;
+  margin: 2px 0 0 3px;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.main-text-wrap {
+  padding: 60px 64px
+}
+
+.main-text-wrap .text-head {
+  position: relative;
+  z-index: 5;
+  margin-bottom: 12px
+}
+
+.main-text-wrap .text-head h3 {
+  font: 24px/32px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  overflow: hidden;
+  height: 32px;
+  margin-bottom: 12px
+}
+
+.main-text-wrap .text-head .book-mark {
+  position: absolute;
+  top: -60px;
+  right: -40px;
+  width: 24px;
+  height: 40px;
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: -228px -143.5px;
+  background-size: 340px
+}
+
+.main-text-wrap .text-head .book-mark.on {
+  width: 24px;
+  height: 40px;
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: -254px -143.5px;
+  background-size: 340px
+}
+
+.main-text-wrap .text-head .guide-box {
+  position: absolute;
+  top: -150px;
+  right: -180px;
+  height: 70px;
+  padding: 0 18px;
+  border-radius: 3px;
+  background: #fff
+}
+
+.main-text-wrap .text-head .guide-box p {
+  font: 14px/22px PingFangSC-Regular, '-apple-system', Simsun;
+  width: 272px;
+  padding-top: 12px;
+  text-align: left
+}
+
+.main-text-wrap .text-head .guide-box cite {
+  top: 100%;
+  right: 50%;
+  margin-right: -6px;
+  border-top: 5px solid #fff;
+  border-right: 5px solid transparent;
+  border-bottom: 0 none;
+  border-left: 5px solid transparent
+}
+
+.main-text-wrap .text-info {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  height: 34px
+}
+
+.main-text-wrap .text-info .info a,
+.main-text-wrap .text-info .info i {
+  font-family: PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  margin-right: 16px;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.main-text-wrap .text-info .info span {
+  margin-right: 5px
+}
+
+.main-text-wrap .text-info .info .iconfont {
+  font-size: 16px;
+  display: inline-block;
+  min-width: 16px;
+  margin-right: 6px;
+  vertical-align: -2px
+}
+
+.main-text-wrap .text-info .info a:hover {
+  color: #ed4259
+}
+
+.main-text-wrap .text-info .top-comment-wrap {
+  position: relative;
+  z-index: 1;
+  margin-top: -10px
+}
+
+.main-text-wrap .text-info .top-comment-wrap dl {
+  float: right;
+  margin-top: 6px
+}
+
+.main-text-wrap .text-info .top-comment-wrap dl dd {
+  float: left;
+  width: 22px;
+  height: 22px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: border-radius .3s, box-shadow .3s;
+  border-radius: 100%;
+  background: #fff
+}
+
+.main-text-wrap .text-info .top-comment-wrap dl dd img {
+  width: 100%;
+  height: 100%;
+  transition: border-radius .3s, box-shadow .3s;
+  border-radius: 100%
+}
+
+.main-text-wrap .text-info .top-comment-wrap dl dd:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, .3)
+}
+
+.main-text-wrap .text-info .top-comment-wrap .comment-btn {
+  line-height: 32px;
+  float: right;
+  width: 32px;
+  height: 32px;
+  margin-top: 2px;
+  text-align: center;
+  border-radius: 2px
+}
+
+.main-text-wrap .text-info .top-comment-wrap .comment-btn .iconfont {
+  font-size: 16px;
+  min-width: 16px;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.main-text-wrap .text-info .top-comment-wrap .comment-btn:hover {
+  background: #e5e5e5
+}
+
+.main-text-wrap .text-info .top-comment-wrap .j_comReplyNum {
+  font: 12px/14px Arial;
+  float: right;
+  margin-top: 8px;
+  vertical-align: top
+}
+
+.main-text-wrap .read-content {
+  margin-bottom: 64px
+}
+
+.main-text-wrap .read-content p {
+  line-height: 1.8;
+  overflow: hidden;
+  margin: .8em 0
+}
+
+.main-text-wrap .admire-wrap {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 48px
+}
+
+.main-text-wrap .admire-wrap .read-btn-box {
+  text-align: center
+}
+
+.main-text-wrap .admire-wrap .admire {
+  font-size: 24px;
+  line-height: 60px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 160px;
+  height: 60px;
+  margin: 0 25px 24px;
+  text-align: center;
+  text-indent: 5px;
+  letter-spacing: 5px;
+  color: #fff;
+  border-radius: 50px;
+  background: #bf2c24
+}
+
+.main-text-wrap .admire-wrap .admire:hover {
+  background: #ed4259
+}
+
+.main-text-wrap .admire-wrap .admire span {
+  font: 12px/14px PingFangSC-Regular, '-apple-system', Simsun;
+  position: absolute;
+  top: 12px;
+  left: 106px;
+  text-indent: 0;
+  letter-spacing: 0
+}
+
+.main-text-wrap .admire-wrap .pwd-btn {
+  text-indent: 0;
+  letter-spacing: 0
+}
+
+.main-text-wrap .admire-wrap .user-active {
+  width: 224px;
+  margin: 0 auto;
+  text-align: center
+}
+
+.main-text-wrap .admire-wrap .user-active dd {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-left: 16px;
+  cursor: pointer;
+  transition: z-index .3s;
+  vertical-align: middle;
+  border-radius: 100%;
+  background: #fff
+}
+
+.main-text-wrap .admire-wrap .user-active dd:first-child {
+  margin-left: 0
+}
+
+.main-text-wrap .admire-wrap .user-active dd a,
+.main-text-wrap .admire-wrap .user-active dd img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%
+}
+
+.main-text-wrap .admire-wrap .user-active dd .active-bubble {
+  position: absolute;
+  z-index: 1;
+  top: -48px;
+  left: -105px;
+  display: none;
+  width: 240px;
+  height: 40px;
+  text-align: center;
+  white-space: nowrap
+}
+
+.main-text-wrap .admire-wrap .user-active dd .active-bubble span {
+  font: 14px/40px PingFangSC-Regular, '-apple-system', Simsun;
+  display: inline-block;
+  min-width: 174px;
+  padding: 0 12px;
+  padding: 0 12px;
+  text-align: center;
+  color: #fff;
+  border-radius: 2px;
+  border-radius: 2px;
+  background: #444;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .3)
+}
+
+.main-text-wrap .admire-wrap .user-active dd .active-bubble cite {
+  position: absolute;
+  z-index: 3;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -6px;
+  border-top: 6px solid #444;
+  border-right: 6px solid transparent;
+  border-bottom: 0 none;
+  border-left: 6px solid transparent
+}
+
+.main-text-wrap .admire-wrap .report-btn {
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.main-text-wrap .admire-wrap .report-btn .iconfont {
+  font-size: 18px;
+  display: inline-block;
+  min-width: 18px;
+  margin-right: 3px;
+  vertical-align: -2px;
+  -webkit-text-stroke-width: 0
+}
+
+.main-text-wrap .admire-wrap .report-btn:hover {
+  color: #ed4259
+}
+
+.main-text-wrap .author-say-wrap {
+  margin-bottom: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e5e5
+}
+
+.main-text-wrap .author-say-wrap h3 {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 24px
+}
+
+.main-text-wrap .author-say-wrap .author-say {
+  position: relative;
+  z-index: 1;
+  padding-left: 56px
+}
+
+.main-text-wrap .author-say-wrap .author-say .avatar {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 100%
+}
+
+.main-text-wrap .author-say-wrap .author-say .avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%
+}
+
+.main-text-wrap .author-say-wrap .author-say h4 {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  overflow: hidden;
+  height: 16px;
+  margin-bottom: 8px
+}
+
+.main-text-wrap .author-say-wrap .author-say h4 a {
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.main-text-wrap .author-say-wrap .author-say p {
+  font: 14px/24px PingFangSC-Regular, '-apple-system', Simsun;
+  margin-bottom: 8px
+}
+
+.main-text-wrap .author-say-wrap .author-say p+p {
+  font: 12px/1 PingFangSC-Regular, '-apple-system', Simsun;
+  margin-bottom: 0;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.main-text-wrap .operation-wrap {
+  position: relative;
+  z-index: 1;
+  padding-top: 26px;
+  padding-left: 80px;
+  border-top: 1px solid #e5e5e5
+}
+
+.main-text-wrap .operation-wrap.min img {
+  position: absolute;
+  z-index: 1;
+  top: 26px;
+  left: 0;
+  width: 64px;
+  height: 64px
+}
+
+.main-text-wrap .operation-wrap.min h3 {
+  font: 700 18px/24px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  margin: 0 0 7px;
+  padding-top: 5px
+}
+
+.main-text-wrap .operation-wrap.min h3 a {
+  display: inline
+}
+
+.main-text-wrap .operation-wrap.min p {
+  font: 14px/24px PingFangSC-Regular, '-apple-system', Simsun;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.main-text-wrap .operation-wrap.max {
+  padding-left: 0
+}
+
+.main-text-wrap .operation-wrap.max a {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 64px
+}
+
+.main-text-wrap .operation-wrap.max a img.max {
+  height: 100%
+}
+
+.reply-popup {
+  position: absolute;
+  z-index: 1;
+  top: 40px;
+  right: 0;
+  width: 600px;
+  cursor: default
+}
+
+.reply-popup .inner-wrap {
+  padding: 48px 0 0 24px
+}
+
+.reply-popup .first-reply {
+  padding: 0 24px 24px 0
+}
+
+.reply-popup .first-reply h3 {
+  overflow: hidden;
+  margin-bottom: 12px
+}
+
+.reply-popup .first-reply h3 span {
+  font: 14px/32px PingFangSC-Regular, '-apple-system', Simsun;
+  float: left;
+  overflow: hidden;
+  width: 480px;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+
+.reply-popup .first-reply h3 span img {
+  display: inline-block;
+  width: 32px !important;
+  height: 32px !important;
+  vertical-align: middle;
+  border-radius: 0 !important
+}
+
+.reply-popup .first-reply h3 .discuss-btn {
+  font: 12px/14px PingFangSC-Regular, '-apple-system', Simsun;
+  float: right;
+  float: right;
+  margin-top: 5px;
+  color: #a6a6a6
+}
+
+.reply-popup .first-reply h3 .discuss-btn em {
+  font-size: 16px;
+  min-width: 16px;
+  margin: 0 0 0 5px
+}
+
+.reply-popup .first-reply h3 .discuss-btn:hover {
+  color: #ed4259
+}
+
+.reply-popup .first-reply h3 .discuss-btn:hover em {
+  color: #ed4259
+}
+
+.reply-popup .first-reply .users {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun
+}
+
+.reply-popup .first-reply .users em {
+  float: right;
+  color: #a6a6a6
+}
+
+.reply-popup .first-reply .users cite {
+  color: #a6a6a6
+}
+
+.reply-popup .first-reply .users .blue {
+  margin: 0 8px 0 5px
+}
+
+.reply-popup .first-reply .users .user-level {
+  display: inline-block;
+  margin-top: -2px;
+  vertical-align: middle
+}
+
+.reply-popup .first-reply .reply-send-wrap {
+  overflow: hidden;
+  margin: 25px 0 0
+}
+
+.reply-popup .first-reply .reply-send-wrap input {
+  font: 14px/32px PingFangSC-Regular, '-apple-system', Simsun;
+  float: left;
+  width: 470px;
+  height: 32px;
+  padding: 0 5px;
+  border: 1px solid #e5e5e5;
+  border: 1px solid rgba(0, 0, 0, .2)
+}
+
+.reply-popup .first-reply .reply-send-wrap input.error {
+  border: 1px solid #bf2c24
+}
+
+.reply-popup .first-reply .reply-send-wrap .red-btn {
+  font: 14px/34px PingFangSC-Regular, '-apple-system', Simsun;
+  float: right;
+  width: 60px;
+  height: 34px;
+  border-radius: 2px
+}
+
+.reply-popup .first-reply .reply-send-wrap p.error-tip {
+  line-height: 30px;
+  color: #bf2c24
+}
+
+.reply-popup .other-reply-wrap {
+  padding-bottom: 24px
+}
+
+.reply-popup .go-discuss {
+  width: 552px;
+  text-align: center;
+  background: #f7f6f2;
+  background: rgba(0, 0, 0, .05)
+}
+
+.reply-popup .go-discuss a {
+  font: 12px/34px PingFangSC-Regular, '-apple-system', Simsun;
+  display: block;
+  height: 34px;
+  color: #666
+}
+
+.reply-popup .go-discuss a:hover {
+  color: #ed4259
+}
+
+.reply-popup .go-discuss a .iconfont {
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle
+}
+
+.other-reply-list {
+  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid rgba(0, 0, 0, .1)
+}
+
+.other-reply-list.bt0 {
+  border-top: none
+}
+
+.other-reply-list li {
+  position: relative;
+  z-index: 1;
+  margin-right: 24px;
+  padding: 20px 0;
+  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid rgba(0, 0, 0, .1)
+}
+
+.other-reply-list li:first-child {
+  border-top: none
+}
+
+.other-reply-list li .user-photo {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  left: 0;
+  margin: 0
+}
+
+.other-reply-list li .user-photo a,
+.other-reply-list li .user-photo img {
+  position: relative;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: 100%
+}
+
+.other-reply-list li .user-comment {
+  padding-left: 56px
+}
+
+.other-reply-list li .user-comment h5 {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  margin-bottom: 7px
+}
+
+.other-reply-list li .user-comment h5 a {
+  color: #a6a6a6
+}
+
+.other-reply-list li .user-comment h5 a:hover {
+  color: #ed4259
+}
+
+.other-reply-list li .user-comment p {
+  font: 14px/24px PingFangSC-Regular, '-apple-system', Simsun;
+  overflow: hidden;
+  max-height: 48px;
+  margin-bottom: 10px
+}
+
+.other-reply-list li .user-comment p img {
+  height: 32px
+}
+
+.other-reply-list li .user-comment p+p {
+  font: 12px/14px Arial;
+  margin-bottom: 0;
+  color: #a6a6a6
+}
+
+.vip-limit-wrap {
+  padding-top: 48px;
+  text-align: center;
+  border-top: 1px solid #d8d8d8
+}
+
+.vip-limit-wrap h3 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 48px;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.vip-limit-wrap h3 i {
+  margin-right: 24px
+}
+
+.vip-limit-wrap .subscribe-btn-wrap {
+  position: relative;
+  z-index: 1;
+  height: 70px;
+  margin: 0 auto 15px
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a {
+  position: absolute;
+  z-index: 1;
+  border-radius: 4px
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a em {
+  font: 18px/24px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  display: block;
+  margin-top: 13px;
+  margin-bottom: 5px;
+  color: #1a1a1a
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a span {
+  font: 12px/14px PingFangSC-Regular, '-apple-system', Simsun;
+  display: block;
+  color: #666
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a span i {
+  font: 12px/14px Arial;
+  margin-right: 5px;
+  vertical-align: -1px
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a.all {
+  right: 435px;
+  width: 158px;
+  height: 68px;
+  transition: width .3s;
+  text-align: right;
+  border: 1px solid #d8d8d8;
+  background: #fffcf7;
+  background: rgba(255, 255, 255, .5)
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a.all em,
+.vip-limit-wrap .subscribe-btn-wrap a.all span {
+  padding-right: 42px
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a.all cite {
+  font: 14px/1 PingFangSC-Regular, '-apple-system', Simsun;
+  position: absolute;
+  z-index: 1;
+  top: 28px;
+  left: 0;
+  overflow: hidden;
+  width: 160px;
+  transition: opacity .3s;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  opacity: 0;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a.all cite s {
+  text-decoration: none
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a.all:hover {
+  width: 290px
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a.all:hover cite {
+  opacity: 1
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a.single {
+  right: 255px;
+  width: 160px;
+  height: 70px;
+  background: #bf2c24
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a.single em {
+  color: #fff
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a.single span {
+  color: #fcfcfa;
+  color: rgba(255, 255, 255, .6)
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a.single:hover {
+  background: #ed4259
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a.download-app {
+  right: 65px;
+  width: 160px;
+  height: 70px;
+  background: #d01d13
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a.download-app em {
+  line-height: 70px;
+  margin: 0;
+  color: #fff
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a.download-app span {
+  color: #fcfcfa;
+  color: rgba(255, 255, 255, .6)
+}
+
+.vip-limit-wrap .subscribe-btn-wrap a.download-app:hover {
+  background: #ed4259
+}
+
+.vip-limit-wrap .subscribe-btn-wrap.no-subscribe-btn-box a em {
+  margin-top: 23px
+}
+
+.vip-limit-wrap .subscribe-btn-wrap.no-subscribe-btn-box a.all:hover {
+  width: 158px
+}
+
+.vip-limit-wrap p span {
+  position: relative;
+  vertical-align: middle
+}
+
+.vip-limit-wrap p label {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  vertical-align: middle;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.chapter-control {
+  height: 70px;
+  margin-bottom: 24px;
+  text-align: center;
+  border: 1px solid #d8d8d8;
+  background: url(/qd/images/read.qidian.com/basic_bg.edf95.png) repeat
+}
+
+.chapter-control a {
+  font: 18px/70px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  width: 33.2%
+}
+
+.chapter-control a:hover {
+  color: #1a1a1a;
+  background: #ede9e1;
+  background: rgba(0, 0, 0, .03)
+}
+
+.chapter-control a.disabled {
+  cursor: default;
+  color: #ccc;
+  background: 0 0
+}
+
+.chapter-control .w-all {
+  width: 100%
+}
+
+.chapter-control span {
+  height: 32px;
+  border-right: 1px solid #d8d8d8
+}
+
+.last-chapter-wrap h2 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  text-align: center
+}
+
+.last-chapter-wrap h3 {
+  font-size: 22px;
+  line-height: 25px;
+  overflow: hidden;
+  height: 25px
+}
+
+.fans-zone {
+  margin-bottom: 48px
+}
+
+.fans-zone h3 {
+  margin-bottom: 16px
+}
+
+.fans-zone dd {
+  float: left;
+  width: 49.8%;
+  height: 264px;
+  padding: 24px 0
+}
+
+.fans-zone dd.line {
+  width: 0;
+  height: 208px;
+  margin-top: 28px;
+  border-left: 1px solid #e5e5e5;
+  border-left: 1px solid rgba(0, 0, 0, .1)
+}
+
+.fans-interact {
+  margin-bottom: 16px;
+  text-align: center;
+  background: #ede9e1;
+  background: rgba(0, 0, 0, .03)
+}
+
+.fans-interact dd:hover .icon-box span {
+  top: 0
+}
+
+.fans-interact dd:hover .icon-box.money span {
+  top: 6px
+}
+
+.fans-interact dd h4 {
+  font-size: 0;
+  margin-bottom: 14px
+}
+
+.fans-interact dd h4 span {
+  font-size: 18px;
+  line-height: 22px
+}
+
+.fans-interact dd h4 span.act {
+  color: #ed4259
+}
+
+.fans-interact dd h4 a {
+  font-size: 18px;
+  line-height: 22px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  vertical-align: middle;
+  color: #a6a6a6
+}
+
+.fans-interact dd h4 a.act,
+.fans-interact dd h4 a:hover {
+  color: #ed4259
+}
+
+.fans-interact dd h4 a cite {
+  font: 12px/28px PingFangSC-Regular, '-apple-system', Simsun;
+  position: absolute;
+  z-index: 1;
+  top: 28px;
+  left: -8px;
+  display: none;
+  width: 140px;
+  text-align: center;
+  color: grey;
+  border: 1px solid #e5e5e5;
+  background: #fff
+}
+
+.fans-interact dd h4 a cite span {
+  position: absolute;
+  top: 5px;
+  right: -3px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid #3f5a93;
+  border-right: 5px solid transparent;
+  border-bottom: 0 none;
+  border-left: 5px solid transparent
+}
+
+.fans-interact dd h4 a cite span i {
+  position: absolute;
+  top: -7px;
+  right: -5px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid #fff;
+  border-right: 5px solid transparent;
+  border-bottom: 0 none;
+  border-left: 5px solid transparent
+}
+
+.fans-interact dd h4 a cite span.up {
+  border-top: 0 none;
+  border-bottom: 5px solid #3f5a93
+}
+
+.fans-interact dd h4 a cite span.up i {
+  top: 2px;
+  border-top: 0 none;
+  border-bottom: 5px solid #fff
+}
+
+.fans-interact dd h4 a cite span {
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  border-top: 0 none;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #e5e5e5;
+  border-left: 7px solid transparent
+}
+
+.fans-interact dd h4 a cite span i {
+  position: absolute;
+  top: 2px;
+  right: -7px;
+  width: 0;
+  height: 0;
+  border-top: 0 none;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #fff;
+  border-left: 7px solid transparent
+}
+
+.fans-interact dd h4 em {
+  font: 18px/21px Arail;
+  display: inline-block;
+  margin: 0 12px;
+  vertical-align: middle;
+  color: #a6a6a6
+}
+
+.fans-interact dd h4 b {
+  font-size: 12px;
+  font-weight: 400;
+  min-width: 12px;
+  margin-left: -3px;
+  vertical-align: 2px;
+  color: #bfbfbf
+}
+
+.fans-interact dd .tip {
+  font: 12px/28px PingFangSC-Regular, '-apple-system', Simsun;
+  color: grey
+}
+
+.fans-interact dd .tip cite {
+  color: #1a1a1a
+}
+
+.fans-interact dd .action-wrap p {
+  overflow: hidden
+}
+
+.fans-interact dd .action-wrap p:first-child {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  height: 16px;
+  margin-bottom: 7px;
+  color: #a6a6a6
+}
+
+.fans-interact dd .action-wrap p:first-child+p {
+  font: 30px/33px Arial;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  height: 33px;
+  margin-bottom: 7px
+}
+
+.fans-interact dd .action-wrap p:first-child+p span {
+  font: 16px/1 Arial;
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  left: 160px;
+  animation: fadeOutUp 1s 1s;
+  color: #bf2c24
+}
+
+.fans-interact dd .action-wrap p:first-child+p+p {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  height: 16px;
+  margin-bottom: 14px
+}
+
+.fans-interact dd .action-wrap p:first-child+p+p i {
+  font-family: Arial;
+  margin: 0 3px
+}
+
+.fans-interact dd .action-wrap p:first-child+p+p em {
+  font: 14px/16px Arial;
+  display: inline-block;
+  height: 16px;
+  margin: -2px 3px 0;
+  vertical-align: middle;
+  color: #ed4259
+}
+
+.fans-interact dd .icon-box {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 44px;
+  height: 52px;
+  margin: 0 auto
+}
+
+.fans-interact dd .icon-box b {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 44px;
+  height: 2px;
+  margin: 0 auto
+}
+
+.fans-interact dd .icon-box span {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  left: 50%;
+  margin-left: -18px;
+  transition: top .5s ease-out
+}
+
+.fans-interact dd .icon-box.month span {
+  width: 36px;
+  height: 52px;
+  background-image: url(/qd/images/book_details/sprite.385d7.png);
+  background-repeat: no-repeat;
+  background-position: -299px 0;
+  background-size: 335px
+}
+
+.fans-interact dd .icon-box.month b {
+  background: #d67772
+}
+
+.fans-interact dd .icon-box.rec span {
+  width: 36px;
+  height: 52px;
+  background-image: url(/qd/images/book_details/sprite.385d7.png);
+  background-repeat: no-repeat;
+  background-position: -299px -54px;
+  background-size: 335px
+}
+
+.fans-interact dd .icon-box.rec b {
+  background: #d69a72
+}
+
+.fans-interact dd .icon-box.money span {
+  top: 18px;
+  width: 40px;
+  height: 40px;
+  margin-left: -20px;
+  background-image: url(/qd/images/book_details/sprite.385d7.png);
+  background-repeat: no-repeat;
+  background-position: -146px -222px;
+  background-size: 335px
+}
+
+.fans-interact dd .icon-box.money b {
+  background: #c8b078
+}
+
+.fans-dynamic {
+  height: 56px;
+  background: #ede9e1;
+  background: rgba(0, 0, 0, .03)
+}
+
+.fans-dynamic .fans-slide-wrap {
+  overflow: hidden;
+  height: 56px
+}
+
+.fans-dynamic .fans-slide-wrap li {
+  font: 14px/56px PingFangSC-Regular, '-apple-system', Simsun;
+  float: left;
+  height: 56px;
+  padding: 0 3%
+}
+
+.fans-dynamic .fans-slide-wrap li b {
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin: 15px 11px 0 0;
+  border-radius: 4px
+}
+
+.fans-dynamic .fans-slide-wrap li b em {
+  display: block;
+  margin: 5px auto 0
+}
+
+.fans-dynamic .fans-slide-wrap li b.money {
+  background: #ffeea8
+}
+
+.fans-dynamic .fans-slide-wrap li b.money em {
+  width: 14px;
+  height: 14px;
+  background-image: url(/qd/images/book_details/sprite.385d7.png);
+  background-repeat: no-repeat;
+  background-position: -320px -188px;
+  background-size: 335px
+}
+
+.fans-dynamic .fans-slide-wrap li b.month {
+  background: #ffd2d0
+}
+
+.fans-dynamic .fans-slide-wrap li b.month em {
+  width: 10px;
+  height: 14px;
+  background-image: url(/qd/images/book_details/sprite.385d7.png);
+  background-repeat: no-repeat;
+  background-position: -323px -164px;
+  background-size: 335px
+}
+
+.fans-dynamic .fans-slide-wrap li b.rec {
+  background: #ffe3d1
+}
+
+.fans-dynamic .fans-slide-wrap li b.rec em {
+  width: 10px;
+  height: 14px;
+  background-image: url(/qd/images/book_details/sprite.385d7.png);
+  background-repeat: no-repeat;
+  background-position: -325px -138px;
+  background-size: 335px
+}
+
+.fans-dynamic .fans-slide-wrap li span {
+  margin: 0 5px;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.fans-dynamic .fans-slide-wrap li i {
+  font-family: Arial;
+  margin-right: 5px
+}
+
+.fans-dynamic .fans-slide-wrap li.high-light {
+  color: #bf2c24
+}
+
+.fans-dynamic .fans-slide-wrap li.high-light a,
+.fans-dynamic .fans-slide-wrap li.high-light span {
+  color: #bf2c24
+}
+
+.user-discuss h3 {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #666
+}
+
+.user-discuss h3 span {
+  font-size: 16px;
+  display: inline-block;
+  margin-top: -2px;
+  margin-left: 5px;
+  vertical-align: middle
+}
+
+.book-discuss-wrap {
+  margin-bottom: 48px
+}
+
+.discuss-list .no-data {
+  padding-bottom: 60px;
+  text-align: center
+}
+
+.discuss-list .no-data span {
+  display: block;
+  width: 85px;
+  height: 80px;
+  margin: 80px auto 20px;
+  background-image: url(/qd/images/book_details/sprite.385d7.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 335px
+}
+
+.discuss-list .no-data p {
+  font: 14px/21px PingFangSC-Regular, '-apple-system', Simsun;
+  color: #a6a6a6
+}
+
+.discuss-list .no-data p i {
+  font-family: Arail
+}
+
+.discuss-list li {
+  padding: 18px 0 14px;
+  border-top: 1px solid #e5e5e5
+}
+
+.discuss-list li:first-child {
+  border-top: none
+}
+
+.discuss-list li .user-photo {
+  float: left;
+  margin: 0 12px 0 0
+}
+
+.discuss-list li .discuss-info {
+  float: left;
+  width: 90%
+}
+
+.discuss-list li.qd-game .qd-game-wrap {
+  display: block
+}
+
+.discuss-list li.qd-game .qd-game-wrap .user-photo {
+  width: 44px;
+  width: 45px;
+  height: 44px;
+  height: 45px;
+  background-image: url(/qd/images/book_details/sprite.385d7.png);
+  background-repeat: no-repeat;
+  background-position: -100px -222px;
+  background-size: 335px
+}
+
+.discuss-list li.qd-game .qd-game-wrap .text {
+  font-weight: 700;
+  overflow: hidden;
+  max-width: 90%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #3f5a93
+}
+
+.discuss-list li.qd-game .qd-game-wrap .game-desc {
+  font: 12px/14px PingFangSC-Regular, '-apple-system', Simsun;
+  overflow: hidden;
+  max-width: 480px;
+  white-space: nowrap;
+  color: #a6a6a6
+}
+
+.discuss-list li.qd-game .qd-game-wrap:hover .text {
+  color: #2972cc
+}
+
+.discuss-list .text {
+  font-family: PingFangSC-Regular, '-apple-system', Simsun;
+  font-size: 14px;
+  margin-bottom: 8px
+}
+
+.discuss-list .text .discuss-btn {
+  font: 12px/14px PingFangSC-Regular, '-apple-system', Simsun;
+  float: right;
+  margin-top: 5px;
+  color: #a6a6a6
+}
+
+.discuss-list .text .discuss-btn .iconfont {
+  font-size: 16px;
+  min-width: 16px;
+  margin: 0 0 0 5px
+}
+
+.discuss-list .text .discuss-btn:hover {
+  color: #ed4259
+}
+
+.discuss-list .text .discuss-btn:hover em {
+  color: #ed4259
+}
+
+.discuss-list .text a {
+  font: 14px/24px PingFangSC-Regular, '-apple-system', Simsun
+}
+
+.discuss-list .text .link,
+.discuss-list .text a,
+.discuss-list .text cite,
+.discuss-list .text i {
+  display: inline-block;
+  vertical-align: middle
+}
+
+.discuss-list .text cite {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  width: 30px;
+  height: 16px;
+  margin: 0 5px 0 0;
+  text-align: center;
+  color: #fff;
+  border-radius: 1px
+}
+
+.discuss-list .text cite.top {
+  background: #4a90e2
+}
+
+.discuss-list .text cite.good {
+  background: #ed4259
+}
+
+.discuss-list .text .link {
+  font-weight: 700;
+  overflow: hidden;
+  max-width: 550px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #3f5a93
+}
+
+.discuss-list .text .link img {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: -3px 3px 0 5px;
+  vertical-align: middle
+}
+
+.discuss-list .text .link:hover {
+  color: #2972cc
+}
+
+.discuss-list .text i {
+  margin-left: 5px
+}
+
+.discuss-list .text i.month {
+  width: 10px;
+  height: 14px;
+  background-image: url(/qd/images/book_details/sprite.385d7.png);
+  background-repeat: no-repeat;
+  background-position: -323px -164px;
+  background-size: 335px
+}
+
+.discuss-list .text i.money {
+  width: 14px;
+  height: 14px;
+  background-image: url(/qd/images/book_details/sprite.385d7.png);
+  background-repeat: no-repeat;
+  background-position: -320px -188px;
+  background-size: 335px
+}
+
+.discuss-list .text i.rec {
+  width: 10px;
+  height: 14px;
+  background-image: url(/qd/images/book_details/sprite.385d7.png);
+  background-repeat: no-repeat;
+  background-position: -325px -138px;
+  background-size: 335px
+}
+
+.discuss-list .users {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun
+}
+
+.discuss-list .users em {
+  float: right;
+  color: #a6a6a6
+}
+
+.discuss-list .users cite {
+  color: #a6a6a6
+}
+
+.discuss-list .users .blue {
+  margin: 0 8px 0 5px
+}
+
+.discuss-list .users .black {
+  margin: 0 0 0 5px;
+  color: #1a1a1a
+}
+
+.discuss-list .users .black:hover {
+  color: #ed4259
+}
+
+.discuss-list .users .user-level {
+  display: inline-block;
+  margin-top: -2px;
+  vertical-align: middle
+}
+
+.discuss-list .users i {
+  margin: 0 6px;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.discuss-list .users span.time {
+  font: 12px/14px PingFangSC-Regular, '-apple-system', Simsun;
+  color: #9e9e9e
+}
+
+.discuss-list .users a {
+  font: 12px/14px PingFangSC-Regular, '-apple-system', Simsun;
+  display: inline;
+  margin-top: 5px;
+  color: #a6a6a6
+}
+
+.discuss-list .users a .iconfont {
+  font-size: 16px;
+  float: none;
+  min-width: 16px;
+  margin: 0 6px 0 12px
+}
+
+.discuss-list .users a:hover {
+  color: #ed4259
+}
+
+.discuss-list .users a:hover .iconfont {
+  color: #ed4259
+}
+
+.discuss-list .go-discuss {
+  text-align: center;
+  background: #f7f6f2
+}
+
+.discuss-list .go-discuss a {
+  font: 12px/34px PingFangSC-Regular, '-apple-system', Simsun;
+  display: block;
+  height: 34px
+}
+
+.discuss-list .go-discuss a.blue {
+  color: #666
+}
+
+.discuss-list .go-discuss a .iconfont {
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle
+}
+
+.like-more.other-works {
+  margin-bottom: 48px
+}
+
+.like-more h3 {
+  margin-bottom: 14px
+}
+
+.like-more li {
+  float: left;
+  width: 86px;
+  margin-left: 60px
+}
+
+.like-more li:first-child {
+  margin-left: 0
+}
+
+.like-more li .book-img {
+  width: 84px;
+  height: 112px;
+  margin-bottom: 16px
+}
+
+.like-more li h4 {
+  font: 700 14px/21px PingFangSC-Regular, '-apple-system', Simsun;
+  overflow: hidden;
+  height: 21px
+}
+
+.like-more li p {
+  font: 12px/20px PingFangSC-Regular, '-apple-system', Simsun;
+  overflow: hidden;
+  height: 40px;
+  color: #666
+}
+
+.like-more li p.red {
+  color: #bf2c24
+}
+
+.left-bar-list,
+.right-bar-list {
+  position: fixed;
+  width: 60px
+}
+
+.left-bar-list dd,
+.right-bar-list dd {
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+  border: 1px solid #d8d8d8;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-top: none;
+  background: url(/qd/images/read.qidian.com/basic_bg.edf95.png) repeat
+}
+
+.left-bar-list dd .red-point,
+.right-bar-list dd .red-point {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 38px;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background: #bf2c24
+}
+
+.left-bar-list dd:first-child,
+.right-bar-list dd:first-child {
+  border-top: 1px solid #d8d8d8;
+  border-top: 1px solid rgba(0, 0, 0, .1)
+}
+
+.left-bar-list dd.act,
+.right-bar-list dd.act {
+  z-index: 101;
+  width: 69px;
+  border-right: none;
+  background: url(/qd/images/read.qidian.com/base_theme_popup.f1a43.png) repeat;
+  box-shadow: -10px 5px 25px -4px rgba(0, 0, 0, .2)
+}
+
+.left-bar-list dd a,
+.right-bar-list dd a {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  display: block;
+  width: 58px;
+  height: 58px;
+  transition: none;
+  text-align: center
+}
+
+.left-bar-list dd a i,
+.right-bar-list dd a i {
+  display: block;
+  height: 48px;
+  padding-top: 12px;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.left-bar-list dd a span,
+.right-bar-list dd a span {
+  transition: color .3s
+}
+
+.left-bar-list dd a .iconfont,
+.right-bar-list dd a .iconfont {
+  font-size: 16px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 0 auto 6px;
+  transition: color .3s;
+  color: #000
+}
+
+.left-bar-list dd a:hover .iconfont,
+.right-bar-list dd a:hover .iconfont {
+  color: #ed4259
+}
+
+.left-bar-list dd a:hover span,
+.right-bar-list dd a:hover span {
+  color: #ed4259
+}
+
+.left-bar-list dd a.add-book.in-shelf,
+.right-bar-list dd a.add-book.in-shelf {
+  line-height: 60px
+}
+
+.left-bar-list dd .guide-box,
+.right-bar-list dd .guide-box {
+  font: 14px/32px PingFangSC-Regular, '-apple-system', Simsun;
+  top: 14px;
+  white-space: nowrap;
+  color: #000
+}
+
+.auto-switch {
+  position: relative;
+  z-index: 1;
+  width: 170px;
+  margin: 0 auto 28px
+}
+
+.auto-switch a,
+.auto-switch em,
+.auto-switch span {
+  display: inline-block;
+  vertical-align: middle
+}
+
+.auto-switch span {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  color: #999;
+  color: rgba(0, 0, 0, .4)
+}
+
+.auto-switch em {
+  position: relative;
+  z-index: 1;
+  width: 60px;
+  height: 12px;
+  margin-right: 12px;
+  border-radius: 14px;
+  background: #bfbfbf
+}
+
+.auto-switch em a {
+  font-size: 12px;
+  line-height: 24px;
+  position: absolute;
+  z-index: 1;
+  top: -6px;
+  width: 44px;
+  height: 24px;
+  transition: left .3s;
+  text-align: center;
+  color: #fff;
+  border-radius: 100px
+}
+
+.auto-switch em.off a {
+  left: 0;
+  background: grey
+}
+
+.auto-switch em.on {
+  background: #ffaca8
+}
+
+.auto-switch em.on a {
+  left: 20px;
+  background: #bf2c24
+}
+
+.guide-btn-wrap {
+  position: fixed;
+  z-index: 102;
+  bottom: 120px;
+  left: 50%;
+  margin-left: -421px
+}
+
+.guide-btn-wrap a {
+  font-size: 12px;
+  line-height: 1;
+  display: block;
+  width: 12px;
+  padding: 5px 4px 5px 5px;
+  text-align: center;
+  color: #fff;
+  background: #ccc;
+  background: rgba(0, 0, 0, .2)
+}
+
+.guide-box {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  padding: 0 12px;
+  border-radius: 3px;
+  background: #fff
+}
+
+.guide-box cite {
+  position: absolute;
+  z-index: 1;
+  top: 11px;
+  width: 0;
+  height: 0
+}
+
+.guide-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
+
+.guide-mask.bottom {
+  z-index: 99;
+  background: #000;
+  background-color: rgba(0, 0, 0, .6)
+}
+
+.guide-mask.top {
+  z-index: 106;
+  background: #fff;
+  background: rgba(255, 255, 255, 0)
+}
+
+.guide-popup .guide-img {
+  padding: 24px 0
+}
+
+.guide-popup .guide-img p {
+  width: 360px;
+  height: 308px;
+  margin: 0 auto;
+  background: url(/qd/images/read.qidian.com/guide.356c2.png)
+}
+
+.left-bar-list {
+  z-index: 102;
+  top: 119px;
+  left: 50%;
+  margin-left: -468px
+}
+
+.left-bar-list .guide-box {
+  right: 72px
+}
+
+.left-bar-list .guide-box cite {
+  right: -5px;
+  border-top: 5px solid transparent;
+  border-right: 0 none;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #fff
+}
+
+.left-bar-list .panel-list-wrap {
+  position: relative;
+  z-index: 1;
+  min-height: 235px
+}
+
+.left-bar-list .panel-list-wrap .loading {
+  padding: 131px 0;
+  text-align: center
+}
+
+.left-bar-list .panel-list-wrap .loading span {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  background: url(/qd/images/common/loading.6bd87.gif) no-repeat
+}
+
+.left-bar-list .panel-list-wrap .loading p {
+  font: 14px/24px PingFangSC-Regular, '-apple-system', Simsun
+}
+
+.left-bar-list .panel-wrap {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 69px;
+  width: 798px
+}
+
+.left-bar-list .panel-wrap .panel-box {
+  padding: 40px 0 40px 24px;
+  border: 1px solid #d8d8d8;
+  border: 1px solid rgba(0, 0, 0, .1)
+}
+
+.left-bar-list .panel-wrap .panel-box h4 {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 28px
+}
+
+.left-bar-list .panel-wrap.catalog .panel-box {
+  padding-left: 0
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-tab {
+  margin: 0 0 20px 24px
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-tab span {
+  font-size: 18px;
+  line-height: 22px;
+  margin-right: 20px;
+  padding: 0 2px 4px;
+  cursor: pointer;
+  transition: color .3s;
+  color: #a6a6a6
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-tab span.act,
+.left-bar-list .panel-wrap.catalog .catalog-tab span:hover {
+  color: #ed4259
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-tab span.act {
+  border-bottom: 1px solid #ed4259
+}
+
+.left-bar-list .panel-wrap.catalog .bookmark-list-wrap,
+.left-bar-list .panel-wrap.catalog .catalog-scroll-wrap {
+  overflow: auto
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap h3 {
+  position: relative;
+  z-index: 2;
+  transition: background .3s
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap h3 i {
+  font: 700 18px/40px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  display: block;
+  width: 754px;
+  height: 34px;
+  margin-left: 24px;
+  padding-bottom: 6px;
+  cursor: pointer;
+  border-bottom: 1px solid #e5e5e5
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap h3:hover {
+  background: rgba(0, 0, 0, .05)
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap h3 span {
+  font: 700 12px/16px Arial;
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+  margin-left: 8px;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  background: #fc6c28
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap h3 cite {
+  float: left;
+  overflow: hidden;
+  max-width: 90%;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap h3 em {
+  font-size: 16px;
+  line-height: 16px;
+  float: right;
+  width: 16px;
+  height: 16px;
+  margin: 12px 12px 0 0
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap h3 em.up {
+  display: none
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap h3.cur em.down {
+  display: none
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap h3.cur em.up {
+  display: block
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list {
+  display: none;
+  clear: both;
+  margin-bottom: 20px
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list ul {
+  overflow: hidden;
+  padding-left: 24px
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list li {
+  font: 16px/40px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  float: left;
+  width: 376px;
+  border-top: 1px solid #f2f2f2
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list li:first-child,
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list li:first-child+li {
+  border-top: none
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list li:after,
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list li:before {
+  display: table;
+  content: ''
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list li:after {
+  clear: both
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list li a {
+  float: left;
+  overflow: hidden;
+  max-width: 80%;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list li em {
+  font-size: 16px;
+  line-height: 16px;
+  float: right;
+  width: 16px;
+  height: 16px;
+  margin: 12px 12px 0 0;
+  color: #a6a6a6
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list li.on a {
+  color: #ed4259
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list li:nth-of-type(odd) .iconfont {
+  margin-right: 48px
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list.no-data {
+  padding: 48px 0
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list.no-data .iconfont {
+  font-size: 84px;
+  width: 72px;
+  height: 90px;
+  margin: 0 auto 16px;
+  color: #e6e3da;
+  -webkit-text-stroke-width: 0
+}
+
+.left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list.no-data p {
+  font: 16px/22px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  margin-left: 10px;
+  text-align: center;
+  color: #a6a6a6
+}
+
+.left-bar-list .panel-wrap.catalog .bookmark-list-wrap {
+  margin-top: -10px
+}
+
+.left-bar-list .panel-wrap.catalog .bookmark-list-wrap .bookmark-list li {
+  position: relative;
+  z-index: 1;
+  padding: 0 0 10px;
+  transition: background .3s
+}
+
+.left-bar-list .panel-wrap.catalog .bookmark-list-wrap .bookmark-list li:hover {
+  background: rgba(0, 0, 0, .05)
+}
+
+.left-bar-list .panel-wrap.catalog .bookmark-list-wrap .bookmark-list li:first-child .mark-info {
+  border-top: none
+}
+
+.left-bar-list .panel-wrap.catalog .bookmark-list-wrap .bookmark-list li .delete {
+  font-size: 16px;
+  position: absolute;
+  z-index: 1;
+  top: 22px;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  color: #a6a6a6
+}
+
+.left-bar-list .panel-wrap.catalog .bookmark-list-wrap .bookmark-list .mark-info {
+  margin-left: 24px;
+  padding: 14px 24px 0 0;
+  border-top: 1px solid #e5e5e5
+}
+
+.left-bar-list .panel-wrap.catalog .bookmark-list-wrap .bookmark-list .mark-info cite {
+  font: 14px/24px PingFangSC-Regular, '-apple-system', Simsun;
+  float: right;
+  margin-top: 4px;
+  color: #a6a6a6
+}
+
+.left-bar-list .panel-wrap.catalog .bookmark-list-wrap .bookmark-list .bookmark-link {
+  font: 700 18px/32px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  display: block;
+  overflow: hidden;
+  height: 32px;
+  margin: 0 0 6px;
+  padding-right: 24px
+}
+
+.left-bar-list .panel-wrap.catalog .bookmark-list-wrap .no-data {
+  padding: 48px 0
+}
+
+.left-bar-list .panel-wrap.catalog .bookmark-list-wrap .no-data .iconfont {
+  font-size: 84px;
+  width: 72px;
+  height: 90px;
+  margin: 0 auto 16px;
+  color: #e6e3da;
+  -webkit-text-stroke-width: 0
+}
+
+.left-bar-list .panel-wrap.catalog .bookmark-list-wrap .no-data p {
+  font: 16px/22px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  margin-left: 10px;
+  text-align: center;
+  color: #a6a6a6
+}
+
+.left-bar-list .panel-wrap.setting {
+  width: 480px
+}
+
+.left-bar-list .panel-wrap.setting li {
+  font-size: 0;
+  margin-top: 28px
+}
+
+.left-bar-list .panel-wrap.setting li span {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle
+}
+
+.left-bar-list .panel-wrap.setting li:first-child {
+  margin-top: 0
+}
+
+.left-bar-list .panel-wrap.setting li i {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  display: inline-block;
+  margin-right: 16px;
+  vertical-align: middle;
+  color: #666
+}
+
+.left-bar-list .panel-wrap.setting li.theme-list span {
+  line-height: 32px;
+  width: 34px;
+  height: 34px;
+  margin-right: 16px;
+  border: 1px solid #e5e5e5;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 100%
+}
+
+.left-bar-list .panel-wrap.setting li.theme-list span em {
+  font-size: 16px;
+  transition: opacity .3s;
+  text-align: center;
+  opacity: 0;
+  color: #ed4259
+}
+
+.left-bar-list .panel-wrap.setting li.theme-list span.act {
+  border: 1px solid #ed4259
+}
+
+.left-bar-list .panel-wrap.setting li.theme-list span.act em {
+  display: block;
+  opacity: 1
+}
+
+.left-bar-list .panel-wrap.setting li.theme-list span.act cite {
+  display: none
+}
+
+.left-bar-list .panel-wrap.setting li.theme-list span.theme-0 {
+  background: #faf5eb;
+  background: rgba(250, 245, 235, .8)
+}
+
+.left-bar-list .panel-wrap.setting li.theme-list span.theme-1 {
+  background: #f5eacc;
+  background: rgba(245, 234, 204, .8)
+}
+
+.left-bar-list .panel-wrap.setting li.theme-list span.theme-2 {
+  background: #e6f2e6;
+  background: rgba(230, 242, 230, .8)
+}
+
+.left-bar-list .panel-wrap.setting li.theme-list span.theme-3 {
+  background: #e4f1f5;
+  background: rgba(228, 241, 245, .8)
+}
+
+.left-bar-list .panel-wrap.setting li.theme-list span.theme-4 {
+  background: #f5e4e4;
+  background: rgba(245, 228, 228, .8)
+}
+
+.left-bar-list .panel-wrap.setting li.theme-list span.theme-5 {
+  background: #e0e0e0;
+  background: rgba(224, 224, 224, .8)
+}
+
+.left-bar-list .panel-wrap.setting li.theme-list span.theme-6 {
+  position: relative;
+  background: #191b1c;
+  background: rgba(25, 27, 28, .8)
+}
+
+.left-bar-list .panel-wrap.setting li.theme-list span.theme-6 cite {
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  left: 9px;
+  text-align: center;
+  color: #fff;
+  color: rgba(255, 255, 255, .2)
+}
+
+.left-bar-list .panel-wrap.setting li.font-family span,
+.left-bar-list .panel-wrap.setting li.read-mode span {
+  width: 78px;
+  height: 34px;
+  margin-right: 16px;
+  transition: color .3s;
+  border: 1px solid #e5e5e5;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 2px;
+  background: #fff;
+  background: rgba(255, 255, 255, .5)
+}
+
+.left-bar-list .panel-wrap.setting li.font-family span.act,
+.left-bar-list .panel-wrap.setting li.read-mode span.act {
+  color: #ed4259;
+  border: 1px solid #ed4259;
+  background: #fff0f2
+}
+
+.left-bar-list .panel-wrap.setting li.font-family span em,
+.left-bar-list .panel-wrap.setting li.read-mode span em {
+  font-size: 16px;
+  line-height: 34px;
+  transition: color .3s
+}
+
+.left-bar-list .panel-wrap.setting li.font-family span.kaiti,
+.left-bar-list .panel-wrap.setting li.read-mode span.kaiti {
+  font: 16px/34px KaiTi
+}
+
+.left-bar-list .panel-wrap.setting li.font-family span.yahei,
+.left-bar-list .panel-wrap.setting li.read-mode span.yahei {
+  font: 14px/34px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif
+}
+
+.left-bar-list .panel-wrap.setting li.font-family span.simsun,
+.left-bar-list .panel-wrap.setting li.read-mode span.simsun {
+  font: 14px/34px PingFangSC-Regular, '-apple-system', Simsun
+}
+
+.left-bar-list .panel-wrap.setting li.font-family span:hover,
+.left-bar-list .panel-wrap.setting li.read-mode span:hover {
+  color: #ed4259
+}
+
+.left-bar-list .panel-wrap.setting li.font-family span:hover em,
+.left-bar-list .panel-wrap.setting li.read-mode span:hover em {
+  color: #ed4259
+}
+
+.left-bar-list .panel-wrap.setting li.font-size cite,
+.left-bar-list .panel-wrap.setting li.page-width cite {
+  display: inline-block;
+  width: 270px;
+  height: 34px;
+  vertical-align: middle;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  background: #fff;
+  background: rgba(255, 255, 255, .5)
+}
+
+.left-bar-list .panel-wrap.setting li.font-size span,
+.left-bar-list .panel-wrap.setting li.page-width span {
+  line-height: 34px;
+  height: 34px
+}
+
+.left-bar-list .panel-wrap.setting li.font-size span:first-child,
+.left-bar-list .panel-wrap.setting li.page-width span:first-child {
+  width: 89px
+}
+
+.left-bar-list .panel-wrap.setting li.font-size span em,
+.left-bar-list .panel-wrap.setting li.page-width span em {
+  font-size: 16px;
+  line-height: 34px;
+  transition: color .3s
+}
+
+.left-bar-list .panel-wrap.setting li.font-size span.lang,
+.left-bar-list .panel-wrap.setting li.page-width span.lang {
+  font-size: 16px;
+  width: 90px;
+  cursor: default;
+  color: #a6a6a6
+}
+
+.left-bar-list .panel-wrap.setting li.font-size span.lang+b+span,
+.left-bar-list .panel-wrap.setting li.page-width span.lang+b+span {
+  width: 89px
+}
+
+.left-bar-list .panel-wrap.setting li.font-size span:hover em,
+.left-bar-list .panel-wrap.setting li.page-width span:hover em {
+  color: #ed4259
+}
+
+.left-bar-list .panel-wrap.setting li.font-size b,
+.left-bar-list .panel-wrap.setting li.page-width b {
+  display: inline-block;
+  height: 20px;
+  vertical-align: middle;
+  border-right: 1px solid #e5e5e5
+}
+
+.left-bar-list .panel-wrap.setting li.remind .auto-switch {
+  position: static;
+  width: auto;
+  margin: 0
+}
+
+.left-bar-list .panel-wrap.setting .btn-wrap {
+  padding: 48px 0 0;
+  text-align: center
+}
+
+.left-bar-list .panel-wrap.setting .btn-wrap a {
+  font: 14px/34px PingFangSC-Regular, '-apple-system', Simsun;
+  width: 100px;
+  height: 34px;
+  border-radius: 2px
+}
+
+.left-bar-list .panel-wrap.setting .btn-wrap a.grey-btn {
+  line-height: 32px;
+  width: 98px;
+  height: 32px;
+  margin-left: 40px
+}
+
+.left-bar-list .panel-wrap.setting .remind-voice {
+  font-size: 12px;
+  color: #999
+}
+
+.left-bar-list .panel-wrap.cellphone {
+  width: 382px
+}
+
+.left-bar-list .panel-wrap.cellphone .panel-box {
+  padding-left: 0
+}
+
+.left-bar-list .panel-wrap.cellphone h4 {
+  padding-left: 24px
+}
+
+.left-bar-list .panel-wrap.cellphone .qr-code-wrap h5 {
+  font: 14px/20px PingFangSC-Regular, '-apple-system', Simsun;
+  margin-bottom: 32px;
+  text-align: center
+}
+
+.left-bar-list .panel-wrap.cellphone .qr-code-wrap img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 40px
+}
+
+.left-bar-list .panel-wrap.cellphone .qr-code-wrap .scan-bottom {
+  width: 154px;
+  margin: 0 auto
+}
+
+.left-bar-list .panel-wrap.cellphone .qr-code-wrap .scan-bottom span {
+  float: left;
+  width: 30px;
+  height: 28px;
+  margin: 2px 10px 0 0;
+  background-image: url(/qd/images/book_details/sprite.385d7.png);
+  background-repeat: no-repeat;
+  background-position: -299px -108px;
+  background-size: 335px
+}
+
+.left-bar-list .panel-wrap.cellphone .qr-code-wrap .scan-bottom .tip {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  float: left;
+  text-align: left;
+  color: #a6a6a6
+}
+
+.left-bar-list .panel-wrap.cellphone .qr-code-wrap .scan-bottom .tip .red {
+  margin-left: 5px
+}
+
+.left-bar-list .panel-wrap.game {
+  overflow: hidden;
+  width: auto;
+  height: 500px
+}
+
+.left-bar-list .panel-wrap.game iframe {
+  width: 720px;
+  height: 500px
+}
+
+.left-bar-list dd.left-game-icon {
+  border: none
+}
+
+.left-bar-list dd.left-game-icon a {
+  width: 60px;
+  height: 60px
+}
+
+.right-bar-list {
+  z-index: 101;
+  right: 50%;
+  bottom: 0;
+  margin-right: -468px
+}
+
+.right-bar-list dd.go-top i {
+  padding-top: 22px
+}
+
+.right-bar-list dd.go-top .iconfont {
+  margin-left: 19px
+}
+
+.right-bar-list dd.hongbao {
+  margin-top: 8px;
+  border-top: 1px solid #d8d8d8;
+  border-top: 1px solid rgba(0, 0, 0, .1)
+}
+
+.right-bar-list dd.hongbao b {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 6px auto 0;
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: -202px -185.5px;
+  background-size: 340px
+}
+
+.right-bar-list .guide-box {
+  left: 72px
+}
+
+.right-bar-list .guide-box cite {
+  left: -5px;
+  border-top: 5px solid transparent;
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid transparent;
+  border-left: 0 none
+}
+
+.panel-wrap {
+  background: url(/qd/images/read.qidian.com/base_theme_popup.f1a43.png) repeat;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .2)
+}
+
+.panel-wrap .close-panel {
+  font-size: 24px;
+  line-height: 24px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  transition: .5s;
+  transform: rotate(0);
+  text-align: center;
+  color: #a6a6a6
+}
+
+.panel-wrap .close-panel:hover {
+  transform: rotate(90deg);
+  color: #1a1a1a
+}
+
+.comment-popup {
+  width: 600px
+}
+
+.comment-popup .inner-wrap {
+  padding: 40px 24px 0
+}
+
+.comment-popup h3 {
+  font: 16px/24px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  margin-bottom: 12px
+}
+
+.comment-popup h3 span {
+  font: 14px/20px PingFangSC-Regular, '-apple-system', Simsun;
+  margin-right: 10px;
+  color: #a6a6a6
+}
+
+.comment-popup .comment-text-wrap {
+  position: relative;
+  padding-bottom: 24px
+}
+
+.comment-popup .comment-text-wrap .error-tip {
+  font-size: 12px;
+  line-height: 30px;
+  position: absolute;
+  top: 128px;
+  left: 0;
+  color: #bf2c24
+}
+
+.comment-popup .count-text {
+  width: 550px;
+  margin-bottom: 12px
+}
+
+.comment-popup .count-text textarea {
+  width: 96%
+}
+
+.comment-popup .count-text.error {
+  border: 1px solid #bf2c24
+}
+
+.comment-popup .count-text+p {
+  text-align: right
+}
+
+.comment-popup .count-text+p a {
+  font: 12px/24px PingFangSC-Regular, '-apple-system', Simsun;
+  display: inline-block;
+  width: 80px;
+  height: 24px;
+  text-align: center;
+  color: #fff;
+  border-radius: 2px
+}
+
+.comment-popup .other-reply-list li:first-child {
+  padding-top: 0
+}
+
+.comment-popup .other-reply-list li:first-child .user-photo {
+  top: 0
+}
+
+.discuss-container {
+  position: fixed;
+  z-index: 105;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 382px;
+  height: 612px;
+  max-height: 100%
+}
+
+.discuss-container h3 {
+  font-size: 18px;
+  line-height: 22px;
+  padding: 40px 0 10px 24px
+}
+
+.discuss-container .discuss-list-wrap {
+  position: absolute;
+  top: 72px;
+  right: 0;
+  bottom: 56px;
+  left: 0;
+  overflow-x: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-y: auto;
+  width: 100%;
+  background: rgba(0, 0, 0, .05)
+}
+
+.discuss-container .discuss-list-wrap .la-ball-pulse {
+  padding: 20px 0
+}
+
+.discuss-container .discuss-list-wrap .loading {
+  padding: 198px 0;
+  text-align: center
+}
+
+.discuss-container .discuss-list-wrap .loading span {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  background: url(/qd/images/common/loading.6bd87.gif) no-repeat
+}
+
+.discuss-container .discuss-list-wrap .loading p {
+  font: 14px/24px PingFangSC-Regular, '-apple-system', Simsun
+}
+
+.discuss-container .discuss-list-wrap .content-list {
+  width: 340px;
+  padding: 20px 24px;
+  text-align: center
+}
+
+.discuss-container .discuss-list-wrap .content-list .btn {
+  font: 12px/1 PingFangSC-Regular, '-apple-system', Simsun;
+  display: inline-block;
+  color: #a6a6a6
+}
+
+.discuss-container .discuss-list-wrap .content-list .btn.history {
+  margin-bottom: 14px
+}
+
+.discuss-container .discuss-list-wrap .content-list .btn.reload {
+  margin-top: 14px
+}
+
+.discuss-container .discuss-list-wrap .content-list .btn em {
+  font-size: 16px;
+  display: inline-block;
+  width: 16px;
+  margin: -2px 3px 0 0;
+  vertical-align: middle
+}
+
+.discuss-container .discuss-list-wrap li {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 24px;
+  padding-left: 54px
+}
+
+.discuss-container .discuss-list-wrap li:after,
+.discuss-container .discuss-list-wrap li:before {
+  display: table;
+  content: ''
+}
+
+.discuss-container .discuss-list-wrap li:after {
+  clear: both
+}
+
+.discuss-container .discuss-list-wrap li:last-of-type {
+  margin-bottom: 0
+}
+
+.discuss-container .discuss-list-wrap li .user-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0
+}
+
+.discuss-container .discuss-list-wrap li .user-text {
+  position: relative;
+  float: left;
+  width: 215px;
+  border-radius: 0 5px 5px 5px;
+  background: #fff
+}
+
+.discuss-container .discuss-list-wrap li .user-text cite {
+  position: absolute;
+  left: -10px;
+  width: 10px;
+  height: 16px;
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: -228px -185.5px;
+  background-position: -240px -185px;
+  background-size: 340px
+}
+
+.discuss-container .discuss-list-wrap li .user-text p {
+  font: 12px/20px PingFangSC-Regular, '-apple-system', Simsun;
+  padding: 6px 8px
+}
+
+.discuss-container .discuss-list-wrap li.red-packet .user-text {
+  cursor: pointer;
+  color: #fff;
+  background: #f5a623
+}
+
+.discuss-container .discuss-list-wrap li.red-packet .user-text cite {
+  top: -1px;
+  width: 10px;
+  height: 16px;
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: -240px -185.5px;
+  background-position: -240px -185px;
+  background-size: 340px
+}
+
+.discuss-container .discuss-list-wrap li.red-packet .user-text .red-packet-box {
+  overflow: hidden;
+  padding: 12px 9px
+}
+
+.discuss-container .discuss-list-wrap li.red-packet .user-text .red-packet-box span {
+  float: left;
+  width: 26px;
+  height: 32px;
+  margin: 2px 9px 0 0;
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: -280px -143.5px;
+  background-size: 340px
+}
+
+.discuss-container .discuss-list-wrap li.red-packet .user-text .red-packet-box p {
+  font: 12px/18px PingFangSC-Regular, '-apple-system', Simsun;
+  float: left;
+  overflow: hidden;
+  width: 160px;
+  max-height: 36px;
+  padding: 0;
+  text-align: left
+}
+
+.discuss-container .discuss-list-wrap li.red-packet .user-text .type {
+  font: 12px/20px PingFangSC-Regular, '-apple-system', Simsun;
+  overflow: hidden;
+  height: 20px;
+  padding: 0 9px;
+  color: #a6a6a6;
+  border: 1px solid #f5a623;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  background: #fff
+}
+
+.discuss-container .discuss-list-wrap li.red-packet .user-text .type span {
+  float: right
+}
+
+.discuss-container .discuss-list-wrap li.red-packet .user-text .type span .iconfont {
+  font-size: 12px;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+  color: #a6a6a6;
+  -webkit-text-stroke-width: 0
+}
+
+.discuss-container .discuss-list-wrap li.red-packet .user-text .type i {
+  float: left
+}
+
+.discuss-container .discuss-list-wrap li.my {
+  overflow: hidden;
+  padding-right: 54px;
+  padding-left: 0
+}
+
+.discuss-container .discuss-list-wrap li.my .user-photo {
+  right: 0;
+  left: auto
+}
+
+.discuss-container .discuss-list-wrap li.my .user-text {
+  float: right;
+  color: #fff;
+  border-radius: 5px 0 5px 5px;
+  background: #bf2c24
+}
+
+.discuss-container .discuss-list-wrap li.my .user-text cite {
+  left: 100%;
+  width: 10px;
+  height: 16px;
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: -264px -185.5px;
+  background-size: 340px
+}
+
+.discuss-container .discuss-list-wrap li.my.red-packet .user-text {
+  background: #f5a623
+}
+
+.discuss-container .discuss-list-wrap li.my.red-packet .user-text cite {
+  right: -9px;
+  left: auto;
+  width: 10px;
+  height: 16px;
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: -252px -185.5px;
+  background-size: 340px
+}
+
+.discuss-container .discuss-list-wrap li.time {
+  margin-bottom: 10px;
+  padding-left: 0;
+  text-align: center
+}
+
+.discuss-container .discuss-list-wrap li.time b {
+  font: 12px/18px Arail;
+  display: inline-block;
+  height: 18px;
+  padding: 2px 6px;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+  background: #333;
+  background: rgba(0, 0, 0, .2)
+}
+
+.discuss-container .discuss-list-wrap .get-list {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  margin-top: 10px;
+  padding-left: 0;
+  text-align: center;
+  color: #fff
+}
+
+.discuss-container .discuss-list-wrap .get-list span {
+  display: inline-block;
+  height: 16px;
+  padding: 1px 6px;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+  background: #ccc;
+  background: rgba(0, 0, 0, .2)
+}
+
+.discuss-container .discuss-list-wrap .get-list a {
+  color: #ed4259
+}
+
+.discuss-container .publish-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 0
+}
+
+.discuss-container .publish-wrap a {
+  font: 14px/32px PingFangSC-Regular, '-apple-system', Simsun;
+  display: block;
+  width: 100px;
+  height: 32px;
+  margin: 0 auto;
+  border-radius: 2px
+}
+
+.pwd-overlay,
+.red-overlay {
+  position: fixed;
+  z-index: 499;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+  background-color: #000
+}
+
+body .fans-slide-wrap li {
+  width: 290px
+}
+
+body.w640 .crumbs-nav {
+  width: 640px
+}
+
+body.w640 .main-text-wrap .text-head .guide-box {
+  top: -120px;
+  right: -156px
+}
+
+body.w640 .main-text-wrap .text-head .book-mark {
+  top: -32px;
+  right: -14px
+}
+
+body.w640 .main-text-wrap {
+  padding: 32px
+}
+
+body.w640 .read-main-wrap {
+  width: 640px
+}
+
+body.w640 .left-bar-list {
+  margin-left: -388px
+}
+
+body.w640 .left-bar-list .panel-wrap.game {
+  width: 720px
+}
+
+body.w640 .left-bar-list .panel-wrap.catalog {
+  width: 640px
+}
+
+body.w640 .left-bar-list .panel-wrap.catalog .catalog-list-wrap h3 i {
+  width: 596px
+}
+
+body.w640 .left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list li {
+  width: 298px
+}
+
+body.w640 .left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list li a {
+  max-width: 72%
+}
+
+body.w640 .right-bar-list {
+  margin-right: -388px
+}
+
+body.w640 .guide-btn-wrap {
+  margin-left: -341px
+}
+
+body.w640 .like-more li {
+  margin-left: 36px
+}
+
+body.w640 .like-more li:first-child {
+  margin-left: 0
+}
+
+body.w640 .fans-slide-wrap li {
+  width: 250px
+}
+
+body.w640 .float-op-wrap .float-op.left-op {
+  margin-left: -680px
+}
+
+body.w640 .float-op-wrap .float-op.right-op {
+  margin-right: -680px
+}
+
+body.w900 .crumbs-nav,
+body.w900 .read-main-wrap {
+  width: 900px
+}
+
+body.w900 .left-bar-list {
+  margin-left: -518px
+}
+
+body.w900 .right-bar-list {
+  margin-right: -518px
+}
+
+body.w900 .guide-btn-wrap {
+  margin-left: -471px
+}
+
+body.w900 .like-more li {
+  margin-left: 85px
+}
+
+body.w900 .like-more li:first-child {
+  margin-left: 0
+}
+
+body.w900 .fans-slide-wrap li {
+  width: 330px
+}
+
+body.w900 .float-op-wrap .float-op.left-op {
+  margin-left: -800px
+}
+
+body.w900 .float-op-wrap .float-op.right-op {
+  margin-right: -800px
+}
+
+body.w1280 .crumbs-nav,
+body.w1280 .read-main-wrap {
+  width: 1280px
+}
+
+body.w1280 .left-bar-list {
+  margin-left: -708px
+}
+
+body.w1280 .right-bar-list {
+  margin-right: -708px
+}
+
+body.w1280 .guide-btn-wrap {
+  margin-left: -661px
+}
+
+body.w1280 .like-more li {
+  margin-left: 180px
+}
+
+body.w1280 .like-more li:first-child {
+  margin-left: 0
+}
+
+body.w1280 .fans-slide-wrap li {
+  width: 480px
+}
+
+body.w1280 .float-op-wrap .float-op.left-op {
+  margin-left: -950px
+}
+
+body.w1280 .float-op-wrap .float-op.right-op {
+  margin-right: -950px
+}
+
+body {
+  background: #ede7da url(/qd/images/read.qidian.com/body_base_bg.5988a.png) repeat
+}
+
+body.theme-1 {
+  background: #e0ce9e url(/qd/images/read.qidian.com/theme/body_theme1_bg.9987a.png) repeat
+}
+
+body.theme-1 .chapter-control,
+body.theme-1 .left-bar-list dd,
+body.theme-1 .right-bar-list dd,
+body.theme-1 .text-wrap {
+  background: #f3e9c6 url(/qd/images/read.qidian.com/theme/theme_1_bg.1ae7b.png) repeat
+}
+
+body.theme-1 .guide-btn-wrap a {
+  color: #666;
+  background: #f2e8c7
+}
+
+body.theme-1 .left-bar-list dd.act,
+body.theme-1 .panel-wrap {
+  background: #f8f1d9 url(/qd/images/read.qidian.com/theme/theme_1_popup_bg.9bb69.png) repeat
+}
+
+body.theme-2 {
+  background: #cddfcd url(/qd/images/read.qidian.com/theme/body_theme2_bg.75a33.png) repeat
+}
+
+body.theme-2 .chapter-control,
+body.theme-2 .left-bar-list dd,
+body.theme-2 .right-bar-list dd,
+body.theme-2 .text-wrap {
+  background: #e2eee2 url(/qd/images/read.qidian.com/theme/theme_2_bg.b6f68.png) repeat
+}
+
+body.theme-2 .guide-btn-wrap a {
+  color: #666;
+  background: #e1ede1
+}
+
+body.theme-2 .left-bar-list dd.act,
+body.theme-2 .panel-wrap {
+  background: #f3fbf3 url(/qd/images/read.qidian.com/theme/theme_2_popup_bg.b3538.png) repeat
+}
+
+body.theme-3 {
+  background: #cfdde1 url(/qd/images/read.qidian.com/theme/body_theme3_bg.b8eff.png) repeat
+}
+
+body.theme-3 .chapter-control,
+body.theme-3 .left-bar-list dd,
+body.theme-3 .right-bar-list dd,
+body.theme-3 .text-wrap {
+  background: #e2eff3 url(/qd/images/read.qidian.com/theme/theme_3_bg.31237.png) repeat
+}
+
+body.theme-3 .guide-btn-wrap a {
+  color: #666;
+  background: #e1eef2
+}
+
+body.theme-3 .left-bar-list dd.act,
+body.theme-3 .panel-wrap {
+  background: #e7f5f6 url(/qd/images/read.qidian.com/theme/theme_3_popup_bg.7ecca.png) repeat
+}
+
+body.theme-4 {
+  background: #ebcece
+}
+
+body.theme-4 .chapter-control,
+body.theme-4 .left-bar-list dd,
+body.theme-4 .right-bar-list dd,
+body.theme-4 .text-wrap {
+  background: #f5e4e4
+}
+
+body.theme-4 .guide-btn-wrap a {
+  color: #666;
+  border: 1px solid #d8d8d8;
+  border: 1px solid rgba(0, 0, 0, .1);
+  background: #faeceb
+}
+
+body.theme-4 .left-bar-list dd.act,
+body.theme-4 .panel-wrap {
+  background: #faeceb
+}
+
+body.theme-5 {
+  background: #d0d0d0 url(/qd/images/read.qidian.com/theme/body_theme5_bg.85f0d.png) repeat
+}
+
+body.theme-5 .chapter-control,
+body.theme-5 .left-bar-list dd,
+body.theme-5 .right-bar-list dd,
+body.theme-5 .text-wrap {
+  background: #dcdcdc url(/qd/images/read.qidian.com/theme/theme_5_bg.3f715.png) repeat
+}
+
+body.theme-5 .guide-btn-wrap a {
+  color: #666;
+  background: #e0e0e0
+}
+
+body.theme-5 .left-bar-list dd.act,
+body.theme-5 .panel-wrap {
+  background: #e8e8e8 url(/qd/images/read.qidian.com/theme/theme_5_popup_bg.36ab5.png) repeat
+}
+
+body.theme-6 {
+  background: #0f1112 url(/qd/images/read.qidian.com/theme/body_theme6_bg.a8d28.png) repeat
+}
+
+body.theme-6 .la-ball-pulse span {
+  color: #fafafa
+}
+
+body.theme-6 .left-nav li.site a.pin-logo {
+  background-image: url(/qd/images/pin_logo_1x.6068b.png)
+}
+
+body.theme-6 .left-nav li.act.site a.pin-logo {
+  background-image: url(/qd/images/pin_logo_black_1x.9c2fd.png)
+}
+
+body.theme-6 .left-nav li.site a.mm-pin-logo {
+  background-image: url(/qd/images/mm_pin_logo_1x.b4b52.png)
+}
+
+body.theme-6 .left-nav li.act.site a.mm-pin-logo {
+  background-image: url(/qd/images/mm_pin_logo_black_1x.c2e44.png)
+}
+
+body.theme-6 .read-header {
+  height: 59px;
+  border-bottom: 1px solid #444;
+  background: rgba(255, 255, 255, .05)
+}
+
+body.theme-6 .left-nav li.site a span,
+body.theme-6 .read-login li.sign-in a span {
+  border-top: 4px solid #999
+}
+
+body.theme-6 .read-login li:first-child input {
+  color: #999;
+  border-bottom: 1px solid #444
+}
+
+body.theme-6 .chapter-control,
+body.theme-6 .left-bar-list dd,
+body.theme-6 .panel-wrap,
+body.theme-6 .right-bar-list dd,
+body.theme-6 .text-wrap {
+  background: #111 url(/qd/images/read.qidian.com/theme/theme_6_bg.45ad3.png) repeat
+}
+
+body.theme-6 .body-rec-mask {
+  opacity: .8;
+  background: #000
+}
+
+body.theme-6 .guide-btn-wrap a {
+  color: grey;
+  border: 1px solid #444;
+  border-right: none;
+  background: #000
+}
+
+body.theme-6 .book-cover-wrap,
+body.theme-6 .chapter-control,
+body.theme-6 .float-wrap dd,
+body.theme-6 .panel-wrap .panel-box,
+body.theme-6 .text-wrap {
+  border: 1px solid #444
+}
+
+body.theme-6 .left-bar-list dd.act {
+  border-right: none
+}
+
+body.theme-6 .discuss-list li,
+body.theme-6 .float-wrap dd:first-child,
+body.theme-6 .left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list li,
+body.theme-6 .main-text-wrap .author-say-wrap,
+body.theme-6 .main-text-wrap .operation-wrap,
+body.theme-6 .other-reply-list li,
+body.theme-6 .reply-popup .other-reply-list,
+body.theme-6 .right-bar-list dd.hongbao,
+body.theme-6 .vip-limit-wrap {
+  border-top: 1px solid #444
+}
+
+body.theme-6 .left-bar-list .panel-wrap.catalog .bookmark-list-wrap .bookmark-list li:first-child .mark-info,
+body.theme-6 .other-reply-list li:first-child {
+  border-top: none
+}
+
+body.theme-6 .left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list li:first-child,
+body.theme-6 .left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list li:first-child+li {
+  border-top: none
+}
+
+body.theme-6 .fans-zone dd.line {
+  border-left: 1px solid #444
+}
+
+body.theme-6 .chapter-control span,
+body.theme-6 .read-login li.line {
+  border-right: 1px solid #444
+}
+
+body.theme-6 .discuss-list li:first-child,
+body.theme-6 .float-wrap dd,
+body.theme-6 .reply-popup .other-reply-list li:first-child {
+  border-top: none
+}
+
+body.theme-6 .book-discuss-wrap h3,
+body.theme-6 .left-bar-list .panel-wrap.catalog .catalog-list-wrap h3 i {
+  border-bottom: 1px solid #444
+}
+
+body.theme-6 .left-bar-list dd a .iconfont,
+body.theme-6 .right-bar-list dd a .iconfont {
+  color: #999
+}
+
+body.theme-6 .left-bar-list dd a i,
+body.theme-6 .right-bar-list dd a i {
+  color: #666
+}
+
+body.theme-6 .left-bar-list dd a:hover .iconfont,
+body.theme-6 .left-bar-list dd a:hover i,
+body.theme-6 .right-bar-list dd a:hover .iconfont,
+body.theme-6 .right-bar-list dd a:hover i {
+  color: #ed4259
+}
+
+body.theme-6 .author-say p,
+body.theme-6 .book-cover-wrap .info-list li em,
+body.theme-6 .book-cover-wrap .info-list li p,
+body.theme-6 .book-cover-wrap .info-list li span,
+body.theme-6 .book-cover-wrap h1,
+body.theme-6 .book-cover-wrap h3,
+body.theme-6 .crumbs-nav a,
+body.theme-6 .crumbs-nav em,
+body.theme-6 .fans-dynamic .fans-slide-wrap li i,
+body.theme-6 .left-bar-list .panel-wrap.catalog .bookmark-list-wrap .bookmark-list h3,
+body.theme-6 .left-nav li cite,
+body.theme-6 .like-more li h4 a,
+body.theme-6 .main-text-wrap .operation-wrap.min h3 a,
+body.theme-6 .main-text-wrap .operation-wrap.min p,
+body.theme-6 .main-text-wrap .read-content p a,
+body.theme-6 .read-login li a,
+body.theme-6 .read-login li:first-child .iconfont,
+body.theme-6 .read-main-wrap .lang,
+body.theme-6 .reply-popup .first-reply .reply-send-wrap input {
+  color: grey
+}
+
+body.theme-6 .like-more li h4 a:hover,
+body.theme-6 .main-text-wrap .operation-wrap.min h3 a:hover,
+body.theme-6 .main-text-wrap .read-content p a:hover {
+  color: #ed4259
+}
+
+body.theme-6 .book-cover-wrap h2,
+body.theme-6 .book-cover-wrap h4,
+body.theme-6 .book-cover-wrap h5,
+body.theme-6 .book-cover-wrap h6 {
+  color: #666
+}
+
+body.theme-6 .book-cover-wrap h2 a,
+body.theme-6 .book-cover-wrap h4 a,
+body.theme-6 .book-cover-wrap h5 a,
+body.theme-6 .book-cover-wrap h6 a {
+  color: #666
+}
+
+body.theme-6 .book-cover-wrap h2 a:hover,
+body.theme-6 .book-cover-wrap h4 a:hover,
+body.theme-6 .book-cover-wrap h5 a:hover,
+body.theme-6 .book-cover-wrap h6 a:hover {
+  color: #ed4259
+}
+
+body.theme-6 .author-say-wrap .author-say p+p,
+body.theme-6 .catalog-list-wrap h3,
+body.theme-6 .comment-popup h3,
+body.theme-6 .comment-popup h3 span,
+body.theme-6 .discuss-container h3,
+body.theme-6 .discuss-list .users cite,
+body.theme-6 .discuss-list .users em,
+body.theme-6 .fans-dynamic .fans-slide-wrap li span,
+body.theme-6 .fans-interact dd .tip,
+body.theme-6 .fans-interact dd .tip cite,
+body.theme-6 .left-bar-list .panel-wrap .panel-box h4,
+body.theme-6 .left-bar-list .panel-wrap.catalog .bookmark-list-wrap .bookmark-list .bookmark-link,
+body.theme-6 .left-bar-list .panel-wrap.catalog .bookmark-list-wrap .bookmark-list p,
+body.theme-6 .left-bar-list .panel-wrap.catalog .bookmark-list-wrap .bookmark-list p+p cite,
+body.theme-6 .left-bar-list .panel-wrap.cellphone .qr-code-wrap h5,
+body.theme-6 .main-text-wrap,
+body.theme-6 .main-text-wrap .text-head h3,
+body.theme-6 .main-text-wrap .text-info .info a,
+body.theme-6 .main-text-wrap .text-info .info i,
+body.theme-6 .other-reply-list li .user-comment p,
+body.theme-6 .read-content,
+body.theme-6 .reply-popup .first-reply .users em,
+body.theme-6 .reply-popup .other-reply-list li .user-comment p+p {
+  color: #666
+}
+
+body.theme-6 .catalog-list-wrap .volume-list li a,
+body.theme-6 .chapter-control a,
+body.theme-6 .discuss-list .text .discuss-btn,
+body.theme-6 .discuss-list .text .link,
+body.theme-6 .fans-dynamic .fans-slide-wrap li b+a,
+body.theme-6 .lbf-checkbox+label,
+body.theme-6 .main-text-wrap .admire-wrap .report-btn,
+body.theme-6 .main-text-wrap .author-say-wrap .author-say h4 a,
+body.theme-6 .reply-popup .first-reply h3 .discuss-btn,
+body.theme-6 .reply-popup .other-reply-list li .user-comment h5 a {
+  color: #666
+}
+
+body.theme-6 .catalog-list-wrap .volume-list li a:hover,
+body.theme-6 .chapter-control a:hover,
+body.theme-6 .discuss-list .text .discuss-btn:hover,
+body.theme-6 .discuss-list .text .link:hover,
+body.theme-6 .fans-dynamic .fans-slide-wrap li b+a:hover,
+body.theme-6 .lbf-checkbox+label:hover,
+body.theme-6 .main-text-wrap .admire-wrap .report-btn:hover,
+body.theme-6 .main-text-wrap .author-say-wrap .author-say h4 a:hover,
+body.theme-6 .reply-popup .first-reply h3 .discuss-btn:hover,
+body.theme-6 .reply-popup .other-reply-list li .user-comment h5 a:hover {
+  color: #ed4259
+}
+
+body.theme-6 .last-chapter-wrap .auto-switch em a {
+  color: #fcfcfa
+}
+
+body.theme-6 .chapter-control a:hover,
+body.theme-6 .discuss-list .go-discuss,
+body.theme-6 .fans-dynamic,
+body.theme-6 .fans-interact {
+  background: #333;
+  background: rgba(255, 255, 255, .03)
+}
+
+body.theme-6 .vip-limit-wrap .subscribe-btn-wrap a.all {
+  border: 1px solid #444;
+  background: #444;
+  background: rgba(255, 255, 255, .03)
+}
+
+body.theme-6 .vip-limit-wrap .subscribe-btn-wrap a.all:hover {
+  background: #666;
+  background: rgba(255, 255, 255, .07)
+}
+
+body.theme-6 .vip-limit-wrap .subscribe-btn-wrap a.all cite,
+body.theme-6 .vip-limit-wrap .subscribe-btn-wrap a.all em {
+  color: grey
+}
+
+body.theme-6 .chapter-control a.disabled {
+  color: #444
+}
+
+body.theme-6 .main-text-wrap .text-head .book-mark {
+  width: 24px;
+  height: 40px;
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: -202px -143.5px;
+  background-size: 340px
+}
+
+body.theme-6 .main-text-wrap .text-head .book-mark.on {
+  width: 24px;
+  height: 40px;
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: -254px -143.5px;
+  background-size: 340px
+}
+
+body.theme-6 .book-cover-wrap .book-photo {
+  border: 1px solid #444;
+  background: 0 0
+}
+
+body.theme-6 .catalog-list-wrap h3:hover,
+body.theme-6 .reply-popup .go-discuss a {
+  background: #444;
+  background: rgba(255, 255, 255, .05)
+}
+
+body.theme-6 .discuss-container,
+body.theme-6 .reply-popup .inner-wrap {
+  border: 1px solid #444
+}
+
+body.theme-6 .admire.lang {
+  color: #fff
+}
+
+body.theme-6 .left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list.no-data .iconfont,
+body.theme-6 .left-bar-list .panel-wrap.catalog .catalog-list-wrap .volume-list.no-data p {
+  color: #666
+}
+
+body.theme-6 .left-bar-list .panel-wrap.setting li.theme-list span.theme-6 {
+  border: 1px solid #444
+}
+
+body.theme-6 .left-bar-list .panel-wrap.setting li.font-family span,
+body.theme-6 .left-bar-list .panel-wrap.setting li.read-mode span {
+  color: #999;
+  border: 1px solid #444;
+  background: #444;
+  background: rgba(255, 255, 255, .05)
+}
+
+body.theme-6 .left-bar-list .panel-wrap.setting li.font-family span.act,
+body.theme-6 .left-bar-list .panel-wrap.setting li.read-mode span.act {
+  color: #ed4259;
+  border: 1px solid #ed4259
+}
+
+body.theme-6 .left-bar-list .panel-wrap.setting li.font-size cite,
+body.theme-6 .left-bar-list .panel-wrap.setting li.page-width cite {
+  border: 1px solid #444;
+  background: #444;
+  background: rgba(255, 255, 255, .05)
+}
+
+body.theme-6 .left-bar-list .panel-wrap.setting li.font-size b,
+body.theme-6 .left-bar-list .panel-wrap.setting li.page-width b {
+  border-right: 1px solid #666
+}
+
+body.theme-6 .left-bar-list .panel-wrap.setting li.font-size span em,
+body.theme-6 .left-bar-list .panel-wrap.setting li.page-width span em {
+  color: #999
+}
+
+body.theme-6 .left-bar-list .panel-wrap.setting li.font-size span:hover em,
+body.theme-6 .left-bar-list .panel-wrap.setting li.page-width span:hover em {
+  color: #ed4259
+}
+
+body.theme-6 .left-bar-list .panel-wrap.setting .btn-wrap a.grey-btn {
+  color: #999;
+  border: 1px solid #444;
+  background: #444;
+  background: rgba(255, 255, 255, .1)
+}
+
+body.theme-6 .lbf-panel .lbf-panel-close:hover,
+body.theme-6 .panel-wrap .close-panel:hover {
+  color: #eee
+}
+
+body.theme-6 .main-text-wrap .text-info .top-comment-wrap .comment-btn:hover,
+body.theme-6 .reply-popup .first-reply .reply-send-wrap input {
+  background: #444;
+  background: rgba(255, 255, 255, .1)
+}
+
+body.theme-6 .comment-popup .count-text,
+body.theme-6 .comment-popup .inner-wrap,
+body.theme-6 .lbf-panel {
+  border: 1px solid #444;
+  border: 1px solid rgba(255, 255, 255, .1)
+}
+
+body.theme-6 .comment-popup .count-text,
+body.theme-6 .comment-popup .count-text textarea {
+  color: grey;
+  background: #444
+}
+
+body.theme-6 .count-text .count {
+  color: #bbb
+}
+
+body.theme-6 .discuss-container h3 {
+  border-bottom: 1px solid #444;
+  background: rgba(255, 255, 255, .05)
+}
+
+body.theme-6 .discuss-container .publish-wrap,
+body.theme-6 .left-bar-list .panel-wrap.catalog .bookmark-list-wrap .bookmark-list .mark-info {
+  border-top: 1px solid #444
+}
+
+body.theme-6 .discuss-list-wrap,
+body.theme-6 .publish-wrap {
+  background: rgba(255, 255, 255, .05)
+}
+
+body.theme-6 .discuss-container .discuss-list-wrap .get-list dd span {
+  background: #333;
+  background: rgba(255, 255, 255, .2)
+}
+
+body.theme-6 .discuss-list .users .black {
+  color: #a6a6a6
+}
+
+body.theme-6 .discuss-list .users .black:hover {
+  color: #ed4259
+}
+
+body.theme-6 .left-nav li.quick-nav cite .iconfont,
+body.theme-6 .main-text-wrap .text-info .top-comment-wrap .comment-btn .iconfont {
+  color: #999;
+  color: rgba(255, 255, 255, .4)
+}
+
+body.theme-6 .left-nav li.act.quick-nav cite .iconfont {
+  color: #444
+}
+
+.lbf-overlay {
+  z-index: 499;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+  background-color: #000
+}
+
+.red-packet-select {
+  position: fixed;
+  z-index: 500;
+  top: 50%;
+  left: 50%;
+  margin: -120px 0 0 -350px
+}
+
+.red-packet-select.red-packet-select-two {
+  margin: -100px 0 0 -220px
+}
+
+.red-packet-select .red-packet-close {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 28px;
+  width: 30px;
+  height: 28px;
+  height: 30px;
+  transition: .5s;
+  transform: rotate(0);
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: -308px -143.5px;
+  background-size: 340px
+}
+
+.red-packet-select .red-packet-close:hover {
+  transform: rotate(90deg)
+}
+
+.red-packet-select .packet-list li {
+  float: left;
+  width: 200px;
+  height: 240px;
+  margin-left: 40px;
+  border-radius: 5px;
+  background: url(/qd/images/read.qidian.com/red-packet/red_bg.ca7bb.png) repeat;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .2)
+}
+
+.red-packet-select .packet-list li .red-top {
+  width: 200px;
+  height: 74px;
+  margin-bottom: 42px;
+  text-align: center;
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: 0 -233.5px;
+  background-size: 340px
+}
+
+.red-packet-select .packet-list li .red-top .icon {
+  padding-top: 32px
+}
+
+.red-packet-select .packet-list li .red-top .iconfont {
+  font-size: 25px;
+  display: block;
+  margin-right: -2px;
+  color: #de3f36
+}
+
+.red-packet-select .packet-list li a {
+  font-size: 20px;
+  line-height: 48px;
+  display: block;
+  width: 158px;
+  height: 38px;
+  margin: 0 auto 8px;
+  padding: 2px 0;
+  text-align: center;
+  color: #b29a60;
+  border: 1px solid #e5e5e5;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 100px;
+  background: #f0e4c2
+}
+
+.red-packet-select .packet-list li a span {
+  line-height: 36px;
+  display: block;
+  margin: 0 4px;
+  border: 1px solid #e1cf9c;
+  border-radius: 100px
+}
+
+.red-packet-select .packet-list li p {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  text-align: center;
+  color: rgba(255, 255, 255, .6)
+}
+
+.red-packet-select .packet-list li:first-child {
+  margin-left: 0
+}
+
+.red-packet-select .packet-list li:hover .red-top {
+  width: 200px;
+  height: 88px;
+  margin: -44px 0 72px;
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: 0 -143.5px;
+  background-size: 340px
+}
+
+.red-packet-select .packet-list li:hover .red-top .icon {
+  display: none
+}
+
+.send-red-packet {
+  position: fixed;
+  z-index: 500;
+  top: 50%;
+  left: 50%;
+  width: 340px;
+  margin: -283px 0 0 -170px;
+  padding-bottom: 16px;
+  border-radius: 5px;
+  background: url(/qd/images/read.qidian.com/red-packet/default_bg.8cd8d.png) repeat;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .2)
+}
+
+.send-red-packet .red-packet-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transition: .5s;
+  transform: rotate(0);
+  opacity: .2;
+  color: #000
+}
+
+.send-red-packet .red-packet-close:hover {
+  transform: rotate(90deg);
+  opacity: .5
+}
+
+.send-red-packet .red-top {
+  width: 340px;
+  height: 75px;
+  margin-bottom: 16px;
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 340px
+}
+
+.send-red-packet .red-top h3 {
+  font-size: 18px;
+  line-height: 68px;
+  text-align: center;
+  color: #f0e4c2
+}
+
+.send-red-packet .packet-input-list {
+  padding: 0 20px
+}
+
+.send-red-packet .packet-input-list h3 {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #a6a6a6
+}
+
+.send-red-packet .packet-input-list li {
+  font: 14px/38px PingFangSC-Regular, '-apple-system', Simsun;
+  margin-bottom: 14px
+}
+
+.send-red-packet .packet-input-list li .input-box {
+  line-height: 38px;
+  overflow: hidden;
+  width: 274px;
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .1);
+  background: #fdfaf3;
+  background: rgba(255, 255, 255, .4)
+}
+
+.send-red-packet .packet-input-list li .input-box.error {
+  border: 1px solid #ec443a
+}
+
+.send-red-packet .packet-input-list li .input-box input {
+  font: 14px/38px Arial;
+  float: left;
+  width: 100%;
+  height: 38px;
+  margin-right: 6px;
+  background: 0 0
+}
+
+.send-red-packet .packet-input-list li .input-box em,
+.send-red-packet .packet-input-list li .input-box i {
+  color: #1a1a1a
+}
+
+.send-red-packet .packet-input-list li .input-box cite,
+.send-red-packet .packet-input-list li .input-box em {
+  float: left
+}
+
+.send-red-packet .packet-input-list li .input-box i {
+  float: right
+}
+
+.send-red-packet .packet-input-list li .input-box+p {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  padding: 6px 0 0 12px;
+  color: #a6a6a6
+}
+
+.send-red-packet .packet-input-list li .input-box+p.tip {
+  color: #ec443a
+}
+
+.send-red-packet .packet-input-list li .input-box+p.desc-tip {
+  float: left
+}
+
+.send-red-packet .packet-input-list li .j_goRecharge {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  padding: 6px 0 0 12px;
+  color: #ec443a
+}
+
+.send-red-packet .packet-input-list li.right-input input {
+  max-width: 100px;
+  text-align: right
+}
+
+.send-red-packet .total-coin {
+  margin: 42px auto;
+  text-align: center
+}
+
+.send-red-packet .total-coin h3 {
+  font-size: 34px;
+  line-height: 40px;
+  overflow: hidden;
+  max-height: 40px
+}
+
+.send-red-packet .total-coin p {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  color: #a6a6a6
+}
+
+.send-red-packet .send-btn {
+  text-align: center
+}
+
+.send-red-packet .send-btn .poundage-voice {
+  padding-bottom: 20px
+}
+
+.send-red-packet .send-btn a {
+  line-height: 40px;
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: 0 auto 20px;
+  border-radius: 100px;
+  background: #ec443a
+}
+
+.send-red-packet .send-btn a.disabled {
+  background: #f7b4b0;
+  background: rgba(236, 68, 58, .4)
+}
+
+.send-red-packet .send-btn p {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  color: #a6a6a6
+}
+
+.get-packet {
+  position: fixed;
+  z-index: 500;
+  top: 50%;
+  left: 50%;
+  width: 340px;
+  height: 420px;
+  margin: -210px 0 0 -170px;
+  border-radius: 5px
+}
+
+.get-packet .bg-wrap {
+  position: relative;
+  height: 420px;
+  transition: 1s;
+  border-radius: 5px;
+  background: url(/qd/images/read.qidian.com/red-packet/red_bg.ca7bb.png) repeat;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .2)
+}
+
+.get-packet .j_redPacketInfo,
+.get-packet .j_redPacketSatus {
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+.get-packet .j_redPacketSatus {
+  z-index: 2
+}
+
+.get-packet .j_redPacketInfo {
+  -webkit-animation: flipInY .55s ease-in;
+  -moz-animation: flipInY .5s ease-in;
+  -ms-animation: flipInY .5s ease-in;
+  animation: flipInY .5s ease-in
+}
+
+.get-packet .got {
+  min-height: 404px;
+  padding-bottom: 16px;
+  border-radius: 5px;
+  background: url(/qd/images/read.qidian.com/red-packet/default_bg.8cd8d.png) repeat
+}
+
+.get-packet .got .red-top {
+  width: 340px;
+  height: 75px;
+  margin-bottom: 66px;
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 340px
+}
+
+.get-packet .got .avatar {
+  padding-top: 32px
+}
+
+.get-packet .got .avatar img {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 12px;
+  border-radius: 100%
+}
+
+.get-packet .got .avatar h6 {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  margin-bottom: 8px;
+  color: #1a1a1a
+}
+
+.get-packet .got .avatar p {
+  font: 12px/20px PingFangSC-Regular, '-apple-system', Simsun;
+  color: #a6a6a6
+}
+
+.get-packet .got p.blue {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  text-align: center
+}
+
+.get-packet .got p.blue:hover {
+  color: #3f5a93
+}
+
+.get-packet .got .look {
+  font: 12px/20px PingFangSC-Regular, '-apple-system', Simsun;
+  display: block;
+  margin-top: 130px;
+  text-align: center;
+  color: #a6a6a6
+}
+
+.get-packet .got .look em {
+  font-size: 12px;
+  min-width: 12px;
+  margin-left: 3px;
+  vertical-align: -1px
+}
+
+.get-packet .got .look.getRedPacketInfo {
+  margin-top: 104px
+}
+
+.get-packet .get-packet-list {
+  overflow-y: auto;
+  height: 273px;
+  margin-bottom: -16px;
+  padding: 6px 0 0 20px
+}
+
+.get-packet .get-packet-list .reload-btn {
+  font: 12px/1 PingFangSC-Regular, '-apple-system', Simsun;
+  display: block;
+  width: 150px;
+  margin: 14px auto;
+  padding-right: 20px;
+  text-align: center;
+  color: #a6a6a6
+}
+
+.get-packet .get-packet-list .reload-btn em {
+  font-size: 16px;
+  display: inline-block;
+  width: 16px;
+  margin: -2px 3px 0 0;
+  vertical-align: middle
+}
+
+.get-packet .get-packet-list .reload-btn.hidden {
+  display: none
+}
+
+.get-packet .get-packet-list .loading {
+  padding: 93px 20px 92px 0;
+  text-align: center
+}
+
+.get-packet .get-packet-list .loading span {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  background: url(/qd/images/common/loading.6bd87.gif) no-repeat
+}
+
+.get-packet .get-packet-list .loading p {
+  font: 14px/24px PingFangSC-Regular, '-apple-system', Simsun
+}
+
+.get-packet .get-packet-list .la-ball-pulse {
+  padding-top: 10px;
+  padding-right: 20px
+}
+
+.get-packet .get-packet-list li {
+  overflow: hidden;
+  margin-top: 12px
+}
+
+.get-packet .get-packet-list li:first-child {
+  margin-top: 0
+}
+
+.get-packet .get-packet-list li .photo {
+  float: left;
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 100%
+}
+
+.get-packet .get-packet-list li .photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%
+}
+
+.get-packet .get-packet-list li .info {
+  position: relative;
+  z-index: 1;
+  float: left;
+  width: 256px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e5e5
+}
+
+.get-packet .get-packet-list li .info h3 {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  margin-bottom: 4px
+}
+
+.get-packet .get-packet-list li .info h3 span {
+  display: inline-block;
+  margin: -2px 0 0 5px;
+  vertical-align: middle
+}
+
+.get-packet .get-packet-list li .info p {
+  font: 12px/16px Arial;
+  color: #a6a6a6
+}
+
+.get-packet .get-packet-list li .info em {
+  font: 12px/1 PingFangSC-Regular, '-apple-system', Simsun;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 0
+}
+
+.get-packet .get-packet-list li.no-data {
+  font-size: 14px;
+  padding: 100px 20px 0 0;
+  text-align: center;
+  color: #ccc
+}
+
+.get-packet .red-packet-close {
+  position: absolute;
+  z-index: 10;
+  top: 5px;
+  right: 5px;
+  transition: .5s;
+  transform: rotate(0);
+  opacity: .2;
+  color: #000
+}
+
+.get-packet .red-packet-close:hover {
+  transform: rotate(90deg);
+  opacity: .5
+}
+
+.get-packet .envelope {
+  position: relative;
+  z-index: 1;
+  height: 255px;
+  border-radius: 5px 5px 0 0;
+  background: url(/qd/images/read.qidian.com/red-packet/red_bg_cover.0881c.png) repeat
+}
+
+.get-packet .envelope .cover {
+  position: absolute;
+  z-index: 1;
+  bottom: -64px;
+  left: 0;
+  width: 340px;
+  height: 64.5px;
+  background-image: url(/qd/images/read.qidian.com/sprite.36b4c.png);
+  background-repeat: no-repeat;
+  background-position: 0 -77px;
+  background-size: 340px
+}
+
+.get-packet .envelope .cover .btn {
+  padding-top: 28px;
+  text-align: center
+}
+
+.get-packet .envelope .cover .btn.circle {
+  padding-top: 20px
+}
+
+.get-packet .envelope .cover .btn.circle a.lang {
+  font-size: 30px;
+  line-height: 64px;
+  width: 70px;
+  height: 64px;
+  border-radius: 100%
+}
+
+.get-packet .envelope .cover .btn.circle a.lang span {
+  line-height: 60px;
+  margin: 1px 4px;
+  border-radius: 100%
+}
+
+.get-packet .envelope .cover .btn.disabled a.lang {
+  color: #a6a6a6;
+  background: #e6e6e6
+}
+
+.get-packet .envelope .cover .btn.disabled a.lang span {
+  border: 1px solid #d6d6d6
+}
+
+.get-packet .envelope .cover a.lang {
+  font-size: 16px;
+  line-height: 48px;
+  display: inline-block;
+  height: 38px;
+  margin: 0 auto 10px;
+  padding: 2px 0;
+  text-align: center;
+  color: #b29a60;
+  border: 1px solid #e5e5e5;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 100px;
+  background: #f0e4c2
+}
+
+.get-packet .envelope .cover a.lang span {
+  line-height: 36px;
+  display: block;
+  margin: 0 4px;
+  padding: 0 14px;
+  border: 1px solid #e1cf9c;
+  border-radius: 100px
+}
+
+.get-packet .envelope .cover a.btn-loading {
+  position: relative;
+  color: #f0e4c2
+}
+
+.get-packet .envelope .cover a.btn-loading .la-sm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -8px 0 0 -8px
+}
+
+.get-packet .envelope .cover p {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  opacity: .6;
+  color: #fff
+}
+
+.get-packet .envelope .cover .look {
+  font: 12px/20px PingFangSC-Regular, '-apple-system', Simsun;
+  display: block;
+  margin-top: 130px;
+  text-align: center;
+  color: #f0e4c2
+}
+
+.get-packet .envelope .cover .look em {
+  font-size: 12px;
+  min-width: 12px;
+  margin-left: 3px;
+  vertical-align: -1px
+}
+
+.get-packet .avatar {
+  padding: 32px 36px 0;
+  text-align: center
+}
+
+.get-packet .avatar img {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  border-radius: 100%
+}
+
+.get-packet .avatar h3,
+.get-packet .avatar h5,
+.get-packet .avatar h6 {
+  color: #f0e4c2
+}
+
+.get-packet .avatar h6 {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  margin-bottom: 4px
+}
+
+.get-packet .avatar h5 {
+  font: 14px/20px PingFangSC-Regular, '-apple-system', Simsun;
+  margin-bottom: 40px
+}
+
+.get-packet .avatar h3 {
+  font: 22px/28px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  overflow: hidden;
+  max-height: 56px
+}
+
+.get-packet .avatar h3 .mobile-bind {
+  font: 12px/28px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+  color: #f0e4c2
+}
+
+.get-packet .total-coin {
+  margin: 24px auto;
+  text-align: center
+}
+
+.get-packet .total-coin h3 {
+  font-size: 34px;
+  line-height: 40px;
+  margin-bottom: 6px
+}
+
+.get-packet .total-coin p {
+  font: 12px/16px PingFangSC-Regular, '-apple-system', Simsun;
+  overflow: hidden;
+  height: 16px;
+  margin-bottom: 24px;
+  color: #a6a6a6
+}
+
+input[type=checkbox] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0)
+}
+
+.ui-checkbox {
+  display: inline-block;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  margin: 0 8px 0 -3px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: -6px;
+  background-color: #fff;
+  background-clip: content-box
+}
+
+.ui-checkbox {
+  background: url(/qd/images/ico/checkbox.00c80.png) no-repeat
+}
+
+.ui-checkbox:hover {
+  background-position: 0 -20px
+}
+
+.ui-checkbox-checked {
+  background-position: 0 -40px
+}
+
+.ui-checkbox-checked:hover {
+  background-position: 0 -40px
+}
+
+.ui-checkbox-disabled {
+  opacity: .38
+}
+
+.ui-checkbox-disabled:hover {
+  opacity: .38;
+  background-position: 0 0
+}
+
+:root .ui-checkbox {
+  vertical-align: -7px
+}
+
+:root .chapter-wrap .chapter h3 .ui-checkbox {
+  vertical-align: -4px
+}
+
+:root .select-all .ui-checkbox {
+  vertical-align: -6px
+}
+
+:root .subscribe-wrap .left-box .ui-checkbox,
+:root .subscribe-wrap .right-box .ui-checkbox {
+  vertical-align: -6px
+}
+
+body .fix-float-wrap .left-bar-list {
+  left: 0;
+  margin-left: 0
+}
+
+body .fix-float-wrap .right-bar-list {
+  right: 0;
+  margin-right: 0
+}
+
+body .left-bar-guide .guide-btn-wrap {
+  left: 0;
+  margin-left: 0
+}
+
+@media (min-width:1920px) {
+  .float-op-wrap {
+    background-size: cover
+  }
+}
+
+@media (max-width:1280px) {
+  .float-op-wrap {
+    background-size: 134%
+  }
+
+  .left-word {
+    left: 140px !important
+  }
+
+  .right-word {
+    right: 140px !important
+  }
+}
+
+@media (min--moz-device-pixel-ratio:1.3),
+(-o-min-device-pixel-ratio:2.6 / 2),
+(-webkit-min-device-pixel-ratio:1.3),
+(min-device-pixel-ratio:1.3),
+(min-resolution:1.3dppx) {
+  .float-op-wrap {
+    background-size: cover
+  }
+
+  .text-wrap {
+    background: url(/qd/images/read.qidian.com/basic_bg_2x.7c4fc.png) repeat
+  }
+
+  .panel-wrap {
+    background: url(/qd/images/read.qidian.com/base_theme_popup_2x.30c79.png) repeat
+  }
+
+  body {
+    background: #ede7da url(/qd/images/read.qidian.com/body_base_bg_2x.31666.png) repeat
+  }
+
+  body.theme-1 {
+    background: #e0ce9e url(/qd/images/read.qidian.com/theme/body_theme1_bg_2x.acde8.png) repeat
+  }
+
+  body.theme-1 .left-bar-list dd,
+  body.theme-1 .right-bar-list dd,
+  body.theme-1 .text-wrap {
+    background: #f3e9c6 url(/qd/images/read.qidian.com/theme/theme_1_bg_2x.1445e.png) repeat
+  }
+
+  body.theme-1 .left-bar-list dd.act,
+  body.theme-1 .panel-wrap {
+    background: #f8f1d9 url(/qd/images/read.qidian.com/theme/theme_1_popup_bg_2x.8ca37.png) repeat
+  }
+
+  body.theme-2 {
+    background: #cddfcd url(/qd/images/read.qidian.com/theme/body_theme2_bg_2x.90459.png) repeat
+  }
+
+  body.theme-2 .left-bar-list dd,
+  body.theme-2 .right-bar-list dd,
+  body.theme-2 .text-wrap {
+    background: #e2eee2 url(/qd/images/read.qidian.com/theme/theme_2_bg_2x.de6bf.png) repeat
+  }
+
+  body.theme-2 .left-bar-list dd.act,
+  body.theme-2 .panel-wrap {
+    background: #f3fbf3 url(/qd/images/read.qidian.com/theme/theme_2_popup_bg_2x.5ab64.png) repeat
+  }
+
+  body.theme-3 {
+    background: #cfdde1 url(/qd/images/read.qidian.com/theme/body_theme3_bg_2x.f15ee.png) repeat
+  }
+
+  body.theme-3 .left-bar-list dd,
+  body.theme-3 .right-bar-list dd,
+  body.theme-3 .text-wrap {
+    background: #e2eff3 url(/qd/images/read.qidian.com/theme/theme_3_bg_2x.5b83c.png) repeat
+  }
+
+  body.theme-3 .left-bar-list dd.act,
+  body.theme-3 .panel-wrap {
+    background: #e7f5f6 url(/qd/images/read.qidian.com/theme/theme_3_popup_bg_2x.9e31e.png) repeat
+  }
+
+  body.theme-5 {
+    background: #d0d0d0 url(/qd/images/read.qidian.com/theme/body_theme5_bg_2x.0a67a.png) repeat
+  }
+
+  body.theme-5 .left-bar-list dd,
+  body.theme-5 .right-bar-list dd,
+  body.theme-5 .text-wrap {
+    background: #dcdcdc url(/qd/images/read.qidian.com/theme/theme_5_bg_2x.e875e.png) repeat
+  }
+
+  body.theme-5 .left-bar-list dd.act,
+  body.theme-5 .panel-wrap {
+    background: #e8e8e8 url(/qd/images/read.qidian.com/theme/theme_5_popup_bg_2x.43da6.png) repeat
+  }
+
+  body.theme-6 {
+    background: #0f1112 url(/qd/images/read.qidian.com/theme/body_theme6_bg_2x.83201.png) repeat
+  }
+
+  body.theme-6 .left-bar-list dd,
+  body.theme-6 .panel-wrap,
+  body.theme-6 .right-bar-list dd,
+  body.theme-6 .text-wrap {
+    background: #111 url(/qd/images/read.qidian.com/theme/theme_6_bg_2x.37b8a.png) repeat
+  }
+
+  body.theme-6 .left-nav li.site a.pin-logo {
+    background-image: url(/qd/images/pin_logo_3x.a3710.png)
+  }
+
+  body.theme-6 .left-nav li.act.site a.pin-logo {
+    background-image: url(/qd/images/pin_logo_black_3x.c4765.png)
+  }
+
+  body.theme-6 .left-nav li.site a.mm-pin-logo {
+    background-image: url(/qd/images/mm_pin_logo_3x.bc470.png)
+  }
+
+  body.theme-6 .left-nav li.act.site a.mm-pin-logo {
+    background-image: url(/qd/images/mm_pin_logo_black_3x.b0330.png)
+  }
+
+  .guide-popup .guide-img p {
+    background: url(/qd/images/read.qidian.com/guide_2x.f77a3.png);
+    background-size: 100%
+  }
+
+  .fans-dynamic .fans-slide-wrap li b.money em {
+    width: 14px;
+    height: 14px;
+    background-image: url(/qd/images/book_details/sprite_2x.558e8.png);
+    background-repeat: no-repeat;
+    background-position: -320px -188px;
+    background-size: 335px
+  }
+
+  .fans-dynamic .fans-slide-wrap li b.month {
+    background: #ffd2d0
+  }
+
+  .fans-dynamic .fans-slide-wrap li b.month em {
+    width: 10px;
+    height: 14px;
+    background-image: url(/qd/images/book_details/sprite_2x.558e8.png);
+    background-repeat: no-repeat;
+    background-position: -323px -164px;
+    background-size: 335px
+  }
+
+  .fans-dynamic .fans-slide-wrap li b.rec {
+    background: #ffe3d1
+  }
+
+  .fans-dynamic .fans-slide-wrap li b.rec em {
+    width: 10px;
+    height: 14px;
+    background-image: url(/qd/images/book_details/sprite_2x.558e8.png);
+    background-repeat: no-repeat;
+    background-position: -325px -138px;
+    background-size: 335px
+  }
+
+  .right-bar-list dd.hongbao b {
+    width: 24px;
+    height: 24px;
+    background-image: url(/qd/images/read.qidian.com/sprite_2x.a2a80.png);
+    background-repeat: no-repeat;
+    background-position: -202px -185.5px;
+    background-size: 340px
+  }
+
+  .icon-box span {
+    background-image: url(/qd/images/book_details/sprite_2x.558e8.png) !important
+  }
+
+  .user-level {
+    background-image: url(/qd/images/common/common_sprite_2x.af3ed.png) !important
+  }
+
+  .left-nav li.site a.pin-logo {
+    background-image: url(/qd/images/pin_logo_black_3x.c4765.png);
+    background-size: 90px
+  }
+
+  .left-nav .logo .logo-ico {
+    background-image: url(/qd/images/common/logo_2x.36dd4.png);
+    background-size: 100%
+  }
+
+  .left-nav li.site a.mm-pin-logo {
+    background-image: url(/qd/images/mm_pin_logo_black_3x.b0330.png);
+    background-size: 90px
+  }
+
+  .left-nav .logo .mm-logo-ico {
+    background-image: url(/qd/images/common/logo_mm_2x.e8d49.png);
+    background-size: 100%
+  }
+
+  .red-packet-select .close {
+    width: 28px;
+    height: 28px;
+    background-image: url(/qd/images/read.qidian.com/sprite_2x.a2a80.png);
+    background-repeat: no-repeat;
+    background-position: -308px -143.5px;
+    background-size: 340px
+  }
+
+  .red-packet-select .packet-list li {
+    background: url(/qd/images/read.qidian.com/red-packet/red_bg_2x.c793d.png) repeat
+  }
+
+  .red-packet-select .packet-list li .red-top {
+    width: 200px;
+    height: 74px;
+    background-image: url(/qd/images/read.qidian.com/sprite_2x.a2a80.png);
+    background-repeat: no-repeat;
+    background-position: 0 -233.5px;
+    background-size: 340px
+  }
+
+  .red-packet-select .packet-list li:hover .red-top {
+    width: 200px;
+    height: 88px;
+    background-image: url(/qd/images/read.qidian.com/sprite_2x.a2a80.png);
+    background-repeat: no-repeat;
+    background-position: 0 -143.5px;
+    background-size: 340px
+  }
+
+  .author-tag {
+    width: 30px;
+    height: 16px;
+    background-image: url(/qd/images/common/common_sprite_2x.af3ed.png);
+    background-repeat: no-repeat;
+    background-position: -290px -162px;
+    background-size: 358px
+  }
+}
+
+@media \0screen\,
+screen\9 {
+  .dropdown {
+    border: 1px solid #d8d8d8;
+    border-top: none
+  }
+
+  .main-text-wrap .text-info .top-comment-wrap .comment-btn:hover,
+  .reply-popup .first-reply .reply-send-wrap input {
+    border: 1px solid #444
+  }
+}
+
+@-webkit-keyframes flipInY {
+  0% {
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    -webkit-transform: perspective(600px) rotateY(120deg);
+    transform: perspective(600px) rotateY(120deg);
+    opacity: 0
+  }
+
+  100% {
+    -webkit-transform: perspective(600px) rotateY(0);
+    transform: perspective(600px) rotateY(0)
+  }
+}
+
+@keyframes flipInY {
+  0% {
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    -webkit-transform: perspective(600px) rotateY(120deg);
+    transform: perspective(600px) rotateY(120deg);
+    opacity: 0
+  }
+
+  100% {
+    -webkit-transform: perspective(600px) rotateY(0);
+    transform: perspective(600px) rotateY(0)
+  }
+}
+
+.flipInY {
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important
+}
+
+.send-red-packet .pwd-red-list {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 298px;
+  max-height: 163px;
+  border: 1px solid #e4e2db;
+  background: #fdfbf3;
+  background: rgba(255, 255, 255, .4)
+}
+
+.send-red-packet .pwd-red-list li {
+  line-height: 40px;
+  overflow: hidden;
+  height: 40px;
+  margin: 0;
+  padding: 0 10px;
+  border-bottom: 1px solid #e4e2db
+}
+
+.send-red-packet .pwd-red-list li:last-of-type {
+  border-bottom: none
+}
+
+.send-red-packet .pwd-red-list li .pwd-red-txt {
+  float: left;
+  overflow: hidden;
+  width: 180px;
+  height: 40px;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+
+.send-red-packet .pwd-red-list li .red-status {
+  font-size: 12px;
+  float: right;
+  overflow: hidden;
+  width: 60px;
+  height: 40px;
+  text-align: right;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+
+.send-red-packet .pwd-red-list li .red-status.disable {
+  color: #a6a6a6
+}
+
+.send-red-packet .pwd-red-box {
+  margin-top: 20px
+}
+
+.send-red-packet .rcode-box {
+  margin-top: 20px
+}
+
+.send-red-packet .rcode-box h4 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13px;
+  position: relative;
+  height: 13px;
+  margin: 0 20px;
+  text-align: center;
+  color: #a6a6a6
+}
+
+.send-red-packet .rcode-box h4 span {
+  position: relative;
+  padding: 0 5px;
+  background: url(/qd/images/read.qidian.com/red-packet/default_bg.8cd8d.png) repeat
+}
+
+.send-red-packet .rcode-box h4 i {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 1px;
+  background: #e4e1d4;
+  background: rgba(0, 0, 0, .1)
+}
+
+.send-red-packet .rcode-box .rcode-img {
+  width: 98px;
+  height: 98px;
+  margin: 23px auto 7px;
+  border: 1px solid #e4e1d4;
+  border: 1px solid rgba(0, 0, 0, .1)
+}
+
+.send-red-packet .rcode-box .rcode-img img {
+  width: 100%;
+  height: 100%
+}
+
+#page-ops {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 24px
+}
+
+#page-ops img {
+  position: absolute;
+  left: 50%;
+  margin-left: -450px
+}
+
+#page-ops .op-tag {
+  display: none
+}
+
+#adbanner-ops {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 24px
+}
+
+#adbanner-ops img {
+  position: absolute;
+  left: 50%;
+  margin-left: -385px
+}
+
+#adbanner-ops .op-tag {
+  display: none
+}

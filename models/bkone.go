@@ -9,15 +9,29 @@ import (
 )
 
 type (
+	// MChpater contains information for an chapter info.
+	MChpater struct {
+		Title      string   `bson:"title"`
+		Index      int      `bson:"index"`
+		Urlc       string   `bson:"url"`
+		ID         string   // `bson:"id"`
+		Intime     string   `bson:"intime"`
+		Recommend  int      `bson:"recommend"`
+		Readcount  int      `bson:"readcount"`
+		Numbers    int      // `bson:"numbers"`
+		Paragraphs []string `bson:"paragraphs"`
+	}
+
 	// MBook contains information for an book info.
 	MBook struct {
-		Name    string `bson:"name"`
-		Author  string `bson:"author"`
-		ID      string `bson:"id"`
-		Profile string `bson:"profile"`
-		Image   string `bson:"image"`
-		Types   string `bson:"type"`
-		Numbers int    `bson:"numbers"`
+		Name     string     `bson:"name"`
+		Author   string     `bson:"author"`
+		ID       string     `bson:"id"`
+		Profile  string     `bson:"profile"`
+		Image    string     `bson:"image"`
+		Types    string     `bson:"type"`
+		Numbers  int        `bson:"numbers"`
+		Chapters []MChpater `bson:"chapters,omitempty"`
 	}
 
 	// BuoyLocation contains the buoys location.
@@ -42,7 +56,7 @@ func (bk *MBook) FindByName(name string) (code int, err error) {
 	defer mConn.Close()
 
 	bc := mConn.DB("web").C("book")
-	err = bc.Find(bson.M{"name": name}).One(bk)
+	err = bc.Find(bson.M{"name": name}).Select(bson.M{"chapters": 0}).One(bk)
 
 	if err != nil {
 		if err == mgo.ErrNotFound {
@@ -86,10 +100,10 @@ func FindByCount(cnt int) (*[]MBook, error) {
 	err := bc.Find(bson.M{"image": bson.M{"$ne": ""}}).Skip(rand.Intn(100)).Limit(cnt).All(&bookList)
 	if err != nil {
 		if err == mgo.ErrNotFound {
-			fmt.Println("bkone not found")
+			fmt.Println("FindByCount not found")
 			//code = ErrNotFound
 		} else {
-			fmt.Println("bkone db error")
+			fmt.Println("FindByCount db error")
 			//code = ErrDatabase
 		}
 	} else {
@@ -108,14 +122,63 @@ func FirstByCount(cnt int) (*[]MBook, error) {
 	err := bc.Find(bson.M{"image": bson.M{"$ne": ""}}).Skip(0).Limit(cnt).All(&bookList)
 	if err != nil {
 		if err == mgo.ErrNotFound {
-			fmt.Println("bkone not found")
+			fmt.Println("FirstByCount not found")
 			//code = ErrNotFound
 		} else {
-			fmt.Println("bkone db error")
+			fmt.Println("FirstByCount db error")
 			//code = ErrDatabase
 		}
 	} else {
 		//code = 0
 	}
 	return &bookList, err
+}
+
+// MLoadChapter query a document according to input id.
+func MLoadChapter(idd string, indexC int, cnt int) (*[]MChpater, error) {
+	mConn := Conn()
+	defer mConn.Close()
+
+	bc := mConn.DB("web").C("book")
+	pipeLine := []bson.M{
+		{"$match": bson.M{"name": idd}},
+		{"$project": bson.M{"_id": 0,
+			"chapters": bson.M{"$slice": []interface{}{"$chapters", indexC, cnt}}}}}
+	var bk MBook
+	err := bc.Pipe(pipeLine).One(&bk)
+	if err != nil {
+		return nil, err
+	}
+
+	var chpaterList = make([]MChpater, len(bk.Chapters))
+	copy(chpaterList, bk.Chapters)
+
+	/*var result struct {
+		Id        string `bson:"_id"`
+		State     string `bson:"st"`
+		City      string `bson:"city"`
+		Address   string `bson:"address"`
+		NoteCount int    `bson:"notecount"`
+	}
+	for iter.Next(&result) {
+		log.Printf("%+v", result)
+	}
+	if iter.Err() != nil {
+		log.Println(iter.Err())
+	}*/
+
+	//err := bc.Find(bson.M{"name": idd}).Select(bson.M{"chapters": 1}).Skip(indexC).Limit(cnt).All(&chpaterList)
+	if false {
+		if true {
+			//if err == mgo.ErrNotFound {
+			fmt.Println("chapter not found")
+			//code = ErrNotFound
+		} else {
+			fmt.Println("chapter db error")
+			//code = ErrDatabase
+		}
+	} else {
+		//code = 0
+	}
+	return &chpaterList, nil
 }

@@ -1,0 +1,108 @@
+<% if(code == 0 ) { %>
+<div class="famous-fans-list">
+    <div class="rank-list">
+        <h3 class="wrap-title lang">本书名人榜</h3>
+        <div class="fans-list">
+            <ul>
+                <%
+                var top = {name:'暂时空缺',val:0,img:g_data.staticPath +'/images/ico/user.f22d3.png',href:'javascript:',tar:'',hideHover:'hide-hover'};
+                var topTicket = {name:'暂时空缺',val:0,img:g_data.staticPath +'/images/ico/user.f22d3.png',href:'javascript:',tar:'',hideHover:'hide-hover'};
+                var topComment = {name:'暂时空缺',val:0,img:g_data.staticPath +'/images/ico/user.f22d3.png',href:'javascript:',tar:'',hideHover:'hide-hover'};
+                var gold = {name:'暂时空缺',val:'首个一次性打赏千万的用户',img:g_data.staticPath +'/images/ico/user.f22d3.png',href:'javascript:',tar:'',hideHover:'hide-hover'};
+                var silver = {name:'暂时空缺',val:'首个一次性打赏百万的用户',img:g_data.staticPath +'/images/ico/user.f22d3.png',href:'javascript:',tar:'',hideHover:'hide-hover'};
+                if(data['topFansInfo']['status']!=0){
+                    top.name = data['topFansInfo']['userName'];
+                    top.val = data['topFansInfo']['fansValue'];
+                    top.img = data['topFansInfo']['avatar'];
+                    top.href = mePreFix +'/friendIndex.aspx?id='+data['topFansInfo']['userId'];
+                    top.tar = 'target=_blank';
+                    top.hideHover = '';
+                }
+                if(data['topTicketInfo']['status']!=0){
+                    topTicket.name = data['topTicketInfo']['userName'];
+                    topTicket.val = data['topTicketInfo']['ticketValue'];
+                    topTicket.img = data['topTicketInfo']['avatar'];
+                    topTicket.href = mePreFix +'/friendIndex.aspx?id='+data['topTicketInfo']['userId'];
+                    topTicket.tar = 'target=_blank';
+                    topTicket.hideHover = '';
+                }
+                if(data['commentInfo']['status']!=0){
+                    topComment.name = data['commentInfo']['userName'];
+                    topComment.val = data['commentInfo']['commentValue'];
+                    topComment.img = data['commentInfo']['avatar'];
+                    topComment.href = mePreFix +'/friendIndex.aspx?id='+data['commentInfo']['userId'];
+                    topComment.tar = 'target=_blank';
+                    topComment.hideHover = '';
+                }
+                if(data['goldMemberInfo']['status']!=0){
+                    gold.name = data['goldMemberInfo']['userName'];
+                    gold.val = '首个一次性打赏千万的用户';
+                    gold.img = data['goldMemberInfo']['avatar'];
+                    gold.href = mePreFix +'/friendIndex.aspx?id='+data['goldMemberInfo']['userId'];
+                    gold.tar = 'target=_blank';
+                    gold.hideHover = '';
+                }
+                if(data['silverMemberInfo']['status']!=0){
+                    silver.name = data['silverMemberInfo']['userName'];
+                    silver.val = '首个一次性打赏百万的用户';
+                    silver.img = data['silverMemberInfo']['avatar'];
+                    silver.href = mePreFix +'/friendIndex.aspx?id='+data['silverMemberInfo']['userId'];
+                    silver.tar = 'target=_blank';
+                    silver.hideHover = '';
+                }
+                %>
+                <li data-rid="1" class="<%=top['hideHover']%>">
+                    <div class="fans-info">
+                        <h4><a href="<%=top['href']%>" class="name" <%= top['tar']%>><%=top['name']%></a></h4>
+                        <p><%if(top['val']==0){%>上月粉丝值第一名<%}else{%><span><%=top['val']%></span>粉丝值<%}%></p>
+                    </div>
+                    <div class="fans-img">
+                        <a href="<%=top['href']%>" <%= top['tar']%>><img src="<%=top['img']%>"></a>
+                        <span class="fans-level icon-fans-first"></span>
+                    </div>
+                </li>
+                <li data-rid="2" class="<%=topTicket['hideHover']%>">
+                    <div class="fans-info">
+                        <h4><a href="<%=topTicket['href']%>" class="name" <%= topTicket['tar']%>><%=topTicket['name']%></a></h4>
+                        <p><%if(topTicket['val']==0){%>上月投票值第一名<%}else{%><span><%=topTicket['val']%></span>投票值<%}%></p>
+                    </div>
+                    <div class="fans-img">
+                        <a href="<%=topTicket['href']%>" <%= topTicket['tar']%>><img src="<%=topTicket['img']%>"></a>
+                        <span class="fans-level icon-fans-second"></span>
+                    </div>
+                </li>
+                <li data-rid="3" class="<%=topComment['hideHover']%> hidden">
+                    <div class="fans-info">
+                        <h4><a href="<%=topComment['href']%>" class="name" <%= topComment['tar']%>><%=topComment['name']%></a></h4>
+                        <p><%if(topComment['val']==0){%>上月书评最活跃用户<%}else{%><span><%=topComment['val']%></span>评论值<%}%></p>
+                    </div>
+                    <div class="fans-img">
+                        <a href="<%=topComment['href']%>" <%= topComment['tar']%>><img src="<%=topComment['img']%>"></a>
+                        <span class="fans-level icon-fans-third"></span>
+                    </div>
+                </li>
+                <li data-rid="4" class="<%=gold['hideHover']%>" >
+                    <div class="fans-info">
+                        <h4><a href="<%=gold['href']%>" class="name" <%= gold['tar']%>><%=gold['name']%></a></h4>
+                        <p><%= gold['val']%></p>
+                    </div>
+                    <div class="fans-img">
+                        <a href="<%=gold['href']%>" <%= gold['tar']%>><img src="<%=gold['img']%>"></a>
+                        <span class="fans-level icon-fans-fourth"></span>
+                    </div>
+                </li>
+                <li data-rid="5" class="<%=silver['hideHover']%>">
+                    <div class="fans-info">
+                        <h4><a href="<%=silver['href']%>" class="name" <%= silver['tar']%>><%=silver['name']%></a></h4>
+                        <p><%= silver['val']%></p>
+                    </div>
+                    <div class="fans-img">
+                        <a href="<%=silver['href']%>" <%= silver['tar']%>><img src="<%=silver['img']%>"></a>
+                        <span class="fans-level icon-fans-fifth"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<% } %>

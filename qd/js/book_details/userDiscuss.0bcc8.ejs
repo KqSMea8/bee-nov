@@ -1,0 +1,213 @@
+<%
+ try {
+    var threadList = data.threadList;
+    var threadCnt = data.threadCnt;
+ } catch(e) {}
+
+  var userLvTable = {
+    0: '[见习] ',
+    1: '[学徒] ',
+    2: '[弟子] ',
+    3: '[执事] ',
+    4: '[舵主] ',
+    5: '[堂主] ',
+    6: '[护法] ',
+    7: '[长老] ',
+    8: '[掌门] ',
+    9: '[宗师] ',
+    10: '[盟主] '
+  };
+
+  var reg = /\[fn=([1-9]|[1-5][0-9]|60)\]/gm;
+  var parseEmoji = function (text) {
+    return text.replace(reg, function(match, num){
+      return '<i class="icon-emoji icon-emoji-' + num + '"></i>';
+    });
+  };
+%>
+
+<div class="book-discuss-wrap">
+    <div class="discuss-list">
+        <% if(code == 0 && threadList.length != 0 ) {%>
+        <!-- start 有数据状态 -->
+        <ul>
+            <!--start 置顶广告-->
+            <%if(data['adForumTop'].length != 0){%>
+            <li class="qd-game">
+                <a class="qd-game-wrap cf" href="<%= data['adForumTop']['adJumpUrl']%>" target="_blank" data-eid="qd_G104" data-qd_dd_p1="1">
+                    <div class="user-photo"></div>
+                    <div class="discuss-info">
+                        <p class="text">
+                            <%
+                            var title = data['adForumTop']['title']
+                            //过滤XSS
+                            title = title.replace(/</g, '&lt;');
+                            title = title.replace(/>/g, '&gt;');
+                            %>
+                           <%=title%>
+                        </p>
+                        <p class="game-desc">
+                            <%
+                            var subTitle = data['adForumTop']['subTitle']
+                            //过滤XSS
+                            subTitle = subTitle.replace(/</g, '&lt;');
+                            subTitle = subTitle.replace(/>/g, '&gt;');
+                            %>
+                            <%=subTitle%>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <%}%>
+            <!--end 置顶广告-->
+            <!-- 置顶帖 -->
+            <%
+              var j = 0;
+              for(var i=0; i < threadList.length; i++) {
+              if (threadList[i].isSticky != 1) { continue; }
+              j++;
+
+              var nickName, pageLink, avatar;
+              if (threadList[i].isAuthor == 1) {
+                nickName = '[本书作者] ' + authorInfo.authorName;
+                pageLink = '//my.qiyan.com/author/' + authorInfo.authorId;
+                avatar = authorInfo.avatar;
+              } else {
+                nickName = threadList[i].userLevel && threadList[i].userLevel >= 4 ?
+                           userLvTable[threadList[i].userLevel] + threadList[i].userName :
+                           threadList[i].userName;
+                pageLink = '//my.qiyan.com/user/' + threadList[i].userId;
+                avatar = threadList[i].avatar;
+              }
+            %>
+            <li class="cf <% if (j > 5) { %>hidden<% } %>" data-rid="<%=j%>">
+                <div class="user-photo">
+                    <a href="<%=pageLink%>" target="_blank">
+                        <img src="<%=avatar%>">
+                    </a>
+                </div>
+               <div class="discuss-info">
+                   <p class="users">
+                       <a class="blue" href="<%=pageLink%>" target="_blank"><b><%=nickName%></b></a><span class="gray"><%=
+                        (function () {
+                          if (threadList[i].type == 1) {
+                            return '打赏了本作品';
+                          }
+                          return '发表了帖子';
+                        })()
+                      %></span>
+                   </p>
+                   <h5 class="text">
+                        <% var titleCls = threadList[i].type == 1 ? 'pink' : ''; %>
+                        <a class="<%= titleCls %>" href="<%= forumPreFix %>/post/<%= data.forumId %>/<%= threadList[i].threadId %>" target="_blank" data-eid="qd_G37">
+                            <i class="icon icon-topfix"></i><% if (threadList[i].isGood == 1) { %><i class="icon icon-jinghua"></i><% } %><%= parseEmoji(threadList[i].title || threadList[i].content) %>
+                        </a>
+                   </h5>
+                   <p class="info dib-wrap" data-id="<%= threadList[i].threadId %>">
+                      <span class="mr20"><%= threadList[i].dateTime %>更新</span>
+                      <a href="<%= forumPreFix %>/post/<%= data.forumId %>/<%= threadList[i].threadId %>" class="info-tab mr20" target="_blank">
+                        <i class="iconfont">&#xe672;</i>
+                        <span><%= threadList[i].repNum %>条回复</span>
+                      </a>
+                      <% if (threadList[i].agreed) { %>
+                        <a href="javascript:;" class="info-tab like-btn act">
+                            <i class="iconfont">&#xe678;</i>
+                      <% } else { %>
+                        <a href="javascript:;" class="info-tab like-btn">
+                            <i class="iconfont">&#xe677;</i>
+                      <% } %>
+                        <span><%= threadList[i].agreeCount %>赞</span>
+                      </a>
+                    </p>
+               </div>
+            </li>
+            <% } %>
+            <!-- 置顶帖 end -->
+
+            <% if (j > 5) { %>
+            <div class="more-post">
+                <a href="javascript:;" class="blue">查看全部<%= j %>条置顶帖 <i class="iconfont icon-d-arr" style="">&#xe623;</i></a>
+            </div>
+            <% } %>
+
+            <!-- 普通帖 -->
+            <%
+              for(var i=0; i < threadList.length; i++) {
+              if (threadList[i].isSticky == 1) { continue; }
+              j++;
+
+              var nickName, pageLink, avatar;
+              if (threadList[i].isAuthor == 1) {
+                nickName = '[本书作者] ' + authorInfo.authorName;
+                pageLink = '//my.qiyan.com/author/' + authorInfo.authorId;
+                avatar = authorInfo.avatar;
+              } else {
+                nickName = threadList[i].userLevel && threadList[i].userLevel >= 4 ?
+                           userLvTable[threadList[i].userLevel] + threadList[i].userName :
+                           threadList[i].userName;
+                pageLink = '//my.qiyan.com/user/' + threadList[i].userId;
+                avatar = threadList[i].avatar;
+              }
+            %>
+            <li class="cf" data-rid="<%=j%>">
+                <div class="user-photo">
+                    <a href="<%=pageLink%>" target="_blank">
+                        <img src="<%=avatar%>">
+                    </a>
+                </div>
+               <div class="discuss-info">
+                   <p class="users">
+                       <a class="blue" href="<%=pageLink%>" target="_blank"><b><%=nickName%></b></a><span class="gray"><%=
+                        (function () {
+                          if (threadList[i].type == 1) {
+                            return '打赏了本作品';
+                          }
+                          return '发表了帖子';
+                        })()
+                      %></span>
+                   </p>
+                   <h5 class="text">
+                        <% var titleCls = threadList[i].type == 1 ? 'pink' : ''; %>
+                        <a class="<%= titleCls %>" href="<%= forumPreFix %>/post/<%= data.forumId %>/<%= threadList[i].threadId %>" target="_blank" data-eid="qd_G37">
+                            <% if (threadList[i].isSticky == 1) { %><i class="icon icon-topfix"></i><% } %><% if (threadList[i].isGood == 1) { %><i class="icon icon-jinghua"></i><% } %><%= parseEmoji(threadList[i].title || threadList[i].content) %>
+                        </a>
+                   </h5>
+                   <p class="info dib-wrap" data-id="<%= threadList[i].threadId %>">
+                      <span class="mr20"><%= threadList[i].dateTime %>更新</span>
+                      <a href="<%= forumPreFix %>/post/<%= data.forumId %>/<%= threadList[i].threadId %>" class="info-tab mr20" target="_blank">
+                        <i class="iconfont">&#xe672;</i>
+                        <span><%= threadList[i].repNum %>条回复</span>
+                      </a>
+                      <% if (threadList[i].agreed) { %>
+                        <a href="javascript:;" class="info-tab like-btn act">
+                            <i class="iconfont">&#xe678;</i>
+                      <% } else { %>
+                        <a href="javascript:;" class="info-tab like-btn">
+                            <i class="iconfont">&#xe677;</i>
+                      <% } %>
+                        <span><%= threadList[i].agreeCount %>赞</span>
+                      </a>
+                    </p>
+               </div>
+            </li>
+            <% } %>
+            <!-- 普通帖 end -->
+        </ul>
+        <p class="go-discuss">
+            <a class="blue" href="<%=forumPreFix%>/index/<%= data.forumId %>" target="_blank" data-eid="qd_G36">去讨论区<em class="iconfont">&#xe621;</em>
+            </a>
+        </p>
+        <!-- end 有数据状态 -->
+
+        <% } else { %>
+        <!-- start 无数据状态 -->
+        <div class="no-data">
+            <span></span>
+            <p>还没有讨论<i>&#183;</i>快来抢沙发</p>
+        </div>
+        <!-- end 无数据状态 -->
+
+        <% } %>
+    </div>
+
+</div>

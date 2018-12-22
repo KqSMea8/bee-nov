@@ -1,27 +1,739 @@
-<!doctype html>
-<html lang="zh-cn">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css" crossorigin="anonymous">
+<head>
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-  <div role="navigation" class="navbar">
-    <div class="navbar-header">
-      <a href="#" class="navbar-brand">aaaabB</a>
+  <meta charset="UTF-8">
+  <title>大超·的七'言 《大超·的七'言《{{.tBook.Name}}》大超·的七'言》</title>
+  <meta name="description" content="{{.tBook.Profile}}">
+  <meta name="keywords" content="{{.tBook.Name}}">
+  <meta name="robots" content="all">
+  <meta name="googlebot" content="all">
+  <meta name="baiduspider" content="all">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="renderer" content="webkit" />
+  <script src="/static/js/jquery-3.3.1.js"></script>
+  <script>
+    document.domain = 'localhost';
+  </script>
+  <script>
+    var speedTimer = [],
+      speedZero = new Date().getTime();
+  </script>
+  <script>
+    function getCookie(name) {
+      var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+      arr = document.cookie.match(reg);
+      if (arr) {
+        return arr[2];
+      } else {
+        return null;
+      }
+    }
+    // tf = 1 用户选择，留在PC
+    if (getCookie('tf') != 1) {
+      if (/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        window.location.href = "//m.qiyan.com/book/1013695262";
+      }
+    } else {
+      // M站设置了一年，这里fixed
+      setCookie('tf', 1, 'qiyan.com', '/', 0);
+    }
+  </script>
+
+  <script>
+    //遇到cookie tf=1的话留在本站，否则跳转移动站
+    if (getCookie('tf') != 1) {
+      //判断是以下设备后跳转到m站
+      if (navigator.userAgent.match(/(iPhone|iPod|Android)/i)) {
+        location.href = "//m.qiyan.com"
+      }
+    } else {
+      // M站设置了一年，这里fixed
+      setCookie('tf', 1, 'qiyan.com', '/', 0);
+    }
+    // start 防劫持
+    //设置cookie
+    function setCookie(name, value, domain, path, expires) {
+      if (expires) {
+        expires = new Date(+new Date() + expires);
+      }
+      var tempcookie = name + '=' + escape(value) +
+        ((expires) ? '; expires=' + expires.toGMTString() : '') +
+        ((path) ? '; path=' + path : '') +
+        ((domain) ? '; domain=' + domain : '');
+      //Ensure the cookie's size is under the limitation
+      if (tempcookie.length < 4096) {
+        document.cookie = tempcookie;
+      }
+    }
+    //获取cookie
+    function getCookie(name) {
+      var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+      if (arr = document.cookie.match(reg))
+        return (arr[2]);
+      else
+        return null;
+    }
+    //创建并发送请求
+    function createSender(url) {
+      var img = new Image();
+      img.onload = img.onerror = function () {
+        img = null;
+      };
+      img.src = url;
+    };
+  </script>
+
+  <link href="/static/css/app-responsive.css" rel="stylesheet" />
+  <link href="/static/css/lohp-42b3.css" rel="stylesheet" />
+
+  <link rel="stylesheet" data-ignore="true" href="/c/=/qd/css/lbfUI/css/icon.a578d.css,/qd/css/lbfUI/css/Drag.41d31.css,/qd/css/reset.ddecf.css,/qd/css/global.d41d8.css,/qd/css/font.089a4.css,/qd/css/footer.3607a.css,/qd/css/qd_popup.7e65f.css,/qd/css/book_popup.18f47.css,/qd/css/vote_popup.3844d.css,/qd/icon/forum/sprite.445f4.css,/qd/css/forum/emoji.c4e81.css" />
+
+  <link rel="stylesheet" href="/qd/css/module.e710a.css" />
+  <link rel="stylesheet" href="/qd/css/layout.5de0f.css" />
+  <link rel="stylesheet" href="/qd/css/book_details.0d238.css" />
+  <script src="/static/js/app-d19f.js"></script>
+</head>
+
+<body>
+  {{template "header.html" .}}
+  <div class="share-img">
+    <img src="/logo.ico" width='300' height="300">
+  </div>
+
+  <div class="main-container" data-home="" data-accountsform="" data-validation="">
+    <!-- <div class="wrap"> -->
+
+    <div id="j-topHeadBox" class="top-bg-op-box " data-cookie="1" style="background-image:url('/static/image/aa.jpg')">
+      <a class="jumpWrap hidden" href="/static/image/aa.jpg" target="_blank" data-eid="qd_G100" data-qd_dd_p1="1">
+        <span class="op-tag"></span>
+      </a>
+      <a class="close-game-op" id="closeTopGame" href="javascript:" data-eid="qd_G101">关闭广告</a>
     </div>
-</div>
-	<p class="nav-text">{{.name}}sdf</p>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"  crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"  crossorigin="anonymous"></script>
-    <script src="/static/js/bootstrap.min.js" crossorigin="anonymous"></script>
-  </body>
+    <div class="top-bg-box " id="j-topBgBox" style="background-image:url('/static/image/aa.jpg')">
+      <span class="back-to-op" data-eid="qd_G106">热门游戏</span>
+    </div>
+    <div class="body-content">
+
+      <div class="crumbs-nav  top-op">
+        <span>
+          <cite class="lt"></cite>
+          <a href="/" data-eid="qd_G01">首页</a><em class="iconfont">&#xe621;</em>
+          <a href="///kehuan" target="_blank" data-eid="qd_G02">科幻频道</a><em class="iconfont">&#xe621;</em>
+          <a href="///all?chanId=9&subCateId=251" target="_blank">时空穿梭</a><em class="iconfont">&#xe621;</em>
+          <a href="/book/{{.tBook.ID}}">{{.tBook.Name}}</a>
+          <cite class="rt"></cite>
+        </span>
+      </div>
+      <div class="border-shadow ">
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="book-detail-wrap">
+        <div class="book-information cf">
+          <div class="book-img">
+            <a class="J-getJumpUrl" id="bookImg" href="javascript:" data-eid="qd_G09" data-bid="1013695262"
+              data-firstchapterjumpurl="javascript:">
+              <img src="/static/image/{{.tBook.Image}}"></a>
+          </div>
+          <div class="book-info ">
+            <h1>
+              <em>{{.tBook.Name}}</em>
+              <span><a class="writer" href="/author/123456" target="_blank" data-eid="qd_G08">{{.tBook.Author}}</a>
+                <small>著</small></span>
+            </h1>
+            <p class="tag"><span class="blue">连载</span>
+              <span class="blue">免费</span>
+              <a href="///kehuan" class="red" target="_blank" data-eid="qd_G10">{{.tBook.Types}}</a>
+            </p>
+
+            <p class="intro">{{.tBook.Profile}}</p>
+            <p><em>
+                <style>
+                  @font-face {
+                    font-family: qJJFXLZJ;
+                    src: url('/static/qd_anti_spider/qJJFXLZJ.eot?') format('eot');
+                    src: url('/static/qd_anti_spider/qJJFXLZJ.woff') format('woff'), url('/static/qd_anti_spider/qJJFXLZJ.ttf') format('truetype');
+                  }
+
+                  .qJJFXLZJ {
+                    font-family: 'qJJFXLZJ' !important;
+                    display: initial !important;
+                    color: inherit !important;
+                    vertical-align: initial !important;
+                  }
+                </style>
+                <span class="qJJFXLZJ">{{.tBook.Numbers}}</span>
+              </em>
+              <cite>字</cite>
+              <i>|</i><em>
+                <style>
+                  @font-face {
+                    font-family: qJJFXLZJ;
+                    src: url('/static/qd_anti_spider/qJJFXLZJ.eot?') format('eot');
+                    src: url('/static/qd_anti_spider/qJJFXLZJ.woff') format('woff'), url('/static/qd_anti_spider/qJJFXLZJ.ttf') format('truetype');
+                  }
+
+                  .qJJFXLZJ {
+                    font-family: 'qJJFXLZJ' !important;
+                    display: initial !important;
+                    color: inherit !important;
+                    vertical-align: initial !important;
+                  }
+                </style>
+                <span class="qJJFXLZJ">&#100443;</span>
+              </em><cite>总会员点击<span>&#183;</span>周</cite><i>|</i><em>
+                <style>
+                  @font-face {
+                    font-family: qJJFXLZJ;
+                    src: url('/static/qd_anti_spider/qJJFXLZJ.eot?') format('eot');
+                    src: url('/static/qd_anti_spider/qJJFXLZJ.woff') format('woff'), url('/static/qd_anti_spider/qJJFXLZJ.ttf') format('truetype');
+                  }
+
+                  .qJJFXLZJ {
+                    font-family: 'qJJFXLZJ' !important;
+                    display: initial !important;
+                    color: inherit !important;
+                    vertical-align: initial !important;
+                  }
+                </style><span class="qJJFXLZJ">&#100446;</span>
+              </em><cite>总推荐<span>&#183;</span>周<style>
+                  @font-face {
+                    font-family: qJJFXLZJ;
+                    src: url('/static/qd_anti_spider/qJJFXLZJ.eot?') format('eot');
+                    src: url('/static/qd_anti_spider/qJJFXLZJ.woff') format('woff'), url('/static/qd_anti_spider/qJJFXLZJ.ttf') format('truetype');
+                  }
+
+                  .qJJFXLZJ {
+                    font-family: 'qJJFXLZJ' !important;
+                    display: initial !important;
+                    color: inherit !important;
+                    vertical-align: initial !important;
+                  }
+                </style><span class="qJJFXLZJ">&#100446;</span></cite></p>
+
+            <p><a class="red-btn J-getJumpUrl " href="/chapter/{.tBook.LastChapter}" id="readBtn" data-eid="qd_G03"
+                data-bid="1013695262" data-firstchapterjumpurl="/chapter/{.tBook.LastChapter}">免费阅读</a>
+              <a class="blue-btn add-book" id="addBookBtn" href="javascript:" data-eid="qd_G05" data-bookId="1013695262"
+                data-bid="1013695262">加入书架</a>
+
+              <a class="blue-btn" id="topRewardBtn" href="javascript:" data-showtype="2" data-eid="qd_G07">投推荐票
+              </a>
+
+              </a>
+              <span id="downloadAppBtnDropdown" style="display: inline-block;width: 390px; height: 295px; background: url(https://qiyan.qpic.cn/qiyan_common/349573/e4894e3e8eb20462c83905370bbf59eb/0); background-repeat: no-repeat; background-position: 50% 0; background-size: contain; position: absolute; right: 200px;top: 200px;display:none; ">
+                <img src='https://qiyan.qpic.cn/qiyan_common/349573/c70af1fc89a259e502e4fcb755d0ff42/0' style='position: absolute; width:100px; padding: 10px; box-shadow: 0 0 5px rgba(0,0,0,.1); height: 100px; left: 50px; top: 100px; z-index:9999;' />
+              </span>
+              <script>
+                setTimeout(function () {
+                  LBF.use(['lib.jQuery'], function ($) {
+                    $('#downloadAppBtn').hover(function () {
+                      $('#downloadAppBtnDropdown').show()
+                    }, function () {
+                      $('#downloadAppBtnDropdown').hide()
+                    })
+                  })
+                }, 2000)
+              </script>
+            </p>
+          </div>
+
+          <div class="comment-wrap">
+            <div id="commentWrap">
+              <div class="j_getData hidden">
+                <h4 id="j_bookScore"><span><cite id="score1">0</cite><em>.</em></span><i id="score2">0</i></h4>
+                <p id="j_userCount"><span></span>人评价</p>
+              </div>
+            </div>
+            <h5>我要评价</h5>
+            <div class="score-mid" id="scoreBtn" data-score="" data-comment="0" data-eid="qd_G12">
+              <img src="/qd/images/book_details/star-off.b2a1b.png">
+              <img src="/qd/images/book_details/star-off.b2a1b.png">
+              <img src="/qd/images/book_details/star-off.b2a1b.png">
+              <img src="/qd/images/book_details/star-off.b2a1b.png">
+              <img src="/qd/images/book_details/star-off.b2a1b.png">
+            </div>
+          </div>
+          <div class="take-wrap">
+            </a>
+          </div>
+        </div>
+
+        <div class="content-nav-wrap cf">
+          <div class="nav-wrap fl">
+            <ul>
+              <li class="act"><a class="lang" id="j-bookInfoPage" href="javascript:" data-eid="qd_G15">作品信息</a></li>
+              <li class="j_catalog_block"><a class="lang" href="javascript:" id="j_catalogPage" data-eid="qd_G16">目录<i><span
+                      id="J-catalogCount">({{.tBook.Chapters|len}}章)</span></i></a></li>
+
+              <li class="j_discussion_block"><a class="lang" href="//forum.qiyan.com/NewForum/List.aspx?BookId=1013695262"
+                  target="_blank" data-eid="qd_G17">作品讨论<i><span id="J-discusCount"></span></i></a></li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="catalog-content-wrap hidden" id="j-catalogWrap">
+          <div class="go-top">
+            <div class="go-top-wrap">
+              <a href="#" class="icon-go-top"><em class="iconfont" data-eid="qd_G72">&#xe66b;</em></a>
+            </div>
+          </div>
+
+          <div class="volume-wrap">
+
+            <div class="volume">
+              <div class="cover"></div>
+              <h3>
+                <a class="subscri" href="//read.qiyan.com/hankread/1013695262/74954500" target="_blank"><em class="btn"><b
+                      class="iconfont">&#xe636;</b>分卷阅读</em></a>
+
+                离家<i>&#183;</i>共{{.tBook.Chapters|len}}章<span class=free> 免费</span><em class="count">本卷共<cite>8410</cite>字</em></h3>
+              <ul class="cf">
+                {{range $ci,$cobj := .tBook.Chapters}}
+                <li data-rid="{{$ci}}"><a href="/chapter/{{$cobj.ID}}" data-eid="qd_G55" data-cid="/chapter/{.tBook.LastChapter}"
+                    title="首发时间：2018-12-12 23:16:52 章节字数：1777">{{$cobj.Title}}</a>
+                </li>
+                {{end}}
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="book-content-wrap cf">
+          <div class="left-wrap fl">
+            <div class="book-info-detail">
+              <cite class="icon-pin"></cite>
+              <div class="book-intro">
+                <p>
+                  {{.tBook.Profile}}</p>
+              </div>
+              <div class="book-state">
+                <ul>
+                  <li class="honor">
+                    <b>荣誉动态</b>
+                    <div class="detail">
+                      <em class="null">暂无动态，打赏投票可支持作家</em>
+                      <p>
+                        <a class="blue" href="//book.qiyan.com/honor/1013695262" target="_blank">荣誉殿堂</a>
+                      </p>
+                    </div>
+                  </li>
+
+
+                  <li class="update">
+                    <b>最近更新</b>
+                    <div class="detail">
+                      <p class="cf">
+                        <a class="blue" href="//read.qiyan.com/chapter/o1gBvOwWEt8uwUjttRcGug2/s_7GXV_4EWL4p8iEw--PPw2"
+                          data-eid="qd_G19" data-cid="//read.qiyan.com/chapter/o1gBvOwWEt8uwUjttRcGug2/s_7GXV_4EWL4p8iEw--PPw2"
+                          title="雁门关" target="_blank">雁门关</a><i>&#183;</i><em class="time">6分钟前</em>
+                      </p>
+                      <p class="tag-wrap mt10">
+
+
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+
+            <div class="like-more mb30 cf">
+              <h3 class="lang">喜欢这本书的人还喜欢</h3>
+              <div class="like-more-list">
+                <ul class="cf">
+
+                  <li data-rid="1">
+                    <div class="book-img" title="小兵传奇">
+                      <a href="//book.qiyan.com/info/501" target="_blank" data-eid="qd_G30" data-bid="501"><img class="lazy"
+                          src="/qd/images/common/default_book.5968b.png" data-original="//bookcover.yueren.com/qdbimg/349573/501/90"
+                          alt="小兵传奇"></a>
+                    </div>
+                    <h4><a href="//book.qiyan.com/info/501" target="_blank" title="小兵传奇" data-eid="qd_G29" data-bid="501">小兵传奇</a></h4>
+                    <p>80%的用户读过</p>
+                  </li>
+
+                  <li data-rid="2">
+                    <div class="book-img" title="师士传说">
+                      <a href="//book.qiyan.com/info/54111" target="_blank" data-eid="qd_G30" data-bid="54111"><img
+                          class="lazy" src="/qd/images/common/default_book.5968b.png" data-original="//bookcover.yueren.com/qdbimg/349573/54111/90"
+                          alt="师士传说"></a>
+                    </div>
+                    <h4><a href="//book.qiyan.com/info/54111" target="_blank" title="师士传说" data-eid="qd_G29" data-bid="54111">师士传说</a></h4>
+                    <p>90%的用户读过</p>
+                  </li>
+
+                  <li data-rid="3">
+                    <div class="book-img" title="无限恐怖">
+                      <a href="//book.qiyan.com/info/109222" target="_blank" data-eid="qd_G30" data-bid="109222"><img
+                          class="lazy" src="/qd/images/common/default_book.5968b.png" data-original="//bookcover.yueren.com/qdbimg/349573/109222/90"
+                          alt="无限恐怖"></a>
+                    </div>
+                    <h4><a href="//book.qiyan.com/info/109222" target="_blank" title="无限恐怖" data-eid="qd_G29" data-bid="109222">无限恐怖</a></h4>
+                    <p>88%的用户读过</p>
+                  </li>
+
+                  <li data-rid="4">
+                    <div class="book-img" title="冒牌大英雄">
+                      <a href="//book.qiyan.com/info/131957" target="_blank" data-eid="qd_G30" data-bid="131957"><img
+                          class="lazy" src="/qd/images/common/default_book.5968b.png" data-original="//bookcover.yueren.com/qdbimg/349573/131957/90"
+                          alt="冒牌大英雄"></a>
+                    </div>
+                    <h4><a href="//book.qiyan.com/info/131957" target="_blank" title="冒牌大英雄" data-eid="qd_G29" data-bid="131957">冒牌大英雄</a></h4>
+                    <p>85%的用户读过</p>
+                  </li>
+
+                  <li data-rid="5">
+                    <div class="book-img" title="时空走私从2000年开始">
+                      <a href="//book.qiyan.com/info/190562" target="_blank" data-eid="qd_G30" data-bid="190562"><img
+                          class="lazy" src="/qd/images/common/default_book.5968b.png" data-original="//bookcover.yueren.com/qdbimg/349573/190562/90"
+                          alt="时空走私从2000年开始"></a>
+                    </div>
+                    <h4><a href="//book.qiyan.com/info/190562" target="_blank" title="时空走私从2000年开始" data-eid="qd_G29"
+                        data-bid="190562">时空走私从2000年开始</a></h4>
+                    <p>85%的用户读过</p>
+                  </li>
+
+                  <li data-rid="6">
+                    <div class="book-img" title="星际之亡灵帝国">
+                      <a href="//book.qiyan.com/info/1018112" target="_blank" data-eid="qd_G30" data-bid="1018112"><img
+                          class="lazy" src="/qd/images/common/default_book.5968b.png" data-original="//bookcover.yueren.com/qdbimg/349573/1018112/90"
+                          alt="星际之亡灵帝国"></a>
+                    </div>
+                    <h4><a href="//book.qiyan.com/info/1018112" target="_blank" title="星际之亡灵帝国" data-eid="qd_G29"
+                        data-bid="1018112">星际之亡灵帝国</a></h4>
+                    <p>91%的用户读过</p>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="user-commentWrap">
+              <div class="user-comment-wrap book-friend">
+                <div class="comment-head cf">
+                  <h3 class="lang">
+
+                    <a class="send blue j_forumBtn" href="//forum.qiyan.com/NewForum/Post.aspx?forumId=1013695262"
+                      target="_blank" data-eid="qd_G35">我要发帖</a>
+                    <a class="comment-btn blue j_commentBtn hidden" id="goComment" href="javascript:" data-comment="1"
+                      data-eid="qd_G33">我要评价</a><span class="j_godiscuss act">作品讨论区</span><i class="grey">|</i><span
+                      class="j_gocomment" data-eid="qd_G113">书友评价</span></h3>
+                  <div class="sort-box hidden" id="sortBox"><a class="act" href="javascript:" data-order="2" data-eid="qd_G31">热门</a><span>·</span><a
+                      href="javascript:" data-order="0" data-eid="qd_G32">最新</a><span class="grey">|</span></div>
+                </div>
+                <div class="userCommentWrap" id="userCommentWrap">
+                  <div class="la-ball-pulse">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+
+                </div>
+                <div class="user-discuss" id="userDiscuss">
+                  <div class="la-ball-pulse">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="right-wrap fr">
+
+            <div class="author-state mb10">
+              <div class="author-info">
+                <div class="info-wrap nobt">
+                  <div class="author-photo" id="authorId" data-authorid="403553193">
+                    <a href="//my.qiyan.com/author/403553193" target="_blank" data-eid="qd_G38">
+                      <img src="//facepic.qiyan.com/qd_face/349573/a403553193/0">
+                    </a>
+
+                    <span class="author">作家</span>
+
+                  </div>
+                  <p><a href="//my.qiyan.com/author/403553193" target="_blank">{{.tBook.Author}}</a>
+
+                    <a class="god-light lv0" href="//my.qiyan.com/author/light/403553193" title="大神之光：已经有0人获得" target="_blank"
+                      data-eid="qd_G39"></a>
+
+                  </p>
+
+                </div>
+                <div class="info-wrap">
+                  <ul class="work-state cf">
+                    <li>
+                      <span class="book"></span>
+                      <p>作品总数</p>
+                      <em>1</em>
+                    </li>
+                    <li>
+                      <span class="word"></span>
+                      <p>累计字数</p>
+                      <em>{{.tBook.Numbers}}</em>
+                    </li>
+                    <li>
+                      <span class="coffee"></span>
+                      <p>创作天数</p>
+                      <em>2</em>
+                    </li>
+                  </ul>
+                </div>
+
+
+
+              </div>
+            </div>
+
+
+
+            <div class="book-list-wrap mb10">
+              <div class="strongrec-list">
+                <h3 class="wrap-title lang">本周强推<i>&#183;</i>科幻</h3>
+                <div class="book-list">
+                  <ul>
+
+                    <li data-rid="1">
+                      <a class="channel" href="///all?chanId=9&amp;subCateId=251" target="_blank" data-eid="qd_G52"><em>「</em>时空穿梭<em>」</em></a><strong><a
+                          class="name" href="//book.qiyan.com/info/1013457781" target="_blank" data-eid="qd_G51"
+                          data-bid="1013457781" title="无限逆推">无限逆推</a></strong>
+                    </li>
+
+                    <li data-rid="2">
+                      <a class="channel" href="///all?chanId=9&amp;subCateId=251" target="_blank" data-eid="qd_G52"><em>「</em>时空穿梭<em>」</em></a><strong><a
+                          class="name" href="//book.qiyan.com/info/1011576642" target="_blank" data-eid="qd_G51"
+                          data-bid="1011576642" title="无限智慧主宰">无限智慧主宰</a></strong>
+                    </li>
+
+                    <li data-rid="3">
+                      <a class="channel" href="///all?chanId=9&amp;subCateId=251" target="_blank" data-eid="qd_G52"><em>「</em>时空穿梭<em>」</em></a><strong><a
+                          class="name" href="//book.qiyan.com/info/1013501891" target="_blank" data-eid="qd_G51"
+                          data-bid="1013501891" title="会穿越的道观">会穿越的道观</a></strong>
+                    </li>
+
+                    <li data-rid="4">
+                      <a class="channel" href="///all?chanId=9&amp;subCateId=251" target="_blank" data-eid="qd_G52"><em>「</em>时空穿梭<em>」</em></a><strong><a
+                          class="name" href="//book.qiyan.com/info/1013565638" target="_blank" data-eid="qd_G51"
+                          data-bid="1013565638" title="美漫生存指南">美漫生存指南</a></strong>
+                    </li>
+
+                    <li data-rid="5">
+                      <a class="channel" href="///all?chanId=9&amp;subCateId=251" target="_blank" data-eid="qd_G52"><em>「</em>时空穿梭<em>」</em></a><strong><a
+                          class="name" href="//book.qiyan.com/info/1013488486" target="_blank" data-eid="qd_G51"
+                          data-bid="1013488486" title="诸天轨迹">诸天轨迹</a></strong>
+                    </li>
+
+                    <li data-rid="6">
+                      <a class="channel" href="///all?chanId=9&amp;subCateId=253" target="_blank" data-eid="qd_G52"><em>「</em>末世危机<em>」</em></a><strong><a
+                          class="name" href="//book.qiyan.com/info/1013522997" target="_blank" data-eid="qd_G51"
+                          data-bid="1013522997" title="诸天降临大逃杀">诸天降临大逃杀</a></strong>
+                    </li>
+
+                    <li data-rid="7">
+                      <a class="channel" href="///all?chanId=9&amp;subCateId=253" target="_blank" data-eid="qd_G52"><em>「</em>末世危机<em>」</em></a><strong><a
+                          class="name" href="//book.qiyan.com/info/1013188538" target="_blank" data-eid="qd_G51"
+                          data-bid="1013188538" title="末日合成系统">末日合成系统</a></strong>
+                    </li>
+
+                    <li data-rid="8">
+                      <a class="channel" href="///all?chanId=9&amp;subCateId=252" target="_blank" data-eid="qd_G52"><em>「</em>进化变异<em>」</em></a><strong><a
+                          class="name" href="//book.qiyan.com/info/1013532685" target="_blank" data-eid="qd_G51"
+                          data-bid="1013532685" title="这操作有鬼">这操作有鬼</a></strong>
+                    </li>
+
+                    <li data-rid="9">
+                      <a class="channel" href="///all?chanId=9&amp;subCateId=252" target="_blank" data-eid="qd_G52"><em>「</em>进化变异<em>」</em></a><strong><a
+                          class="name" href="//book.qiyan.com/info/1013525406" target="_blank" data-eid="qd_G51"
+                          data-bid="1013525406" title="神秘之树">神秘之树</a></strong>
+                    </li>
+
+                    <li data-rid="10">
+                      <a class="channel" href="///all?chanId=9&amp;subCateId=251" target="_blank" data-eid="qd_G52"><em>「</em>时空穿梭<em>」</em></a><strong><a
+                          class="name" href="//book.qiyan.com/info/1013452050" target="_blank" data-eid="qd_G51"
+                          data-bid="1013452050" title="穿越交易网">穿越交易网</a></strong>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="break-rules-report cf">
+              <i class="icon-warning"></i>
+              <a href="//jubao.yueren.com" target="_blank">举报违规有奖</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="footer">
+    <div class="box-center cf">
+      <div class="friend-link">
+        <em>
+          <a class="yuewen" href="//www.yueren.com" target="_blank"></a><cite>友链：</cite></em>
+        <a href="//">起点中文网</a>
+        <a href="//www.qdmm.com" target="_blank">起点女生网</a>
+        <a href="http://chuangshi.qq.com" target="_blank">创世中文网</a>
+        <a href="http://yunqi.qq.com" target="_blank">云起书院</a>
+        <!--<a href="http://www.rongshuxia.com" target="_blank">榕树下</a>-->
+        <a href="http://www.tingbook.com" target="_blank">天方听书网</a>
+        <a href="http://www.lrts.me" target="_blank">懒人听书</a>
+        <a href="http://yuedu.yueren.com" target="_blank">阅文悦读</a>
+      </div>
+      <div class="footer-menu dib-wrap">
+        <a href="///about/intro" target="_blank">关于起言</a>
+        <a href="///about/contact" target="_blank">联系我们</a>
+        <a href="///help/index/2" target="_blank">帮助中心</a>
+        <a href="#" class="advice" target="_blank">提交建议</a>
+        <!--<a href="http://bbs.qiyan.com" target="_blank">起点论坛</a>-->
+        <!--<a href="http://comic.qiyan.com" target="_blank">动漫频道</a>-->
+        <a href="//jubao.yueren.com" target="_blank">举报中心</a>
+      </div>
+      <div class="copy-right">
+        <p><span>Copyright &copy; 2002-2018 www.qiyan.com All Rights Reserved</span>版权所有 **公司</p>
+        <p>**公司
+          <a href="http://www.miitbeian.gov.cn" target="_blank" style="color:#666;margin-left: 5px">增值电信业务经营许可证B2-********6</a>
+          出版经营许可证 新出网证
+          <a href="http://www.miitbeian.gov.cn" target="_blank" style="color:#666;margin-left: 5px">ICP备号-1</a>
+        </p>
+        <p>请所有作者发布作品时务必遵守国家互联网信息管理办法规定，我们拒绝任何色情小说，一经发现，即作删除！举报电话：010-*******1</p>
+        <p>本站所收录的作品、社区话题、用户评论、用户上传内容或图片等均属用户个人行为。如前述内容侵害您的权益，欢迎举报投诉，一经核实，立即删除，本站不承担任何责任</p>
+        <p>联系方式 </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/static/js/analytics-4bf8.js"></script>
+  <script src="/static/js/nr-spa-1071.min.js"></script>
+  <script src="/static/js/common-head-f2f5.js"></script>
+  <script src="/static/js/boomerang.js"></script>
+  <script src="/static/js/vendors-06f3.js"></script>
+
+  <script>
+    var g_data = {};
+    g_data.envType = 'pro';
+    g_data.pageId = 'qd_P_read';
+    g_data.domainSearch = 'www.qiyan.com/search';
+    g_data.readSetting = {
+      "t": 0,
+      "ft": 0,
+      "fs": 3,
+      "w": 1,
+      "rt": 0,
+      "autoBuy": 0
+    };
+    g_data.isPublication = false;
+    g_data.salesMode = 1;
+    g_data.bookInfo = {
+      "bookId": 1013695262,
+      "bookName": '书名随缘',
+      "authorId": 403553193,
+      "authorName": '背剑游江湖'
+    };
+
+    g_data.bgOpsInfo = {
+      "id": 600,
+      "title": "",
+      "adCategoryName": "广告",
+      "colorType": 0,
+      "startTime": 1544666400,
+      "endTime": 1544752800,
+      "type": 1,
+      "isAdv": 1,
+      "adType": 1,
+      "adImgUrl": "//qiyan.qpic.cn/qidian_common/349573/aebdb12749c5d9f0dde7b709c7066637/0",
+      "adJumpUrl": "http://cpgame.qd.game.qiyan.com/Home/Index/directLogin/name/gs/way/1?qd_game_key=gs1920x1057&qd_dd_p1=600",
+      "hasAd": 1
+    };
+
+    g_data.chapter = {
+      id: 437446063,
+      vipStatus: 0,
+      prevId: 437438890,
+      nextId: -1,
+      isBuy: 0
+    };
+    g_data.pageOps = {
+      "id": 5320,
+      "title": "",
+      "adCategoryName": "广告",
+      "colorType": 0,
+      "startTime": 1536458400,
+      "endTime": 1571364000,
+      "type": 1,
+      "isAdv": 1,
+      "adType": 1,
+      "adImgUrl": "//qiyan.qpic.cn/qidian_common/349573/25f208378c84430d59f18781fb7aa257/0",
+      "adJumpUrl": "http://cpgame.qd.game.qiyan.com/Home/Index/directLogin/name/dmbj/way/1?qd_game_key=dmbj900x60&qd_dd_p1=5320",
+      "hasAd": 1
+    };
+    g_data.nextChapterVip = 0;
+    g_data.bottomOps = {
+      "hasAd": 0
+    };
+    g_data.pageJson = {
+      isVip: 0,
+      isPublication: false,
+      isLogin: 0,
+      isSign: 0,
+      noRewardMonthTic: 1,
+      bookId: 1013695262,
+      signStatus: '独家首发',
+      mePreFix: '//me.qiyan.com',
+      forumPreFix: '//forum.qiyan.com'
+    };
+    // 区分女生网 && 起点中文网
+    g_data.isWebSiteType = 1;
+  </script>
+  <script src="/static/js/LBF.js"></script>
+  <script>
+    // LBF 配置
+    LBF.config({
+      "paths": {
+        "site": "/qd/js",
+        "qd": "/qd",
+        "common": "/static"
+      },
+      "vars": {
+        "theme": "/qd/css"
+      },
+      "combo": true,
+      "debug": true
+    });
+    LBF.use(['lib.jQuery'], function ($) {
+      window.$ = $;
+    });
+  </script>
+  <script src="/qd/js/component/login.a4de6.js"></script>
+
+  <script>
+    LBF.use(['monitor.SpeedReport', 'qd/js/component/login.a4de6.js', 'qd/js/book_details/index.55dc5.js'], function (
+      SpeedReport, Login, Index) {
+      // 页面逻辑入口
+      new Index();
+      return;
+      if (Login) {
+        Login.init().always(function () {
+          Index && typeof Index === 'function' && new Index();
+        })
+      }
+    });
+    speedTimer.push(new Date().getTime());
+  </script>
+
+</body>
+
 </html>

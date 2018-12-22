@@ -14,8 +14,24 @@ const (
 	ErrNotFound = -4
 )
 
-// Category ...
-var Category = map[string]string{"玄幻": "/xuanhuan", "武侠": "/wuxia", "全本": "/quanben", "校园": "/xiaoyuan"}
+type (
+	// Category contains information for an Category info.
+	Category struct {
+		Name    string `bson:"name"`
+		ID      string `bson:"id"`
+		Profile string `bson:"profile"`
+		Image   string `bson:"image"`
+		Urll    string `bson:"url"`
+		Numbers int    `bson:"numbers"`
+	}
+)
+
+// CategoryList ...
+var CategoryList = []Category{
+	{Name: "玄1", ID: "/xuanhuan", Profile: "Profile1", Image: "a.jpg", Urll: "/xuanhuan", Numbers: 5555},
+	{Name: "玄2", ID: "/wuxia", Profile: "Profile2", Image: "a.jpg", Urll: "/wuxia", Numbers: 111},
+	{Name: "玄3", ID: "/quanben", Profile: "Profile3", Image: "a.jpg", Urll: "/quanben", Numbers: 123},
+	{Name: "玄4", ID: "/xiaoyuan", Profile: "Profile4", Image: "a.jpg", Urll: "/xiaoyuan", Numbers: 122222}}
 
 // CodeInfo definiton.
 type CodeInfo struct {

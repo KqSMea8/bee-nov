@@ -17,6 +17,8 @@ func hello(in int) (out int) {
 }
 
 func main() {
+	beego.SetStaticPath("/qd", "qd")
+	beego.SetStaticPath("/qd_anti_spider", "qd_anti_spider")
 	beego.AddFuncMap("hi", hello)
 	beego.Run()
 }
